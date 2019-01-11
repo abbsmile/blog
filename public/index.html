@@ -443,13 +443,20 @@
       
         
           
-            <p>同事要测一个需求，叫我向数据库中批量插入一些数据。之前没做过这个,所以不敢懈怠, 最后发现挺好玩的，也把存储过程实际应用了一把。</p>
-<p>不多说，直接上代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">CREATE PROCEDURE unknown()</span><br><span class="line">  BEGIN</span><br><span class="line">    DECLARE num INT;</span><br><span class="line">    SET num = 13000;</span><br><span class="line">    WHILE num &lt; 13500 DO</span><br><span class="line">      set names latin1;</span><br><span class="line">      INSERT INTO learn_questions (FCorpUin, FQuestion, FTimes, FSyncId, FCreateTime, FSyncTime, FIdlist, FRobotId)</span><br><span class="line">        VALUE</span><br><span class="line">        (2852199100, &apos;test&apos;, 2, num, 1536629393, 1536629393, &quot;&quot;, 7777777777);</span><br><span class="line">      SET num = num + 1;</span><br><span class="line">    END WHILE;</span><br><span class="line">  END;</span><br></pre></td></tr></table></figure></p>
-<p>运行之后，调用是这个：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CALL unknown();</span><br></pre></td></tr></table></figure></p>
-<p>插入之后，记得删除：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">DROP PROCEDURE IF EXISTS unknown;</span><br></pre></td></tr></table></figure></p>
-<p>其它语法，笔者找时间总结一个，这是个缺口。</p>
-
+            <p>
+              同事要测一个需求，叫我向数据库中批量插入一些数据。之前没做过这个,所以不敢懈怠, 最后发现挺好玩的，也把存储过程实际应用了一把。
+不多说，直接上代码：CREATE PROCEDURE unknown()  BEGIN    DECLARE num INT;    SET num = 13000;  
+              ...
+            </p>
+          <!--noindex-->
           
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/01/11/mysql-批量插入数据/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
@@ -607,13 +614,21 @@
       
         
           
-            <p>ssh刚进入centOS时，出现这么一行：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Centos warning: setlocale: LC_CTYPE: cannot change locale (UTF-8): No such file or directory</span><br></pre></td></tr></table></figure></p>
-<p>然后查看代码，代码中的中文字符全部为乱码。</p>
-<p>笔者以前遇到过这样的问题，解决的比较麻烦，下面这个亲试不错：<br><a href="https://gist.github.com/mes01/c8634bd4f94f21e4f4259e257509d68f" target="_blank" rel="noopener">cannot change locale (UTF-8)</a></p>
-<p>建立文件：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/environment</span><br></pre></td></tr></table></figure></p>
-<p>添加内容：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">LANG=en_US.utf-8</span><br><span class="line">LC_ALL=en_US.utf-8</span><br></pre></td></tr></table></figure></p>
-
+            <p>
+              ssh刚进入centOS时，出现这么一行：Centos warning: setlocale: LC_CTYPE: cannot change locale (UTF-8): No such file or directory
+然后查看代码，代码中的中文字符全部为乱码。
+笔者以前遇到过这样的问题，解
+              ...
+            </p>
+          <!--noindex-->
           
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/01/11/centOS上汉字乱码/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
@@ -771,11 +786,20 @@
       
         
           
-            <p>mac上的乐器，总占据很大的空间，看着不是特别顺眼。小记一下如何删除</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">rm -rf /Library/Application\ Support/GarageBand</span><br><span class="line">rm -rf /Library/Application\ Support/Logic</span><br><span class="line">rm -rf /Library/Audio/Apple\ Loops</span><br></pre></td></tr></table></figure>
-<p>有些东西（比如mac占用存储空间太多）不必那么专业，用到则查一下，花1个小时稍微处理一下，还是可以的。</p>
-
+            <p>
+              mac上的乐器，总占据很大的空间，看着不是特别顺眼。小记一下如何删除
+rm -rf /Library/Application\ Support/GarageBandrm -rf /Library/Application\ Support/Logicrm -rf /Library/Audio/Appl
+              ...
+            </p>
+          <!--noindex-->
           
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/01/11/Mac上的乐器清理/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
@@ -933,18 +957,23 @@
       
         
           
-            <p>air空间不够，闲着无聊折腾一把，误把navicat删了。</p>
-<p>别人从微信群发过来个破解版navicat，没多想，直接安装，闪现了这个：</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/2875232-5e386a59b83dcd1d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
-<p>这事怪我，没思考，没google, 以为是个废弃文件，直接扔在群里问，然后忙其它事了……等回过头来，发现在群里被个后辈好好教训了一顿……教我要学会用百度。。。</p>
-<p>好吧，，，第一时间用搜索引擎确实是开发者基本素养。</p>
-<p>给个链接：<a href="http://www.codesec.net/view/503511.html" target="_blank" rel="noopener">您应该将它移到废纸篓</a></p>
-<p>####下面这句话很重要，给个特写：</p>
-<blockquote>
-<p>并非你安装的软件已损坏，而是Mac系统的安全设置问题，因为这些应用都是破解或者汉化的,那么解决方法就是临时改变Mac系统安全设置</p>
-</blockquote>
+            <p>
+              air空间不够，闲着无聊折腾一把，误把navicat删了。
+别人从微信群发过来个破解版navicat，没多想，直接安装，闪现了这个：
 
+这事怪我，没思考，没google, 以为是个废弃文件，直接扔在群里问，然后忙其它事了……等回过头来，发现在群里被个后辈好好教训了一顿……教我要学会用百度。。。
+好吧
+              ...
+            </p>
+          <!--noindex-->
           
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/01/11/mac破解文件显示已损坏/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
@@ -1102,18 +1131,26 @@
       
         
           
-            <p>这个还是比较好玩的，对取地址符也能加深认识。</p>
-<p>原文是：# <a href="https://www.cnblogs.com/firstForEver/p/5201618.html" target="_blank" rel="noopener">php的foreach中使用取地址符，注意释放</a></p>
-<p>代码：</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/2875232-5e1026983f572d71.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
-<p>运行结果：</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/2875232-739511425449f3e6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
-<p>1: 第一个foreach()循环后，因为没有释放<code>$value</code>, 所以<code>&amp;$value</code>是存在的，这个地址指向数组的第三个元素。</p>
-<p>2:第二个foreach()循环时，每次给$value赋值，相当于给数组的第三个值赋值。</p>
-<p>我的理解中，<code>unset($value)</code>，相当于把<code>&amp;$value</code>这个地址给毁了。所以在这个程序中是必要的。</p>
-<p>结束！</p>
+            <p>
+              这个还是比较好玩的，对取地址符也能加深认识。
+原文是：# php的foreach中使用取地址符，注意释放
+代码：
 
+运行结果：
+
+1: 第一个foreach()循环后，因为没有释放$value, 所以&amp;$value是存在的，这个地址指向数组的第三个元素。
+2:第二个foreach()循环时，
+              ...
+            </p>
+          <!--noindex-->
           
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/01/11/foreach-中加了取地址符-引起的错误/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
@@ -1271,19 +1308,20 @@
       
         
           
-            <p>这边放两个小例子，然后说明下 <code>array_walk()</code>的用法。以后有机会，再把类似的几个函数放一起，谈谈效率。</p>
-<p>1.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">function myfunction($value,$key)</span><br><span class="line">&#123;</span><br><span class="line">	echo &quot;The key $key has the value $value&quot;.PHP_EOL;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">$a = array(&quot;a&quot;=&gt;&quot;red&quot;,&quot;b&quot;=&gt;&quot;green&quot;,&quot;c&quot;=&gt;&quot;blue&quot;);</span><br><span class="line">array_walk($a,&quot;myfunction&quot;);</span><br></pre></td></tr></table></figure></p>
-<p>2.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$a = array(&quot;a&quot;=&gt;&quot;red&quot;,&quot;b&quot;=&gt;&quot;green&quot;,&quot;c&quot;=&gt;&quot;blue&quot;);</span><br><span class="line">array_walk($a, function($value, $key) &#123;</span><br><span class="line">	echo &quot;The key $key has the value $value&quot;.PHP_EOL;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
-<p>ok，上面两函数的结果是一样的，只不过一个用的函数，一个用的闭包。<br>首先：了解有这样一种写法；<br>其次：注意下函数中参数的顺序，对，就是这样，第一个是<code>$value</code>,第二个是<code>$key</code></p>
-<p>然后，我们看下面的例子：</p>
-<p>3.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">function example(&amp;$value)</span><br><span class="line">&#123;</span><br><span class="line">    $value = $value + 5;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">$arrLearnIds = [1, 2, 3];</span><br><span class="line">array_walk($arrLearnIds, &apos;example&apos;);</span><br><span class="line"></span><br><span class="line">var_dump($arrLearnIds);</span><br></pre></td></tr></table></figure>
-<p>4.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$arrLearnIds = [1, 2, 3];</span><br><span class="line">array_walk($arrLearnIds, function (&amp;$value) &#123;</span><br><span class="line">    $value = $value + 5;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">var_dump($arrLearnIds);</span><br></pre></td></tr></table></figure>
-<p>这里还是要强调一下取地址符&amp;。因为是取地址符，所以改变的是数组，这一点要清楚。</p>
-<p>然后再看一眼这里的闭包，会感觉代码很优美。。。！！！</p>
-
+            <p>
+              这边放两个小例子，然后说明下 array_walk()的用法。以后有机会，再把类似的几个函数放一起，谈谈效率。
+1.function myfunction($value,$key)&#123;	echo &quot;The key $key has the value $value&quot;.PH
+              ...
+            </p>
+          <!--noindex-->
           
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/01/11/how-to-use-array-walk/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
@@ -1441,35 +1479,27 @@
       
         
           
-            <blockquote>
-<p>what is SHELL</p>
-</blockquote>
-<p> 感觉这句话不错，笔者私自盗过来了:</p>
-<ul>
-<li>你在提示符下输入的每个命令都由shell先解释然后传给Linux内核</li>
-</ul>
-<p>相当于一个接口程序，里面是Linux/Unix内核，外面是用户。</p>
-<p>笔者最近一段时间在写接口，对接口有点感悟，上面不理解的朋友可以认识一下接口，不是简单的会写，而是找找接口的那种feel，这块只可意会不可言谈。</p>
-<blockquote>
-<p>shell的种类</p>
-</blockquote>
-<p>这个就多了，不过这个世界很简单，有一个左派，就有一个右派，最后出现一个中间派，集合了前两种的优点。照着这个思路，，，我们分析下几种shell:</p>
-<p>第一种：面向Linux内核的。编程方面相当优秀，用户交互方面有所欠缺。 Bourne shell (sh)<br>第二种：面向用户的，和上面相反 C shell (csh)<br>第三种：集合前面两种优点的 Korn shell (ksh)</p>
-<p>提一点: C语言从语言系统而言是很底层的语言了，但是在这个底层的圈子里，还是比较靠上的。c shell和c语言很相似，面向用户还是可以理解的。</p>
-<p>ok, 我们看一下mac的shell:<br><img src="https://upload-images.jianshu.io/upload_images/2875232-f053c1fc1802b419.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
-<p>zsh是 Bourne shell的一个变种，这样就清楚了，大体上有个分类了。</p>
-<p>当然网上还有其它的分类，讲的特别清楚。有时间的话可以记一下，没时间，也没必要坚持。事有主次之分，过分纠结没那个必要，关键是能解决问题。</p>
-<blockquote>
-<p>mac电脑的环境变量</p>
-</blockquote>
-<p>总算把话题引到正路上了。其实最想讲的是这三点：</p>
-<p> 1./etc/profile   （建议不修改这个文件 ）<br> 全局（公有）配置，不管是哪个用户，登录时都会读取该文件。</p>
-<p> 2./etc/bashrc    （一般在这个文件中添加系统级环境变量）<br> 全局（公有）配置，bash shell执行时，不管是何种方式，都会读取此文件。</p>
-<p> 3.~/.bash_profile  （一般在这个文件中添加用户级环境变量）<br> 每个用户都可使用该文件输入专用于自己使用的shell信息,当用户登录时,该文件仅仅执行一次!</p>
-<p>上面三点直接复制这篇文章的：### <a href="https://elf8848.iteye.com/blog/1582137" target="_blank" rel="noopener">Mac 可设置环境变量的位置、查看和添加PATH环境变量</a></p>
-<p>一般而言，我们直接修改<code>.bash_profile</code>就可以了。这样，几个文件清楚了，大体概念了解了，以后配置的时候，自然舒服一点。</p>
+            <p>
+              
+what is SHELL
 
+ 感觉这句话不错，笔者私自盗过来了:
+
+你在提示符下输入的每个命令都由shell先解释然后传给Linux内核
+
+相当于一个接口程序，里面是Linux/Unix内核，外面是用户。
+笔者最近一段时间在写接口，对接口有点感悟，上面不理解的朋友可以认识一下接口，不是简单的会写
+              ...
+            </p>
+          <!--noindex-->
           
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/01/11/shell-in-mac/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
@@ -1627,23 +1657,29 @@
       
         
           
-            <p>mac上命令行操作的频率远大于界面操作，现在问题来了，插入的u盘、移动硬盘如何用命令行操作。</p>
-<p>之前有这么个单词，可是每次用的时候记不住，特意截图一张：</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/2875232-671827f22644eb24.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
-<p>好吧，联系Linux系统上分卷的知识，有点理解了。</p>
-<p>再去实际操作一把：</p>
-<ol>
-<li><p><img src="https://upload-images.jianshu.io/upload_images/2875232-191d26b298238c5d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
-</li>
-<li><p><img src="https://upload-images.jianshu.io/upload_images/2875232-df569d8a4f4b02ce.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
-</li>
-<li><p>插入移动硬盘时，发现文件还是在这里面，只是 mac自己电脑的Macintosh HD搞个软链接，这样和其它的一对比，明意上区分开来。</p>
-</li>
-</ol>
-<p><img src="https://upload-images.jianshu.io/upload_images/2875232-d6abfcd8664c63f1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
-<p>ok, 所有的都是扯淡。。。 <code>cd /volumes</code>，，，然后操作，记住这一点，也就够了。</p>
+            <p>
+              mac上命令行操作的频率远大于界面操作，现在问题来了，插入的u盘、移动硬盘如何用命令行操作。
+之前有这么个单词，可是每次用的时候记不住，特意截图一张：
 
+好吧，联系Linux系统上分卷的知识，有点理解了。
+再去实际操作一把：
+
+
+
+
+
+插入移动硬盘时，发现文件还是在这里面，只是 mac自己电脑的Ma
+              ...
+            </p>
+          <!--noindex-->
           
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/01/11/item2操作插入u盘的文件/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
@@ -1813,19 +1849,24 @@
       
         
           
-            <p>这篇文章讲得很清楚。<br><a href="https://blog.csdn.net/chenkangqiang/article/details/56677541" target="_blank" rel="noopener">MacOS下添加MySQL路径</a> </p>
-<p>想强调的有两点：</p>
-<ol>
-<li><p><code>.bash_profile</code>的通用格式：export PATH=$PATH:路径名<br>之前在网上看见其它的格式，笔者电脑系统为：10.13.4 经测试，目前这种格式是可以的。</p>
-</li>
-<li><p><code>open -e .bash_profile</code><br>个人感觉这个命令可以一记。</p>
-</li>
-</ol>
-<p>其一：文本编辑，text格式，在系统编辑中经常使用到。但mac中新建文本文件，包括打开很不方便。</p>
-<p>其二：按照这种方式，可以很方便的指定利用什么软件打开某一文件。很灵活。</p>
-<p>结束！</p>
+            <p>
+              这篇文章讲得很清楚。MacOS下添加MySQL路径 
+想强调的有两点：
 
+.bash_profile的通用格式：export PATH=$PATH:路径名之前在网上看见其它的格式，笔者电脑系统为：10.13.4 经测试，目前这种格式是可以的。
+
+open -e .bash_profile个人感觉这个
+              ...
+            </p>
+          <!--noindex-->
           
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/01/10/MacOS下添加MySQL路径/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
@@ -1995,15 +2036,26 @@
       
         
           
-            <p>首先，来张图：</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/2875232-0dab6d6e50e24e51.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
-<p>昨天电脑空间不够，清理缓存的时候不小心把git帐号密码全删了。</p>
-<p>表现为：git pull时，要重新输入帐号密码。</p>
-<p>解决方法：</p>
-<p>运行以下代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config credential.helper store</span><br></pre></td></tr></table></figure></p>
-<p>然后在<code>git pull</code>时输入帐号密码，一切都被记住了。</p>
+            <p>
+              首先，来张图：
 
+昨天电脑空间不够，清理缓存的时候不小心把git帐号密码全删了。
+表现为：git pull时，要重新输入帐号密码。
+解决方法：
+运行以下代码：git config credential.helper store
+然后在git pull时输入帐号密码，一切都被记住了。
+
+              
+            </p>
+          <!--noindex-->
           
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/01/10/remeber-git-s-account-password/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
