@@ -96,28 +96,25 @@
 
 
 
-  <meta name="description" content="这个还是比较好玩的，对取地址符也能加深认识。 原文是：# php的foreach中使用取地址符，注意释放 代码：  运行结果：  1: 第一个foreach()循环后，因为没有释放$value, 所以&amp;amp;$value是存在的，这个地址指向数组的第三个元素。 2:第二个foreach()循环时，每次给$value赋值，相当于给数组的第三个值赋值。 我的理解中，unset($value)，相当于">
-<meta name="keywords" content="PHP,指针,取地址符">
+  <meta name="description" content="1 windows上的配置   折腾过好多方法，也浪费了好多时间，这篇教程是我看见过的最合适的。向楼主致敬。  [Wampserver 2.5 多站点配置方法] 注意事项： 在编辑httpd-vhosts.conf文件时，将这一行的注释去掉时：1Include conf/extra/httpd-vhosts.conf   一定要仔细看后面，确保每一个都相同时才行。我在这上面浪费了很长时间。。。。">
+<meta name="keywords" content="MacOS,MySQL,CentOS,PHP,Apache">
 <meta property="og:type" content="article">
-<meta property="og:title" content="foreach()中加了取地址符&amp;引起的错误">
-<meta property="og:url" content="http://www.abble.com/2019/01/11/foreach-中加了取地址符-引起的错误/index.html">
+<meta property="og:title" content="WAMP &amp;&amp; LAMP环境的配置">
+<meta property="og:url" content="http://www.abble.com/2019/01/11/WAMP-LAMP环境的配置/index.html">
 <meta property="og:site_name" content="笔误通鉴">
-<meta property="og:description" content="这个还是比较好玩的，对取地址符也能加深认识。 原文是：# php的foreach中使用取地址符，注意释放 代码：  运行结果：  1: 第一个foreach()循环后，因为没有释放$value, 所以&amp;amp;$value是存在的，这个地址指向数组的第三个元素。 2:第二个foreach()循环时，每次给$value赋值，相当于给数组的第三个值赋值。 我的理解中，unset($value)，相当于">
+<meta property="og:description" content="1 windows上的配置   折腾过好多方法，也浪费了好多时间，这篇教程是我看见过的最合适的。向楼主致敬。  [Wampserver 2.5 多站点配置方法] 注意事项： 在编辑httpd-vhosts.conf文件时，将这一行的注释去掉时：1Include conf/extra/httpd-vhosts.conf   一定要仔细看后面，确保每一个都相同时才行。我在这上面浪费了很长时间。。。。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/2875232-5e1026983f572d71.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/2875232-739511425449f3e6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2019-01-11T08:56:13.538Z">
+<meta property="og:updated_time" content="2019-01-11T15:19:21.192Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="foreach()中加了取地址符&amp;引起的错误">
-<meta name="twitter:description" content="这个还是比较好玩的，对取地址符也能加深认识。 原文是：# php的foreach中使用取地址符，注意释放 代码：  运行结果：  1: 第一个foreach()循环后，因为没有释放$value, 所以&amp;amp;$value是存在的，这个地址指向数组的第三个元素。 2:第二个foreach()循环时，每次给$value赋值，相当于给数组的第三个值赋值。 我的理解中，unset($value)，相当于">
-<meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/2875232-5e1026983f572d71.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta name="twitter:title" content="WAMP &amp;&amp; LAMP环境的配置">
+<meta name="twitter:description" content="1 windows上的配置   折腾过好多方法，也浪费了好多时间，这篇教程是我看见过的最合适的。向楼主致敬。  [Wampserver 2.5 多站点配置方法] 注意事项： 在编辑httpd-vhosts.conf文件时，将这一行的注释去掉时：1Include conf/extra/httpd-vhosts.conf   一定要仔细看后面，确保每一个都相同时才行。我在这上面浪费了很长时间。。。。">
 
 
 
 
 
 
-  <link rel="canonical" href="http://www.abble.com/2019/01/11/foreach-中加了取地址符-引起的错误/">
+  <link rel="canonical" href="http://www.abble.com/2019/01/11/WAMP-LAMP环境的配置/">
 
 
 
@@ -127,7 +124,7 @@
   };
 </script>
 
-  <title>foreach()中加了取地址符&引起的错误 | 笔误通鉴</title>
+  <title>WAMP && LAMP环境的配置 | 笔误通鉴</title>
   
 
 
@@ -343,7 +340,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.abble.com/2019/01/11/foreach-中加了取地址符-引起的错误/">
+    <link itemprop="mainEntityOfPage" href="http://www.abble.com/2019/01/11/WAMP-LAMP环境的配置/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Abble">
@@ -360,7 +357,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">foreach()中加了取地址符&引起的错误
+          <h1 class="post-title" itemprop="name headline">WAMP && LAMP环境的配置
 
               
             
@@ -386,7 +383,7 @@
                 
               
 
-              <time title="创建时间：2019-01-11 14:39:08 / 修改时间：16:56:13" itemprop="dateCreated datePublished" datetime="2019-01-11T14:39:08+08:00">2019-01-11</time>
+              <time title="创建时间：2019-01-11 23:16:24 / 修改时间：23:19:21" itemprop="dateCreated datePublished" datetime="2019-01-11T23:16:24+08:00">2019-01-11</time>
             
 
             
@@ -408,7 +405,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/PHP/" itemprop="url" rel="index"><span itemprop="name">PHP</span></a></span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/技术心得/" itemprop="url" rel="index"><span itemprop="name">技术心得</span></a></span>
 
                 
                 
@@ -442,16 +439,51 @@
       
 
       
-        <p>这个还是比较好玩的，对取地址符也能加深认识。</p>
-<p>原文是：# <a href="https://www.cnblogs.com/firstForEver/p/5201618.html" target="_blank" rel="noopener">php的foreach中使用取地址符，注意释放</a></p>
-<p>代码：</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/2875232-5e1026983f572d71.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
-<p>运行结果：</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/2875232-739511425449f3e6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
-<p>1: 第一个foreach()循环后，因为没有释放<code>$value</code>, 所以<code>&amp;$value</code>是存在的，这个地址指向数组的第三个元素。</p>
-<p>2:第二个foreach()循环时，每次给$value赋值，相当于给数组的第三个值赋值。</p>
-<p>我的理解中，<code>unset($value)</code>，相当于把<code>&amp;$value</code>这个地址给毁了。所以在这个程序中是必要的。</p>
-<p>结束！</p>
+        <blockquote>
+<p>1 windows上的配置</p>
+</blockquote>
+<ul>
+<li>折腾过好多方法，也浪费了好多时间，这篇教程是我看见过的最合适的。向楼主致敬。</li>
+</ul>
+<p>[<a href="http://www.cnblogs.com/wujilong/p/5865186.html" target="_blank" rel="noopener">Wampserver 2.5 多站点配置方法</a>]</p>
+<h2 id="注意事项："><a href="#注意事项：" class="headerlink" title="注意事项："></a>注意事项：</h2><ul>
+<li>在编辑httpd-vhosts.conf文件时，将这一行的注释去掉时：<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Include</span> conf/extra/httpd-vhosts.conf</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>一定要仔细看后面，确保每一个都相同时才行。我在这上面浪费了很长时间。。。。很长很长。。。同时也吸取教训。</p>
+<blockquote>
+<p>2 Mac上的配置</p>
+</blockquote>
+<p>上面一段是几年前写的，时间永是流驶，这么一点文字反而越发触动人心。</p>
+<p>最近大量配置开发环境，Mac、Windows、CentOS，集成环境或是单独安装。本没有随时记录的习惯，所以配置流程什么的，只能给个大概，这里主要记述一下配置时的体验。想快速安装环境的，可以走开了；无聊打发打发时间的，请接着看下去。</p>
+<h2 id="Mac原生Apache、集成开发环境MAMP-PRO、XAMPP的比较"><a href="#Mac原生Apache、集成开发环境MAMP-PRO、XAMPP的比较" class="headerlink" title="Mac原生Apache、集成开发环境MAMP PRO、XAMPP的比较"></a>Mac原生Apache、集成开发环境MAMP PRO、XAMPP的比较</h2><p>笔者以前使用的是XAMPP, 到了这家公司后，跑功能测试时mysql版本不符合，机缘偶合，用了MAMP PRO。</p>
+<p>XAMPP相对于MAMP PRO，功能单一一点，但可以命令行配置环境，对于一个老手而言，更加合适。MAMP PRO无疑封装得更好，界面操作更舒服一点，开始感觉还好，时间长了，特别是经常在CentOS上配置环境，然后再面向MAMP PRO的界面化操作，总会用的不顺手，同时也担心会生疏那些配置命令。</p>
+<p>当然，因为电脑配置原因，外加上用的是盗版软件，有时会卡的比较厉害。现在最喜欢的是单独安装配置的LAMP。刚刚好最近帮别人配置了Mac的环境，顺便把几个重要点贴出来。</p>
+<h2 id="Mac中Apache的安装注意事项："><a href="#Mac中Apache的安装注意事项：" class="headerlink" title="Mac中Apache的安装注意事项："></a>Mac中Apache的安装注意事项：</h2><ul>
+<li>启动和结束命令<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apachectl start</span><br><span class="line">sudo apachectl stop</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ul>
+<li>放开vhost文件，配置虚拟域名,一般在etc文件下</li>
+<li>如果是tp框架，想隐藏index.php，记得rewrite, 引用mod。其它有.htaccess .ngaccess的，也注意一下。</li>
+</ul>
+<p>上次帮同事配置环境就发生了这样的情况，输入域名可以访问网站首页，但其它页面无法进入。搞了半天，原来把index.php忽略了……这样的问题新手是很熟悉的，老手因为用习惯了，反而忘了程序最先执行的样子。当然，也暴露了对thinkphp中4种路由形式不熟悉，有机会还是要补一下的。</p>
+<blockquote>
+<p>3 什么时候建议集成环境</p>
+</blockquote>
+<p>windows上其实是建议用集成环境的。wamp,xampp,phpstudy笔者都用过，封装的很好，用起来很流畅。</p>
+<p>当然windows上单独安装也可以，但相比于集成软件，有些逊色。powershell用起来还是不太习惯。cmd更不行了……</p>
+<p>mac上的集成软件普遍比较卡，外加上shell的强大，mac没有必要用集成环境。Linux更不用说了。</p>
+<blockquote>
+<p>4 关于mysql</p>
+</blockquote>
+<p>mysql主要还是版本的问题，不同版本有些规则不一样。这个还是随大流吧……笔者电脑里用的是mysql5.6，自己云上用的是8，结果同步数据时，会有点麻烦。不过也在可掌控之内。</p>
+<p>遇到的问题，在网上也是会有答案的。这样记录下来，好像也没什么意义。归根结底无非三点：</p>
+<ol>
+<li>要会看英文的报错的信息，这个比google重要；</li>
+<li>要会google</li>
+<li>可以不会具体的操作流程，但大体的解决思路要明确。</li>
+</ol>
 
       
     </div>
@@ -475,11 +507,15 @@
       
         <div class="post-tags">
           
+            <a href="/tags/MacOS/" rel="tag"># MacOS</a>
+          
+            <a href="/tags/MySQL/" rel="tag"># MySQL</a>
+          
+            <a href="/tags/CentOS/" rel="tag"># CentOS</a>
+          
             <a href="/tags/PHP/" rel="tag"># PHP</a>
           
-            <a href="/tags/指针/" rel="tag"># 指针</a>
-          
-            <a href="/tags/取地址符/" rel="tag"># 取地址符</a>
+            <a href="/tags/Apache/" rel="tag"># Apache</a>
           
         </div>
       
@@ -492,8 +528,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/01/11/how-to-use-array-walk/" rel="next" title="how to use array_walk()">
-                <i class="fa fa-chevron-left"></i> how to use array_walk()
+              <a href="/2019/01/11/mysql-批量插入数据/" rel="next" title="mysql:批量插入数据">
+                <i class="fa fa-chevron-left"></i> mysql:批量插入数据
               </a>
             
           </div>
@@ -502,8 +538,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/01/11/mac破解文件显示已损坏/" rel="prev" title="mac破解文件显示已损坏">
-                mac破解文件显示已损坏 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/01/11/War-for-the-Planet-of-the-Apes/" rel="prev" title="War for the Planet of the Apes">
+                War for the Planet of the Apes <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -549,8 +585,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -664,6 +709,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#注意事项："><span class="nav-number">1.</span> <span class="nav-text">注意事项：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Mac原生Apache、集成开发环境MAMP-PRO、XAMPP的比较"><span class="nav-number">2.</span> <span class="nav-text">Mac原生Apache、集成开发环境MAMP PRO、XAMPP的比较</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Mac中Apache的安装注意事项："><span class="nav-number">3.</span> <span class="nav-text">Mac中Apache的安装注意事项：</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
