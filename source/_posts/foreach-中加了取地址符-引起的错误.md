@@ -1,6 +1,8 @@
 ---
 title: foreach()中加了取地址符&引起的错误
 date: 2019-01-11 14:39:08
+categories:
+- PHP
 tags:
 ---
 

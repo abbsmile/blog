@@ -1,6 +1,8 @@
 ---
 title: centOS上汉字乱码
 date: 2019-01-11 14:48:06
+categories:
+- CentOS
 tags:
 ---
 

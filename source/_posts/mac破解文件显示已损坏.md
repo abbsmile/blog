@@ -1,6 +1,8 @@
 ---
 title: mac破解文件显示已损坏
 date: 2019-01-11 14:42:17
+categories:
+- Mac
 tags:
 ---
 

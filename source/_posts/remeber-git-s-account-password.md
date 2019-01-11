@@ -1,6 +1,8 @@
 ---
 title: remeber git's account & password
 date: 2019-01-10 23:12:35
+categories:
+- Git
 tags:
 ---
 

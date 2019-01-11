@@ -1,6 +1,8 @@
 ---
 title: item2操作插入u盘的文件
 date: 2019-01-11 08:47:21
+categories:
+- Mac
 tags:
 ---
 

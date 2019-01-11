@@ -1,6 +1,8 @@
 ---
 title: 'mysql:批量插入数据'
 date: 2019-01-11 15:48:23
+categories:
+- MySQL
 tags:
 ---
 

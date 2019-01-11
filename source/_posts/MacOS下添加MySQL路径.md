@@ -1,6 +1,8 @@
 ---
 title: MacOS下添加MySQL路径
 date: 2019-01-10 23:57:44
+categories:
+- Mac
 tags:
 ---
 

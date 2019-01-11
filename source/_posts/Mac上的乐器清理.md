@@ -1,6 +1,8 @@
 ---
 title: Mac上的乐器清理
 date: 2019-01-11 14:46:45
+categories:
+- Mac
 tags:
 ---
 

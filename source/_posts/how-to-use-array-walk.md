@@ -1,6 +1,8 @@
 ---
 title: how to use array_walk()
 date: 2019-01-11 14:06:48
+categories:
+- PHP
 tags:
 ---
 
