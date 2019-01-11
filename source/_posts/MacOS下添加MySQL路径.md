@@ -4,6 +4,9 @@ date: 2019-01-10 23:57:44
 categories:
 - Mac
 tags:
+- MacOS
+- MySQL
+- Shell
 ---
 
 这篇文章讲得很清楚。

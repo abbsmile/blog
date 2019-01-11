@@ -4,6 +4,9 @@ date: 2019-01-10 23:12:35
 categories:
 - Git
 tags:
+- Git
+- MacOS
+- CentOS
 ---
 
 首先，来张图：

@@ -4,6 +4,8 @@ date: 2019-01-01 21:28:22
 categories:
 - Mac
 tags:
+- MacOS
+- CentOS
 ---
 
 	这个命令太危险，还是少用为好。

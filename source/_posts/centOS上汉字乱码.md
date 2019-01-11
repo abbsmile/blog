@@ -4,6 +4,8 @@ date: 2019-01-11 14:48:06
 categories:
 - CentOS
 tags:
+- CentOS
+- UTF-8
 ---
 
 ssh刚进入centOS时，出现这么一行：

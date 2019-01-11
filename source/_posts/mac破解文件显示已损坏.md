@@ -4,6 +4,7 @@ date: 2019-01-11 14:42:17
 categories:
 - Mac
 tags:
+- MacOS
 ---
 
 air空间不够，闲着无聊折腾一把，误把navicat删了。

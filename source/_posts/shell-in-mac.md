@@ -4,6 +4,8 @@ date: 2019-01-11 13:56:47
 categories:
 - Mac
 tags:
+- MacOS
+- Shell
 ---
 
 > what is SHELL
