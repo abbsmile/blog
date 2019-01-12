@@ -96,25 +96,34 @@
 
 
 
-  <meta name="description" content="1 windows上的配置   折腾过好多方法，也浪费了好多时间，这篇教程是我看见过的最合适的。向楼主致敬。  [Wampserver 2.5 多站点配置方法] 注意事项： 在编辑httpd-vhosts.conf文件时，将这一行的注释去掉时：1Include conf/extra/httpd-vhosts.conf   一定要仔细看后面，确保每一个都相同时才行。我在这上面浪费了很长时间。。。。">
-<meta name="keywords" content="MacOS,MySQL,PHP,CentOS,Apache">
+  <meta name="description" content="先上一张截图：  在服务器，上传图片之类，往往会因为没有写的权限而失败。如上图所示，ThinkCMF里public/upload目录下的headquarters文件夹详细信息里有个bbao。问题的核心就在这bbao上面，一般改成apache就可以了。为什么改成apache就可以了，以后再专门分析，今天先探讨一下权限的基本知识。 下面我们详细分析一下权限的问题：  ll命令   从上图可以看出，ls">
+<meta name="keywords" content="MacOS,PHP,CentOS,ThinkPHP,ThinkCMF,权限">
 <meta property="og:type" content="article">
-<meta property="og:title" content="WAMP &amp;&amp; LAMP环境的配置">
-<meta property="og:url" content="http://www.abble.com/2019/01/11/WAMP-LAMP环境的配置/index.html">
+<meta property="og:title" content="ThinkCMF：向upload目录下写文件失败">
+<meta property="og:url" content="http://www.abble.com/2019/01/12/ThinkCMF：向upload目录下写文件失败/index.html">
 <meta property="og:site_name" content="笔误通鉴">
-<meta property="og:description" content="1 windows上的配置   折腾过好多方法，也浪费了好多时间，这篇教程是我看见过的最合适的。向楼主致敬。  [Wampserver 2.5 多站点配置方法] 注意事项： 在编辑httpd-vhosts.conf文件时，将这一行的注释去掉时：1Include conf/extra/httpd-vhosts.conf   一定要仔细看后面，确保每一个都相同时才行。我在这上面浪费了很长时间。。。。">
+<meta property="og:description" content="先上一张截图：  在服务器，上传图片之类，往往会因为没有写的权限而失败。如上图所示，ThinkCMF里public/upload目录下的headquarters文件夹详细信息里有个bbao。问题的核心就在这bbao上面，一般改成apache就可以了。为什么改成apache就可以了，以后再专门分析，今天先探讨一下权限的基本知识。 下面我们详细分析一下权限的问题：  ll命令   从上图可以看出，ls">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-01-12T03:31:13.745Z">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2875232-7d49ad64a3ccfd3e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2875232-b21f8357711ad50a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2875232-4afc903c25620117.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2875232-c68bfc35c7377047.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2875232-db7da2a55fc255bd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2875232-52c490a856ec630b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2875232-b9b804d17243cbd2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2875232-d5b2e7e43c494e56.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/620">
+<meta property="og:updated_time" content="2019-01-12T04:30:12.713Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="WAMP &amp;&amp; LAMP环境的配置">
-<meta name="twitter:description" content="1 windows上的配置   折腾过好多方法，也浪费了好多时间，这篇教程是我看见过的最合适的。向楼主致敬。  [Wampserver 2.5 多站点配置方法] 注意事项： 在编辑httpd-vhosts.conf文件时，将这一行的注释去掉时：1Include conf/extra/httpd-vhosts.conf   一定要仔细看后面，确保每一个都相同时才行。我在这上面浪费了很长时间。。。。">
+<meta name="twitter:title" content="ThinkCMF：向upload目录下写文件失败">
+<meta name="twitter:description" content="先上一张截图：  在服务器，上传图片之类，往往会因为没有写的权限而失败。如上图所示，ThinkCMF里public/upload目录下的headquarters文件夹详细信息里有个bbao。问题的核心就在这bbao上面，一般改成apache就可以了。为什么改成apache就可以了，以后再专门分析，今天先探讨一下权限的基本知识。 下面我们详细分析一下权限的问题：  ll命令   从上图可以看出，ls">
+<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/2875232-7d49ad64a3ccfd3e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 
 
 
 
 
 
-  <link rel="canonical" href="http://www.abble.com/2019/01/11/WAMP-LAMP环境的配置/">
+  <link rel="canonical" href="http://www.abble.com/2019/01/12/ThinkCMF：向upload目录下写文件失败/">
 
 
 
@@ -124,7 +133,7 @@
   };
 </script>
 
-  <title>WAMP && LAMP环境的配置 | 笔误通鉴</title>
+  <title>ThinkCMF：向upload目录下写文件失败 | 笔误通鉴</title>
   
 
 
@@ -340,7 +349,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.abble.com/2019/01/11/WAMP-LAMP环境的配置/">
+    <link itemprop="mainEntityOfPage" href="http://www.abble.com/2019/01/12/ThinkCMF：向upload目录下写文件失败/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Abble">
@@ -357,7 +366,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">WAMP && LAMP环境的配置
+          <h1 class="post-title" itemprop="name headline">ThinkCMF：向upload目录下写文件失败
 
               
             
@@ -383,24 +392,12 @@
                 
               
 
-              <time title="创建时间：2019-01-11 23:16:24" itemprop="dateCreated datePublished" datetime="2019-01-11T23:16:24+08:00">2019-01-11</time>
+              <time title="创建时间：2019-01-12 12:28:38 / 修改时间：12:30:12" itemprop="dateCreated datePublished" datetime="2019-01-12T12:28:38+08:00">2019-01-12</time>
             
 
             
               
 
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-01-12 11:31:13" itemprop="dateModified" datetime="2019-01-12T11:31:13+08:00">2019-01-12</time>
               
             
           </span>
@@ -417,7 +414,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/技术心得/" itemprop="url" rel="index"><span itemprop="name">技术心得</span></a></span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/ThinkPHP/" itemprop="url" rel="index"><span itemprop="name">ThinkPHP</span></a></span>
 
                 
                 
@@ -451,51 +448,53 @@
       
 
       
-        <blockquote>
-<p>1 windows上的配置</p>
-</blockquote>
+        <p>先上一张截图：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2875232-7d49ad64a3ccfd3e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="弃我去者，昨日之日不可留；"></p>
+<p>在服务器，上传图片之类，往往会因为没有写的权限而失败。如上图所示，ThinkCMF里public/upload目录下的headquarters文件夹详细信息里有个bbao。问题的核心就在这bbao上面，一般改成apache就可以了。为什么改成apache就可以了，以后再专门分析，今天先探讨一下权限的基本知识。</p>
+<p>下面我们详细分析一下权限的问题：</p>
 <ul>
-<li>折腾过好多方法，也浪费了好多时间，这篇教程是我看见过的最合适的。向楼主致敬。</li>
+<li>ll命令</li>
 </ul>
-<p>[<a href="http://www.cnblogs.com/wujilong/p/5865186.html" target="_blank" rel="noopener">Wampserver 2.5 多站点配置方法</a>]</p>
-<h2 id="注意事项："><a href="#注意事项：" class="headerlink" title="注意事项："></a>注意事项：</h2><ul>
-<li>在编辑httpd-vhosts.conf文件时，将这一行的注释去掉时：<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Include</span> conf/extra/httpd-vhosts.conf</span><br></pre></td></tr></table></figure>
+<p><img src="http://upload-images.jianshu.io/upload_images/2875232-b21f8357711ad50a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="乱我心者，今日之日多烦忧"></p>
+<p>从上图可以看出，ls -l 与 ll命令的效果是一样的。ll并不是Linux下的一个基本命令，只是一个别名。<code>ls --help</code>查看命令看到这样一条信息。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2875232-4afc903c25620117.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<p>用<code>man ls</code>列出的是英文，我们来看看英文解释：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2875232-c68bfc35c7377047.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<p> listing本身有列表的意思，翻译成像表格一样，更有味道。毕竟列出来的东西，有种表格的那种listing味道。题外话了。</p>
+<p>而man则是手册的意思，以前为了记这个命令就想像成有了问题问我们男人。现在要改改了,manual。还是要专业，别人问起来的时候不好解释。当然，题外话了……</p>
+<ul>
+<li><p>ll命令结果说明<br><code>drwxrwxrwx 1 bbao developer 288 10月 23 14:21 headquarters</code></p>
+<ul>
+<li>第一个栏位<code>drwxrwxrwx</code>:表示文件的属性。<br>Linux中文件属性要分为三种：可读，可写，可执行。<br>共有10位，可理解为每位为1bit.(1Byte = 8bit中的bit)</li>
+</ul>
 </li>
 </ul>
-<p>一定要仔细看后面，确保每一个都相同时才行。我在这上面浪费了很长时间。。。。很长很长。。。同时也吸取教训。</p>
-<blockquote>
-<p>2 Mac上的配置</p>
-</blockquote>
-<p>上面一段是几年前写的，时间永是流驶，这么一点文字反而越发触动人心。</p>
-<p>最近大量配置开发环境，Mac、Windows、CentOS，集成环境或是单独安装。本没有随时记录的习惯，所以配置流程什么的，只能给个大概，这里主要记述一下配置时的体验。想快速安装环境的，可以走开了；无聊打发打发时间的，请接着看下去。</p>
-<h2 id="Mac原生Apache、集成开发环境MAMP-PRO、XAMPP的比较"><a href="#Mac原生Apache、集成开发环境MAMP-PRO、XAMPP的比较" class="headerlink" title="Mac原生Apache、集成开发环境MAMP PRO、XAMPP的比较"></a>Mac原生Apache、集成开发环境MAMP PRO、XAMPP的比较</h2><p>笔者以前使用的是XAMPP, 到了这家公司后，跑功能测试时mysql版本不符合，机缘偶合，用了MAMP PRO。</p>
-<p>XAMPP相对于MAMP PRO，功能单一一点，但可以命令行配置环境，对于一个老手而言，更加合适。MAMP PRO无疑封装得更好，界面操作更舒服一点，开始感觉还好，时间长了，特别是经常在CentOS上配置环境，然后再面向MAMP PRO的界面化操作，总会用的不顺手，同时也担心会生疏那些配置命令。</p>
-<p>当然，因为电脑配置原因，外加上用的是盗版软件，有时会卡的比较厉害。现在最喜欢的是单独安装配置的LAMP。刚刚好最近帮别人配置了Mac的环境，顺便把几个重要点贴出来。</p>
-<h2 id="Mac中Apache的安装注意事项："><a href="#Mac中Apache的安装注意事项：" class="headerlink" title="Mac中Apache的安装注意事项："></a>Mac中Apache的安装注意事项：</h2><ul>
-<li>启动和结束命令<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apachectl start</span><br><span class="line">sudo apachectl stop</span><br></pre></td></tr></table></figure>
+<p><strong>第一个字母表示文件类型：</strong></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2875232-db7da2a55fc255bd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="l表示符号链接。可以理解成快捷方式一样的文件，会以l表示。"></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2875232-52c490a856ec630b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="d表示目录，directory"></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2875232-b9b804d17243cbd2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="-表示一般的文件"></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2875232-d5b2e7e43c494e56.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/620" alt="c:字符设备文件；b:块设备文件"></p>
+<p>什么是字符设备文件？什么是块设备文件？</p>
+<p>百度百科上的：<br>字符设备是指在I/O传输过程中以字符为单位进行传输的设备，例如键盘，打印机等。<br>块设备是i/o设备中的一类，是将信息存储在固定大小的块中，每个块都有自己的地址，还可以在设备的任意位置读取一定长度的数据，例如硬盘,U盘，SD卡。</p>
+<p><strong>第2到第10个字符分别表示不同角色所拥有的权限</strong><br>r-read | w-write | e-execute<br>owner 文件所有者<br>group 所属组<br>others 其它 </p>
+<ul>
+<li><p>第二个栏目表示：文件的硬链接数量。<br>这个暂时没弄清楚。有机会补充。</p>
+</li>
+<li><p>第三个栏目表示：文件所属都。owner或是user 好像都有那种味道</p>
+</li>
+<li><p>第四个栏目表示：文件所属用户组 group</p>
+</li>
+<li><p>第5个栏目表示： 文件大小，比如 480 表示 480Byte. 这个要注意Byte的B要大写。1Byte = 8bit 要有规范意识，一是专业，二是方便以后的学习。</p>
+<p> 这里可以提一下我很长时间的误区。1KB = 1024Byte 上学的时候，我一看见K就自动翻译成1000了。没有把加入到这个大家庭中去。</p>
+<ul>
+<li>第6个栏目表示：最新的修改时间。</li>
+</ul>
 </li>
 </ul>
 <ul>
-<li>放开vhost文件，配置虚拟域名,一般在etc文件下</li>
-<li>如果是tp框架，想隐藏index.php，记得rewrite, 引用mod。其它有.htaccess .ngaccess的，也注意一下。</li>
+<li>第7个栏目表示：文件名。</li>
 </ul>
-<p>上次帮同事配置环境就发生了这样的情况，输入域名可以访问网站首页，但其它页面无法进入。搞了半天，原来把index.php忽略了……这样的问题新手是很熟悉的，老手因为用习惯了，反而忘了程序最先执行的样子。当然，也暴露了对thinkphp中4种路由形式不熟悉，有机会还是要补一下的。</p>
-<blockquote>
-<p>3 什么时候建议集成环境</p>
-</blockquote>
-<p>windows上其实是建议用集成环境的。wamp,xampp,phpstudy笔者都用过，封装的很好，用起来很流畅。</p>
-<p>当然windows上单独安装也可以，但相比于集成软件，有些逊色。powershell用起来还是不太习惯。cmd更不行了……</p>
-<p>mac上的集成软件普遍比较卡，外加上shell的强大，mac没有必要用集成环境。Linux更不用说了。</p>
-<blockquote>
-<p>4 关于mysql</p>
-</blockquote>
-<p>mysql主要还是版本的问题，不同版本有些规则不一样。这个还是随大流吧……笔者电脑里用的是mysql5.6，自己云上用的是8，结果同步数据时，会有点麻烦。不过也在可掌控之内。</p>
-<p>遇到的问题，在网上也是会有答案的。这样记录下来，好像也没什么意义。归根结底无非三点：</p>
-<ol>
-<li>要会看英文的报错的信息，这个比google重要；</li>
-<li>要会google</li>
-<li>可以不会具体的操作流程，但大体的解决思路要明确。</li>
-</ol>
+<p>这个东西，就是细工出慢活，一个一个不仅要知道是什么，还能讲出来，最重要的是还要专业，这样后面的才能接下去。</p>
 
       
     </div>
@@ -521,13 +520,15 @@
           
             <a href="/tags/MacOS/" rel="tag"># MacOS</a>
           
-            <a href="/tags/MySQL/" rel="tag"># MySQL</a>
-          
             <a href="/tags/PHP/" rel="tag"># PHP</a>
           
             <a href="/tags/CentOS/" rel="tag"># CentOS</a>
           
-            <a href="/tags/Apache/" rel="tag"># Apache</a>
+            <a href="/tags/ThinkPHP/" rel="tag"># ThinkPHP</a>
+          
+            <a href="/tags/ThinkCMF/" rel="tag"># ThinkCMF</a>
+          
+            <a href="/tags/权限/" rel="tag"># 权限</a>
           
         </div>
       
@@ -540,8 +541,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/01/11/mysql-批量插入数据/" rel="next" title="mysql:批量插入数据">
-                <i class="fa fa-chevron-left"></i> mysql:批量插入数据
+              <a href="/2019/01/12/ThinkCMF：查询条件中的or/" rel="next" title="ThinkCMF：查询条件中的or">
+                <i class="fa fa-chevron-left"></i> ThinkCMF：查询条件中的or
               </a>
             
           </div>
@@ -549,10 +550,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/01/11/War-for-the-Planet-of-the-Apes/" rel="prev" title="War for the Planet of the Apes">
-                War for the Planet of the Apes <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -597,17 +594,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <div class="site-overview-wrap sidebar-panel">
+      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -737,23 +725,6 @@
         </div>
       </div>
 
-      
-      <!--noindex-->
-        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-            
-            
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#注意事项："><span class="nav-number">1.</span> <span class="nav-text">注意事项：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Mac原生Apache、集成开发环境MAMP-PRO、XAMPP的比较"><span class="nav-number">2.</span> <span class="nav-text">Mac原生Apache、集成开发环境MAMP PRO、XAMPP的比较</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Mac中Apache的安装注意事项："><span class="nav-number">3.</span> <span class="nav-text">Mac中Apache的安装注意事项：</span></a></li></ol></div>
-            
-
-          </div>
-        </div>
-      <!--/noindex-->
       
 
       
