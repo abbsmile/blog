@@ -10,11 +10,11 @@ tags:
 - ThinkCMF
 ---
 
-## 1. 背景
+## 背景
 
 程序出了个bug，修改时要判断mysql某一行数据是否存在。因为这套程序是用原生sql写的，所以接触到了 select 1 这样的语句。
 
-## 2. select 1 是什么？
+## select 1 是什么？
 
 首先，看下面3句话：
 
@@ -49,7 +49,7 @@ select 1 from h_admin_menu where id = 1772 limit 1;
 下面来张图，自行体会，了解下：
 ![image.png](https://upload-images.jianshu.io/upload_images/2875232-475b272b7dcd8330.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-## 3. Db::query() 与 Db::execute() 的区别
+## Db::query() 与 Db::execute() 的区别
 
 -  第一种理解
 query是查询，execute是执行，所以当select时用query，当增加、删除、修改时用execute
@@ -79,7 +79,7 @@ select 1 from h_admin_menu where id = 72 limit
 这个时候，便可以用execute了，，因为是受影响的行数，所以：结果只有1和0；很完美！
 
 
-## 4. 好了，总结一下
+## 好了，总结一下
 
 判断某一行数据是否存在：
 ```
