@@ -96,25 +96,30 @@
 
 
 
-  <meta name="description" content="php将数据渲染到html中时，对数据有两种处理方式。大多数是直接在后台进行处理；但，直接在html中处理数据有时也能带来方便。 这样，需求来了：如何在html中嵌入php代码？直接上代码： 12345&amp;lt;td&amp;gt;  &amp;lt;?php       echo date(&amp;apos;Y-m-d H:i&amp;apos;,strtotime($vo[&amp;apos;create_datetime&amp;apos">
-<meta name="keywords" content="PHP,HTML">
+  <meta name="description" content="1. 背景程序出了个bug，修改时要判断mysql某一行数据是否存在。因为这套程序是用原生sql写的，所以接触到了 select 1 这样的语句。 2. select 1 是什么？首先，看下面3句话：  第一个：1select 1 from h_admin_menu;  返回结果是：  第二个12# 注意下面的limit，这里只取一行，以提高效率select 1 from h_admin_menu">
+<meta name="keywords" content="ThinkCMF,ThinkPHP,MySQL,SQL">
 <meta property="og:type" content="article">
-<meta property="og:title" content="html中写点php">
-<meta property="og:url" content="http://www.abble.com/2019/01/12/html中写点php/index.html">
+<meta property="og:title" content="select 1 in SQL">
+<meta property="og:url" content="http://www.abble.com/2019/01/16/select-1-in-SQL/index.html">
 <meta property="og:site_name" content="笔误通鉴">
-<meta property="og:description" content="php将数据渲染到html中时，对数据有两种处理方式。大多数是直接在后台进行处理；但，直接在html中处理数据有时也能带来方便。 这样，需求来了：如何在html中嵌入php代码？直接上代码： 12345&amp;lt;td&amp;gt;  &amp;lt;?php       echo date(&amp;apos;Y-m-d H:i&amp;apos;,strtotime($vo[&amp;apos;create_datetime&amp;apos">
+<meta property="og:description" content="1. 背景程序出了个bug，修改时要判断mysql某一行数据是否存在。因为这套程序是用原生sql写的，所以接触到了 select 1 这样的语句。 2. select 1 是什么？首先，看下面3句话：  第一个：1select 1 from h_admin_menu;  返回结果是：  第二个12# 注意下面的limit，这里只取一行，以提高效率select 1 from h_admin_menu">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-01-12T03:26:16.951Z">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/2875232-20b7c82f71798a51.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/2875232-ee347bb26cfb1c60.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/2875232-38140bf2b031779c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/2875232-475b272b7dcd8330.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2019-01-16T07:24:34.298Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="html中写点php">
-<meta name="twitter:description" content="php将数据渲染到html中时，对数据有两种处理方式。大多数是直接在后台进行处理；但，直接在html中处理数据有时也能带来方便。 这样，需求来了：如何在html中嵌入php代码？直接上代码： 12345&amp;lt;td&amp;gt;  &amp;lt;?php       echo date(&amp;apos;Y-m-d H:i&amp;apos;,strtotime($vo[&amp;apos;create_datetime&amp;apos">
+<meta name="twitter:title" content="select 1 in SQL">
+<meta name="twitter:description" content="1. 背景程序出了个bug，修改时要判断mysql某一行数据是否存在。因为这套程序是用原生sql写的，所以接触到了 select 1 这样的语句。 2. select 1 是什么？首先，看下面3句话：  第一个：1select 1 from h_admin_menu;  返回结果是：  第二个12# 注意下面的limit，这里只取一行，以提高效率select 1 from h_admin_menu">
+<meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/2875232-20b7c82f71798a51.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 
 
 
 
 
 
-  <link rel="canonical" href="http://www.abble.com/2019/01/12/html中写点php/">
+  <link rel="canonical" href="http://www.abble.com/2019/01/16/select-1-in-SQL/">
 
 
 
@@ -124,7 +129,7 @@
   };
 </script>
 
-  <title>html中写点php | 笔误通鉴</title>
+  <title>select 1 in SQL | 笔误通鉴</title>
   
 
 
@@ -340,7 +345,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.abble.com/2019/01/12/html中写点php/">
+    <link itemprop="mainEntityOfPage" href="http://www.abble.com/2019/01/16/select-1-in-SQL/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Abble">
@@ -357,7 +362,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">html中写点php
+          <h1 class="post-title" itemprop="name headline">select 1 in SQL
 
               
             
@@ -383,7 +388,7 @@
                 
               
 
-              <time title="创建时间：2019-01-12 11:24:39 / 修改时间：11:26:16" itemprop="dateCreated datePublished" datetime="2019-01-12T11:24:39+08:00">2019-01-12</time>
+              <time title="创建时间：2019-01-16 15:22:53 / 修改时间：15:24:34" itemprop="dateCreated datePublished" datetime="2019-01-16T15:22:53+08:00">2019-01-16</time>
             
 
             
@@ -405,7 +410,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/HTML/" itemprop="url" rel="index"><span itemprop="name">HTML</span></a></span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/SQL/" itemprop="url" rel="index"><span itemprop="name">SQL</span></a></span>
 
                 
                 
@@ -439,11 +444,43 @@
       
 
       
-        <p>php将数据渲染到html中时，对数据有两种处理方式。大多数是直接在后台进行处理；但，直接在html中处理数据有时也能带来方便。</p>
-<p>这样，需求来了：如何在html中嵌入php代码？直接上代码：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;td&gt;</span><br><span class="line">  &lt;?php </span><br><span class="line">      echo date(&apos;Y-m-d H:i&apos;,strtotime($vo[&apos;create_datetime&apos;]))</span><br><span class="line">  ?&gt;</span><br><span class="line">&lt;/td&gt;</span><br></pre></td></tr></table></figure>
-<p>下面的代码虽然不怎么优雅，但对理解这个知识应该更好:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">  $time = $vo[&apos;update_datetime&apos;];</span><br><span class="line">  $time = substr($time, 0, strlen($time)-3);</span><br><span class="line">  echo &quot;&lt;td&gt;&quot;.$time.&quot;&lt;/td&gt;&quot;;</span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure>
+        <h2 id="1-背景"><a href="#1-背景" class="headerlink" title="1. 背景"></a>1. 背景</h2><p>程序出了个bug，修改时要判断mysql某一行数据是否存在。因为这套程序是用原生sql写的，所以接触到了 select 1 这样的语句。</p>
+<h2 id="2-select-1-是什么？"><a href="#2-select-1-是什么？" class="headerlink" title="2. select 1 是什么？"></a>2. select 1 是什么？</h2><p>首先，看下面3句话：</p>
+<blockquote>
+<p>第一个：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select 1 from h_admin_menu;</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<p>返回结果是：<br><img src="https://upload-images.jianshu.io/upload_images/2875232-20b7c82f71798a51.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<blockquote>
+<p>第二个<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 注意下面的limit，这里只取一行，以提高效率</span><br><span class="line">select 1 from h_admin_menu where id = 72 limit 1;</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<p>返回结果是：<br><img src="https://upload-images.jianshu.io/upload_images/2875232-ee347bb26cfb1c60.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<blockquote>
+<p>第三个<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select 1 from h_admin_menu where id = 1772 limit 1;</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<p>返回结果是：<br><img src="https://upload-images.jianshu.io/upload_images/2875232-38140bf2b031779c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<p>注意无返回值。</p>
+<p>从作用上来说，select 1, select *, select anycol长的差不多，功能也差不多，只是返回值不同。select 1的返回值永远是1，当然，如果有返回值的话。</p>
+<p>效率方面：1&gt;anycol&gt;*  有时间可以验证，笔者在datagrip上观察执行时间，不过上面的执行时间不稳定，也是醉了。</p>
+<p>下面来张图，自行体会，了解下：<br><img src="https://upload-images.jianshu.io/upload_images/2875232-475b272b7dcd8330.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<h2 id="3-Db-query-与-Db-execute-的区别"><a href="#3-Db-query-与-Db-execute-的区别" class="headerlink" title="3. Db::query() 与 Db::execute() 的区别"></a>3. Db::query() 与 Db::execute() 的区别</h2><ul>
+<li><p>第一种理解<br>query是查询，execute是执行，所以当select时用query，当增加、删除、修改时用execute</p>
+</li>
+<li><p>再进一步<br>query表示查询，返回的是表中搜索到的值；<br>execute表示执行，对表中的数据是有影响的，返回的是影响的行数；</p>
+</li>
+<li><p>所以：</p>
+</li>
+</ul>
+<blockquote>
+<p>场景1：</p>
+</blockquote>
+<p>编辑保存时，如果内容未改变，仍调用update方法，返回值为0,但此时保存是成功的。<br>所以判断是否保存成功时，一般用：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">if ($res !== false)</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>场景2 </p>
+</blockquote>
+<p>当query：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select 1 from h_admin_menu where id = 72 limit</span><br></pre></td></tr></table></figure></p>
+<p>返回值是数组那一套，如果恰巧无返回值，那么各种判断会让人跳楼的。</p>
+<p>这个时候，便可以用execute了，，因为是受影响的行数，所以：结果只有1和0；很完美！</p>
+<h2 id="4-好了，总结一下"><a href="#4-好了，总结一下" class="headerlink" title="4. 好了，总结一下"></a>4. 好了，总结一下</h2><p>判断某一行数据是否存在：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$sql = &quot;select 1 from h_admin_menu where id = 72 limit &quot;;</span><br><span class="line">$isExist = Db::execute($sql);</span><br></pre></td></tr></table></figure></p>
 <p>结束！</p>
 
       
@@ -468,9 +505,13 @@
       
         <div class="post-tags">
           
-            <a href="/tags/PHP/" rel="tag"># PHP</a>
+            <a href="/tags/ThinkCMF/" rel="tag"># ThinkCMF</a>
           
-            <a href="/tags/HTML/" rel="tag"># HTML</a>
+            <a href="/tags/ThinkPHP/" rel="tag"># ThinkPHP</a>
+          
+            <a href="/tags/MySQL/" rel="tag"># MySQL</a>
+          
+            <a href="/tags/SQL/" rel="tag"># SQL</a>
           
         </div>
       
@@ -483,8 +524,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/01/12/distinct与paginate的冲突/" rel="next" title="distinct与paginate的冲突">
-                <i class="fa fa-chevron-left"></i> distinct与paginate的冲突
+              <a href="/2019/01/12/ThinkCMF：向upload目录下写文件失败/" rel="next" title="ThinkCMF：向upload目录下写文件失败">
+                <i class="fa fa-chevron-left"></i> ThinkCMF：向upload目录下写文件失败
               </a>
             
           </div>
@@ -492,10 +533,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/01/12/volist-volist-对数组的操作/" rel="prev" title="<volist></volist>对数组的操作">
-                <volist></volist>对数组的操作 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -540,8 +577,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -675,6 +721,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-背景"><span class="nav-number">1.</span> <span class="nav-text">1. 背景</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-select-1-是什么？"><span class="nav-number">2.</span> <span class="nav-text">2. select 1 是什么？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-Db-query-与-Db-execute-的区别"><span class="nav-number">3.</span> <span class="nav-text">3. Db::query() 与 Db::execute() 的区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-好了，总结一下"><span class="nav-number">4.</span> <span class="nav-text">4. 好了，总结一下</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
