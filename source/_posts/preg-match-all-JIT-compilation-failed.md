@@ -2,7 +2,7 @@
 title: 'preg_match_all(): JIT compilation failed'
 date: 2018-12-20 10:54:49
 catagories: Mac Composer
-tags: PHP Composer
+tags: Composer
 ---
 
 在这个电脑上装个laravel,结果composer出现了问题，糟心……查了下原因，php7.3的bug:
