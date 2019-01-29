@@ -2,7 +2,7 @@
 title: select 1 in SQL
 date: 2019-01-16 15:22:53
 categories:
-- SQL
+- SQL>
 tags:
 - SQL
 - MySQL
