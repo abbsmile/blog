@@ -11,7 +11,7 @@ tags: PHPStorm VCS
 
 ## 解决方法
 
-![](media/15487372770760.jpg)
+![](/images/15487372770760.jpg)
 
 点击help,搜一下history,很自然的找到vcs下面的show History.
 
