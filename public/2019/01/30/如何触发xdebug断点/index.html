@@ -96,30 +96,25 @@
 
 
 
-  <meta name="description" content="mac上命令行操作的频率远大于界面操作，现在问题来了，插入的u盘、移动硬盘如何用命令行操作。 之前有这么个单词，可是每次用的时候记不住，特意截图一张：  好吧，联系Linux系统上分卷的知识，有点理解了。 再去实际操作一把：      插入移动硬盘时，发现文件还是在这里面，只是 mac自己电脑的Macintosh HD搞个软链接，这样和其它的一对比，明意上区分开来。    ok, 所有的都是扯淡。">
-<meta name="keywords" content="MacOS,iTerm2">
+  <meta name="description" content="场景网上关于xdebug的教程很多，也教你在postman或浏览器中配置东西，乱七八糟，望而生畏。 笔者没配置好过，现在也没那个心情去配置。 那么，如何快速方便的触发断点呢？并且保存证浏览器能用、postman能用、功能测试能用…… 方案php.ini配置xdebug时加入下面这句话:1xdebug.remote_autostart=1 如此，一牢永逸。 结论xdebug最大的好处是所有代码所有框">
+<meta name="keywords" content="PHP Xdebug">
 <meta property="og:type" content="article">
-<meta property="og:title" content="item2操作插入u盘的文件">
-<meta property="og:url" content="http://www.abble.com/2019/01/11/item2操作插入u盘的文件/index.html">
+<meta property="og:title" content="如何触发xdebug断点">
+<meta property="og:url" content="http://www.abble.com/2019/01/30/如何触发xdebug断点/index.html">
 <meta property="og:site_name" content="笔误通鉴">
-<meta property="og:description" content="mac上命令行操作的频率远大于界面操作，现在问题来了，插入的u盘、移动硬盘如何用命令行操作。 之前有这么个单词，可是每次用的时候记不住，特意截图一张：  好吧，联系Linux系统上分卷的知识，有点理解了。 再去实际操作一把：      插入移动硬盘时，发现文件还是在这里面，只是 mac自己电脑的Macintosh HD搞个软链接，这样和其它的一对比，明意上区分开来。    ok, 所有的都是扯淡。">
+<meta property="og:description" content="场景网上关于xdebug的教程很多，也教你在postman或浏览器中配置东西，乱七八糟，望而生畏。 笔者没配置好过，现在也没那个心情去配置。 那么，如何快速方便的触发断点呢？并且保存证浏览器能用、postman能用、功能测试能用…… 方案php.ini配置xdebug时加入下面这句话:1xdebug.remote_autostart=1 如此，一牢永逸。 结论xdebug最大的好处是所有代码所有框">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/2875232-671827f22644eb24.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/2875232-191d26b298238c5d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/2875232-df569d8a4f4b02ce.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/2875232-d6abfcd8664c63f1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2019-01-11T08:57:57.627Z">
+<meta property="og:updated_time" content="2019-01-30T05:32:37.896Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="item2操作插入u盘的文件">
-<meta name="twitter:description" content="mac上命令行操作的频率远大于界面操作，现在问题来了，插入的u盘、移动硬盘如何用命令行操作。 之前有这么个单词，可是每次用的时候记不住，特意截图一张：  好吧，联系Linux系统上分卷的知识，有点理解了。 再去实际操作一把：      插入移动硬盘时，发现文件还是在这里面，只是 mac自己电脑的Macintosh HD搞个软链接，这样和其它的一对比，明意上区分开来。    ok, 所有的都是扯淡。">
-<meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/2875232-671827f22644eb24.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta name="twitter:title" content="如何触发xdebug断点">
+<meta name="twitter:description" content="场景网上关于xdebug的教程很多，也教你在postman或浏览器中配置东西，乱七八糟，望而生畏。 笔者没配置好过，现在也没那个心情去配置。 那么，如何快速方便的触发断点呢？并且保存证浏览器能用、postman能用、功能测试能用…… 方案php.ini配置xdebug时加入下面这句话:1xdebug.remote_autostart=1 如此，一牢永逸。 结论xdebug最大的好处是所有代码所有框">
 
 
 
 
 
 
-  <link rel="canonical" href="http://www.abble.com/2019/01/11/item2操作插入u盘的文件/">
+  <link rel="canonical" href="http://www.abble.com/2019/01/30/如何触发xdebug断点/">
 
 
 
@@ -129,7 +124,7 @@
   };
 </script>
 
-  <title>item2操作插入u盘的文件 | 笔误通鉴</title>
+  <title>如何触发xdebug断点 | 笔误通鉴</title>
   
 
 
@@ -345,7 +340,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.abble.com/2019/01/11/item2操作插入u盘的文件/">
+    <link itemprop="mainEntityOfPage" href="http://www.abble.com/2019/01/30/如何触发xdebug断点/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Abble">
@@ -362,7 +357,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">item2操作插入u盘的文件
+          <h1 class="post-title" itemprop="name headline">如何触发xdebug断点
 
               
             
@@ -388,7 +383,7 @@
                 
               
 
-              <time title="创建时间：2019-01-11 08:47:21 / 修改时间：16:57:57" itemprop="dateCreated datePublished" datetime="2019-01-11T08:47:21+08:00">2019-01-11</time>
+              <time title="创建时间：2019-01-30 13:16:00 / 修改时间：13:32:37" itemprop="dateCreated datePublished" datetime="2019-01-30T13:16:00+08:00">2019-01-30</time>
             
 
             
@@ -410,7 +405,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Mac/" itemprop="url" rel="index"><span itemprop="name">Mac</span></a></span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/PHP/" itemprop="url" rel="index"><span itemprop="name">PHP</span></a></span>
 
                 
                 
@@ -444,21 +439,14 @@
       
 
       
-        <p>mac上命令行操作的频率远大于界面操作，现在问题来了，插入的u盘、移动硬盘如何用命令行操作。</p>
-<p>之前有这么个单词，可是每次用的时候记不住，特意截图一张：</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/2875232-671827f22644eb24.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
-<p>好吧，联系Linux系统上分卷的知识，有点理解了。</p>
-<p>再去实际操作一把：</p>
-<ol>
-<li><p><img src="https://upload-images.jianshu.io/upload_images/2875232-191d26b298238c5d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
-</li>
-<li><p><img src="https://upload-images.jianshu.io/upload_images/2875232-df569d8a4f4b02ce.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
-</li>
-<li><p>插入移动硬盘时，发现文件还是在这里面，只是 mac自己电脑的Macintosh HD搞个软链接，这样和其它的一对比，明意上区分开来。</p>
-</li>
-</ol>
-<p><img src="https://upload-images.jianshu.io/upload_images/2875232-d6abfcd8664c63f1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
-<p>ok, 所有的都是扯淡。。。 <code>cd /volumes</code>，，，然后操作，记住这一点，也就够了。</p>
+        <h2 id="场景"><a href="#场景" class="headerlink" title="场景"></a>场景</h2><p>网上关于xdebug的教程很多，也教你在postman或浏览器中配置东西，乱七八糟，望而生畏。</p>
+<p>笔者没配置好过，现在也没那个心情去配置。</p>
+<p>那么，如何快速方便的触发断点呢？并且保存证浏览器能用、postman能用、功能测试能用……</p>
+<h2 id="方案"><a href="#方案" class="headerlink" title="方案"></a>方案</h2><p>php.ini配置xdebug时加入下面这句话:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xdebug.remote_autostart=1</span><br></pre></td></tr></table></figure></p>
+<p>如此，一牢永逸。</p>
+<h2 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h2><p>xdebug最大的好处是所有代码所有框架的调试都可以。每个框架都有自己定制的报错系统与规则，但是学那些东西很麻烦。</p>
+<p>比如laravel的命令行操作，确实很强大很神奇，用熟了速度完全抵得上xdebug，但是一个新手没必要去学那些东西，用一套自己并不熟悉的调试方法去运行代码，实在浪费精力。</p>
+<p>所以，没事倒腾一下xdebug相关的东西，还是很有必要的。</p>
 
       
     </div>
@@ -482,9 +470,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/MacOS/" rel="tag"># MacOS</a>
-          
-            <a href="/tags/iTerm2/" rel="tag"># iTerm2</a>
+            <a href="/tags/PHP-Xdebug/" rel="tag"># PHP Xdebug</a>
           
         </div>
       
@@ -497,8 +483,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/01/10/MacOS下添加MySQL路径/" rel="next" title="MacOS下添加MySQL路径">
-                <i class="fa fa-chevron-left"></i> MacOS下添加MySQL路径
+              <a href="/2019/01/29/phpstorm上自动commit/" rel="next" title="phpstorm上自动commit">
+                <i class="fa fa-chevron-left"></i> phpstorm上自动commit
               </a>
             
           </div>
@@ -506,10 +492,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/01/11/shell-in-mac/" rel="prev" title="shell in mac">
-                shell in mac <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -554,8 +536,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -701,6 +692,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#场景"><span class="nav-number">1.</span> <span class="nav-text">场景</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#方案"><span class="nav-number">2.</span> <span class="nav-text">方案</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#结论"><span class="nav-number">3.</span> <span class="nav-text">结论</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
