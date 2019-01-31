@@ -96,25 +96,25 @@
 
 
 
-  <meta name="description" content="场景不同于Yii2,ThinkPHP和其它原生PHPCMS，Laravel框架利用migration将数据库表结构的操作交由代码控制，确实省心省力。相比于python的flask,笔者更喜欢Laravel的设计。  数据库表结构的操作，虽由代码控制，但并没有和逻辑代码混淆在一起； 类似于git和svn,版本迭代功能，虽不怎么完美，但倒也不失为还不错的多人合作解决方案（目前公司多人合作方案是共用一个">
-<meta name="keywords" content="Laravel migration command mysql php">
+  <meta name="description" content="这是个小问题，however,迷惑了笔者很长时间。也不知当初怎么了，不知道在google或者知乎里找找答案。 但是问问身边的编程人员，竟也说不出个所以然来……  函数是面向过程里面的概念，而把这样的函数放到一个类里面，我们习惯于把它称作方法。 仅此而已。 所以，作为专业人员，当听到函数和方法里，应该自动对应到不同的场景。  网上也有一种说法，函数偏向于某种算法的实现，而方法偏向于业务逻辑的实现。">
+<meta name="keywords" content="PHP php函数">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Laravel5.4数据库迁移及几个问题">
-<meta property="og:url" content="http://www.abble.com/2019/01/30/Laravel5-4数据库迁移/index.html">
+<meta property="og:title" content="PHP中方法与函数的区别">
+<meta property="og:url" content="http://www.abble.com/2019/01/31/PHP中的方法与函数/index.html">
 <meta property="og:site_name" content="笔误通鉴">
-<meta property="og:description" content="场景不同于Yii2,ThinkPHP和其它原生PHPCMS，Laravel框架利用migration将数据库表结构的操作交由代码控制，确实省心省力。相比于python的flask,笔者更喜欢Laravel的设计。  数据库表结构的操作，虽由代码控制，但并没有和逻辑代码混淆在一起； 类似于git和svn,版本迭代功能，虽不怎么完美，但倒也不失为还不错的多人合作解决方案（目前公司多人合作方案是共用一个">
+<meta property="og:description" content="这是个小问题，however,迷惑了笔者很长时间。也不知当初怎么了，不知道在google或者知乎里找找答案。 但是问问身边的编程人员，竟也说不出个所以然来……  函数是面向过程里面的概念，而把这样的函数放到一个类里面，我们习惯于把它称作方法。 仅此而已。 所以，作为专业人员，当听到函数和方法里，应该自动对应到不同的场景。  网上也有一种说法，函数偏向于某种算法的实现，而方法偏向于业务逻辑的实现。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-01-30T08:49:35.328Z">
+<meta property="og:updated_time" content="2019-01-31T07:35:12.761Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Laravel5.4数据库迁移及几个问题">
-<meta name="twitter:description" content="场景不同于Yii2,ThinkPHP和其它原生PHPCMS，Laravel框架利用migration将数据库表结构的操作交由代码控制，确实省心省力。相比于python的flask,笔者更喜欢Laravel的设计。  数据库表结构的操作，虽由代码控制，但并没有和逻辑代码混淆在一起； 类似于git和svn,版本迭代功能，虽不怎么完美，但倒也不失为还不错的多人合作解决方案（目前公司多人合作方案是共用一个">
+<meta name="twitter:title" content="PHP中方法与函数的区别">
+<meta name="twitter:description" content="这是个小问题，however,迷惑了笔者很长时间。也不知当初怎么了，不知道在google或者知乎里找找答案。 但是问问身边的编程人员，竟也说不出个所以然来……  函数是面向过程里面的概念，而把这样的函数放到一个类里面，我们习惯于把它称作方法。 仅此而已。 所以，作为专业人员，当听到函数和方法里，应该自动对应到不同的场景。  网上也有一种说法，函数偏向于某种算法的实现，而方法偏向于业务逻辑的实现。">
 
 
 
 
 
 
-  <link rel="canonical" href="http://www.abble.com/2019/01/30/Laravel5-4数据库迁移/">
+  <link rel="canonical" href="http://www.abble.com/2019/01/31/PHP中的方法与函数/">
 
 
 
@@ -124,7 +124,7 @@
   };
 </script>
 
-  <title>Laravel5.4数据库迁移及几个问题 | 笔误通鉴</title>
+  <title>PHP中方法与函数的区别 | 笔误通鉴</title>
   
 
 
@@ -340,7 +340,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.abble.com/2019/01/30/Laravel5-4数据库迁移/">
+    <link itemprop="mainEntityOfPage" href="http://www.abble.com/2019/01/31/PHP中的方法与函数/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Abble">
@@ -357,7 +357,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Laravel5.4数据库迁移及几个问题
+          <h1 class="post-title" itemprop="name headline">PHP中方法与函数的区别
 
               
             
@@ -383,7 +383,7 @@
                 
               
 
-              <time title="创建时间：2019-01-30 14:55:35" itemprop="dateCreated datePublished" datetime="2019-01-30T14:55:35+08:00">2019-01-30</time>
+              <time title="创建时间：2019-01-31 15:21:50" itemprop="dateCreated datePublished" datetime="2019-01-31T15:21:50+08:00">2019-01-31</time>
             
 
             
@@ -401,7 +401,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Laravel/" itemprop="url" rel="index"><span itemprop="name">Laravel</span></a></span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/PHP/" itemprop="url" rel="index"><span itemprop="name">PHP</span></a></span>
 
                 
                 
@@ -435,40 +435,16 @@
       
 
       
-        <h2 id="场景"><a href="#场景" class="headerlink" title="场景"></a>场景</h2><p>不同于Yii2,ThinkPHP和其它原生PHPCMS，Laravel框架利用migration将数据库表结构的操作交由代码控制，确实省心省力。相比于python的flask,笔者更喜欢Laravel的设计。</p>
-<ol>
-<li>数据库表结构的操作，虽由代码控制，但并没有和逻辑代码混淆在一起；</li>
-<li>类似于git和svn,版本迭代功能，虽不怎么完美，但倒也不失为还不错的多人合作解决方案（目前公司多人合作方案是共用一个远程数据库，这样注重了结果，但没有记录修改数据库的过程）</li>
-<li>目前笔者所知的数据库设计方式有三种：CodeFirst,ModelFirst,databaseFirst</li>
-</ol>
-<ul>
-<li><p>databaseFirst<br>  到目前为止，笔者用的最多的还是databaseFirst。利用navicat或者commandLine根据需求直接建表。这种方式比较中性。</p>
-</li>
-<li><p>ModelFirst<br>  利用建模工具创建数据库，笔者还没有做过。不过相信dba利用这些工具建表时，所考虑的代码层面肯定很少很少。</p>
-</li>
-<li><p>CodeFirst<br>  如果想兼顾到代码，相信CodeFirst是最好的方式。作为一个程序员(笔者不喜欢给自己贴标签,只能说当前在公司还是靠程序员这个职位养活自己),或者说暂时还是程序员，不是运维也不是dba,用CodeFist方式操作数据库，更能兼顾到业务逻辑代码和数据库的一体性。</p>
-</li>
-</ul>
-<h2 id="过程"><a href="#过程" class="headerlink" title="过程"></a>过程</h2><p>刚安装Laravel54后，遇到两个小bug.</p>
-<blockquote>
-<p>提示User表已存在 </p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"> /Applications/MAMP/htdocs/laravel54  ./artisan migrate</span><br><span class="line"></span><br><span class="line">In Connection.php line 647:</span><br><span class="line"></span><br><span class="line">  SQLSTATE[42S01]: Base table or view already exists: 1050 Table &apos;users&apos; already exists (SQL: create table `users` (`id` int unsigned not null auto_increment primary key, `name` varchar(191) not</span><br><span class="line">   null, `email` varchar(191) not null, `password` varchar(191) not null, `remember_token` varchar(100) null, `created_at` timestamp null, `updated_at` timestamp null) default character set utf8</span><br><span class="line">  mb4 collate utf8mb4_unicode_ci)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">In Connection.php line 449:</span><br><span class="line"></span><br><span class="line">  SQLSTATE[42S01]: Base table or view already exists: 1050 Table &apos;users&apos; already exists</span><br></pre></td></tr></table></figure>
-<p>笔者查看user表相关逻辑，有了那么一句：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line">   * Reverse the migrations.</span><br><span class="line">   *</span><br><span class="line">   * @return void</span><br><span class="line">   */</span><br><span class="line">  public function down()</span><br><span class="line">  &#123;</span><br><span class="line">      Schema::dropIfExists(&apos;users&apos;);</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure></p>
-<p>有毒，本想直接操作Navicate的，后来想想算了，直接命令行吧,下面一段直接stackoverflow抄的，有效：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">php artisan tinker</span><br><span class="line"></span><br><span class="line">Then</span><br><span class="line"></span><br><span class="line">Schema::drop(&apos;books&apos;)</span><br><span class="line"></span><br><span class="line">(and exit with q)</span><br><span class="line"></span><br><span class="line">Now, you can successfully php artisan migrate:rollback and php artisan migrate.</span><br></pre></td></tr></table></figure></p>
-<p>发现删完再migration的时候不会出毛病了……好吧！！！</p>
-<blockquote>
-<p>字节长度造成的bug</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"> /Applications/MAMP/htdocs/laravel54  ./artisan migrate</span><br><span class="line"></span><br><span class="line">In Connection.php line 647:</span><br><span class="line"></span><br><span class="line">  SQLSTATE[42000]: Syntax error or access violation: 1071 Specified key was too long; max key length is 767 bytes (SQL: alter table `users` add unique `users_email_unique`(`email`))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">In Connection.php line 449:</span><br><span class="line"></span><br><span class="line">  SQLSTATE[42000]: Syntax error or access violation: 1071 Specified key was too long; max key length is 767 bytes</span><br></pre></td></tr></table></figure>
-<p>查了下user表的email,string类型。Laravel 5.4 把默认数据库字符集更改成 utf8mb4，如果运行的是 MySQL v5.7.7 及更高版本，那么就不会出现本文提到的错误。</p>
-<p>因为utf8mb4中是4个byte对应一个字符。767/4 = 191</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">namespace App\Providers;</span><br><span class="line"></span><br><span class="line">use Illuminate\Support\Facades\Schema;</span><br><span class="line">use Illuminate\Support\ServiceProvider;</span><br><span class="line"></span><br><span class="line">class AppServiceProvider extends ServiceProvider</span><br><span class="line">&#123;</span><br><span class="line">    /**</span><br><span class="line">     * Bootstrap any application services.</span><br><span class="line">     *</span><br><span class="line">     * @return void</span><br><span class="line">     */</span><br><span class="line">    public function boot()</span><br><span class="line">    &#123;</span><br><span class="line">        Schema::defaultStringLength(191);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h2><ol>
-<li>migration是个好东西，常用migration命令可以在命令行中查，这里不罗列了；</li>
-<li>codeFirst这种思想不错；</li>
-<li>mysql5.6和更高版本的不同确是要引起足够重视。</li>
-</ol>
+        <p>这是个小问题，however,迷惑了笔者很长时间。也不知当初怎么了，不知道在google或者知乎里找找答案。</p>
+<p>但是问问身边的编程人员，竟也说不出个所以然来……</p>
+<hr>
+<p>函数是面向过程里面的概念，而把这样的函数放到一个类里面，我们习惯于把它称作方法。</p>
+<p>仅此而已。</p>
+<p>所以，作为专业人员，当听到函数和方法里，应该自动对应到不同的场景。</p>
+<hr>
+<p>网上也有一种说法，函数偏向于某种算法的实现，而方法偏向于业务逻辑的实现。</p>
+<p>听着也很有感觉。</p>
+<p>因为没写过比较大型的面向过程的程序，所以对自定义函数在语言架构中所起的作用还是比较片面的。暂时是以上这样的理解。</p>
 
       
     </div>
@@ -492,7 +468,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Laravel-migration-command-mysql-php/" rel="tag"># Laravel migration command mysql php</a>
+            <a href="/tags/PHP-php函数/" rel="tag"># PHP php函数</a>
           
         </div>
       
@@ -505,8 +481,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/01/30/如何触发xdebug断点/" rel="next" title="如何触发xdebug断点">
-                <i class="fa fa-chevron-left"></i> 如何触发xdebug断点
+              <a href="/2019/01/30/Laravel5-4数据库迁移/" rel="next" title="Laravel5.4数据库迁移及几个问题">
+                <i class="fa fa-chevron-left"></i> Laravel5.4数据库迁移及几个问题
               </a>
             
           </div>
@@ -514,10 +490,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/01/31/PHP中的方法与函数/" rel="prev" title="PHP中方法与函数的区别">
-                PHP中方法与函数的区别 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -562,17 +534,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <div class="site-overview-wrap sidebar-panel">
+      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -726,23 +689,6 @@
         </div>
       </div>
 
-      
-      <!--noindex-->
-        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-            
-            
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#场景"><span class="nav-number">1.</span> <span class="nav-text">场景</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#过程"><span class="nav-number">2.</span> <span class="nav-text">过程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#结论"><span class="nav-number">3.</span> <span class="nav-text">结论</span></a></li></ol></div>
-            
-
-          </div>
-        </div>
-      <!--/noindex-->
       
 
       
