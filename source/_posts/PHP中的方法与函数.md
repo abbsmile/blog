@@ -1,8 +1,8 @@
 ---
 title: PHP中方法与函数的区别
-date: 2016-07-15i 15:21:50
+date: 2016-07-15 15:21:50
 categories: PHP
-tags: PHP php函数
+tags: PHP php函数i
 ---
 
 这是个小问题，however,迷惑了笔者很长时间。也不知当初怎么了，不知道在google或者知乎里找找答案。
