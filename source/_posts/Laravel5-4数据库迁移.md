@@ -1,8 +1,14 @@
 ---
 title: Laravel5.4数据库迁移及几个问题
 date: 2019-01-30 14:55:35
-categories: Laravel
-tags: Laravel migration command mysql php
+categories: 
+- Laravel
+tags: 
+- Laravel 
+- migration 
+- command 
+- MySQL 
+- PHP
 ---
 
 ## 场景

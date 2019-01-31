@@ -1,8 +1,10 @@
 ---
 title: rm -rf血淋淋的例子
 date: 2019-01-29 12:08:23
-categories: CentOS 技术心得
-tags: Linux
+categories: 
+- 技术心得
+tags: 
+- Linux
 ---
 
 ## 背景

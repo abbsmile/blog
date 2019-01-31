@@ -1,8 +1,11 @@
 ---
 title: ceil与floor
 date: 2017-01-31 14:46:04
-categories: PHP
-tags: PHP PHP函数
+categories: 
+- PHP
+tags: 
+- PHP 
+- PHP函数
 ---
 
 ## 场景

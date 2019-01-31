@@ -1,8 +1,11 @@
 ---
 title: 如何触发xdebug断点
 date: 2019-01-30 13:16:00
-categories: PHP
-tags: PHP Xdebug 
+categories: 
+- PHP
+tags: 
+- PHP 
+- Xdebug 
 ---
 
 ## 场景

@@ -1,8 +1,11 @@
 ---
 title: phpstorm上自动commit
 date: 2019-01-29 12:40:02
-categories: PHPStorm VCS
-tags: PHPStorm VCS
+categories: 
+- PHPStorm 
+tags: 
+- PHPStorm 
+- VCS
 ---
 
 ## 场景
