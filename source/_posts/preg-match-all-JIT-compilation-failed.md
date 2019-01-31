@@ -48,7 +48,7 @@ As a temporary fix, edit your php.ini file (in my case: vi /usr/local/etc/php/7.
 to
 
 pcre.jit=0
-```
+```s
 
 笔者开始还折腾了一会，，，因为装的php版本太多了，不知道以前装的composer跟哪个有关系，有时间还是要整理下。
 
