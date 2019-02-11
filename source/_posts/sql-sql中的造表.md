@@ -1,7 +1,7 @@
 ---
 title: 'sql:sql中的造表'
 date: 2016-08-21 19:33:44
-caegories:
+categories:
 - SQL
 tags:
 - SQL
