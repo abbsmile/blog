@@ -1686,7 +1686,7 @@ PHP Warning:  preg_match_all
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.abble.com/2017/01/31/ceil与floor/">
+    <link itemprop="mainEntityOfPage" href="http://www.abble.com/2017/02/13/5-单例模式/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Abble">
@@ -1706,7 +1706,7 @@ PHP Warning:  preg_match_all
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/2017/01/31/ceil与floor/" class="post-title-link" itemprop="url">ceil与floor</a>
+                <a href="/2017/02/13/5-单例模式/" class="post-title-link" itemprop="url">5-单例模式</a>
               
             
           </h1>
@@ -1731,7 +1731,7 @@ PHP Warning:  preg_match_all
                 
               
 
-              <time title="创建时间：2017-01-31 14:46:04" itemprop="dateCreated datePublished" datetime="2017-01-31T14:46:04+08:00">2017-01-31</time>
+              <time title="创建时间：2017-02-13 20:39:04" itemprop="dateCreated datePublished" datetime="2017-02-13T20:39:04+08:00">2017-02-13</time>
             
 
             
@@ -1749,7 +1749,7 @@ PHP Warning:  preg_match_all
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/PHP/" itemprop="url" rel="index"><span itemprop="name">PHP</span></a></span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/设计模式/" itemprop="url" rel="index"><span itemprop="name">设计模式</span></a></span>
 
                 
                 
@@ -1786,17 +1786,16 @@ PHP Warning:  preg_match_all
         
           
             <p>
-              场景在处理分页的时候，用到了这两个函数，也造成了一个不小的bug。特此记录下。
-ceil查了下，有天花板的意思，向上取整。
-floor自然，floor这个地板，也就是向下取整了。
-说明程序中开始用的是floor，然后当个数刚刚好时，总数/页数 恰巧为整数时，会出bug。
-所以，当用到这两个函数时，要
+              先了解下静态属性
+code:
+
+class A&#123;    static public $a = &apos;static&apos;;    public $b = &apos;public&apos;;&#125;$a = A::$a;echo $a.PHP_EOL;$newA = new
               ...
             </p>
           <!--noindex-->
           
             <div class="post-button text-center">
-              <a class="btn" href="/2017/01/31/ceil与floor/#more" rel="contents">
+              <a class="btn" href="/2017/02/13/5-单例模式/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -1856,7 +1855,7 @@ floor自然，floor这个地板，也就是向下取整了。
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.abble.com/2017/01/12/3-抽象工厂模式/">
+    <link itemprop="mainEntityOfPage" href="http://www.abble.com/2017/02/12/4-建造者模式/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Abble">
@@ -1876,7 +1875,7 @@ floor自然，floor这个地板，也就是向下取整了。
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/2017/01/12/3-抽象工厂模式/" class="post-title-link" itemprop="url">3-抽象工厂模式</a>
+                <a href="/2017/02/12/4-建造者模式/" class="post-title-link" itemprop="url">4-建造者模式</a>
               
             
           </h1>
@@ -1901,7 +1900,7 @@ floor自然，floor这个地板，也就是向下取整了。
                 
               
 
-              <time title="创建时间：2017-01-12 19:28:38" itemprop="dateCreated datePublished" datetime="2017-01-12T19:28:38+08:00">2017-01-12</time>
+              <time title="创建时间：2017-02-12 21:38:46" itemprop="dateCreated datePublished" datetime="2017-02-12T21:38:46+08:00">2017-02-12</time>
             
 
             
@@ -1956,14 +1955,13 @@ floor自然，floor这个地板，也就是向下取整了。
         
           
             <p>
-              背景网上随意搜一下，抽象工厂模式的例子数不胜数。但理论讲得很复杂，看不下去……或者自己水平太低，接触的核心代码太少。然后看理论，总有种不踏实感！
-code:/** * 抽象产品 A * Interface AbstractProductA */interface AbstractProductA&#
-              ...
+              
+              
             </p>
           <!--noindex-->
           
             <div class="post-button text-center">
-              <a class="btn" href="/2017/01/12/3-抽象工厂模式/#more" rel="contents">
+              <a class="btn" href="/2017/02/12/4-建造者模式/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -2012,7 +2010,7 @@ code:/** * 抽象产品 A * Interface AbstractProductA */interface AbstractProdu
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/4/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/4/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 
@@ -2057,7 +2055,7 @@ code:/** * 抽象产品 A * Interface AbstractProductA */interface AbstractProdu
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">39</span>
+                    <span class="site-state-item-count">41</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
