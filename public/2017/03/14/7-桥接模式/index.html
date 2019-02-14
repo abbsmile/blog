@@ -96,25 +96,25 @@
 
 
 
-  <meta name="description" content="场景不同于Yii2,ThinkPHP和其它原生PHPCMS，Laravel框架利用migration将数据库表结构的操作交由代码控制，确实省心省力。相比于python的flask,笔者更喜欢Laravel的设计。  数据库表结构的操作，虽由代码控制，但并没有和逻辑代码混淆在一起； 类似于git和svn,版本迭代功能，虽不怎么完美，但倒也不失为还不错的多人合作解决方案（目前公司多人合作方案是共用一个">
-<meta name="keywords" content="Laravel,migration,command,MySQL,PHP">
+  <meta name="description" content="概要：桥接模式将抽象化与实现化脱耦。或者说，实现对象与行为的多对多关系。 如下例子，小米mix与小米note，无论是哪种行为，皆可输出。 代码如下：从网上找的例子，这个例子感觉最好code:123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657">
+<meta name="keywords" content="16个PHP设计模式">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Laravel5.4数据库迁移及几个问题">
-<meta property="og:url" content="http://www.abble.com/2019/01/30/Laravel5-4数据库迁移/index.html">
+<meta property="og:title" content="7-桥接模式">
+<meta property="og:url" content="http://www.abble.com/2017/03/14/7-桥接模式/index.html">
 <meta property="og:site_name" content="笔误通鉴">
-<meta property="og:description" content="场景不同于Yii2,ThinkPHP和其它原生PHPCMS，Laravel框架利用migration将数据库表结构的操作交由代码控制，确实省心省力。相比于python的flask,笔者更喜欢Laravel的设计。  数据库表结构的操作，虽由代码控制，但并没有和逻辑代码混淆在一起； 类似于git和svn,版本迭代功能，虽不怎么完美，但倒也不失为还不错的多人合作解决方案（目前公司多人合作方案是共用一个">
+<meta property="og:description" content="概要：桥接模式将抽象化与实现化脱耦。或者说，实现对象与行为的多对多关系。 如下例子，小米mix与小米note，无论是哪种行为，皆可输出。 代码如下：从网上找的例子，这个例子感觉最好code:123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-01-31T07:44:54.740Z">
+<meta property="og:updated_time" content="2019-02-14T11:11:06.592Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Laravel5.4数据库迁移及几个问题">
-<meta name="twitter:description" content="场景不同于Yii2,ThinkPHP和其它原生PHPCMS，Laravel框架利用migration将数据库表结构的操作交由代码控制，确实省心省力。相比于python的flask,笔者更喜欢Laravel的设计。  数据库表结构的操作，虽由代码控制，但并没有和逻辑代码混淆在一起； 类似于git和svn,版本迭代功能，虽不怎么完美，但倒也不失为还不错的多人合作解决方案（目前公司多人合作方案是共用一个">
+<meta name="twitter:title" content="7-桥接模式">
+<meta name="twitter:description" content="概要：桥接模式将抽象化与实现化脱耦。或者说，实现对象与行为的多对多关系。 如下例子，小米mix与小米note，无论是哪种行为，皆可输出。 代码如下：从网上找的例子，这个例子感觉最好code:123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657">
 
 
 
 
 
 
-  <link rel="canonical" href="http://www.abble.com/2019/01/30/Laravel5-4数据库迁移/">
+  <link rel="canonical" href="http://www.abble.com/2017/03/14/7-桥接模式/">
 
 
 
@@ -124,7 +124,7 @@
   };
 </script>
 
-  <title>Laravel5.4数据库迁移及几个问题 | 笔误通鉴</title>
+  <title>7-桥接模式 | 笔误通鉴</title>
   
 
 
@@ -340,7 +340,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.abble.com/2019/01/30/Laravel5-4数据库迁移/">
+    <link itemprop="mainEntityOfPage" href="http://www.abble.com/2017/03/14/7-桥接模式/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Abble">
@@ -357,7 +357,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Laravel5.4数据库迁移及几个问题
+          <h1 class="post-title" itemprop="name headline">7-桥接模式
 
               
             
@@ -383,7 +383,7 @@
                 
               
 
-              <time title="创建时间：2019-01-30 14:55:35" itemprop="dateCreated datePublished" datetime="2019-01-30T14:55:35+08:00">2019-01-30</time>
+              <time title="创建时间：2017-03-14 20:02:59" itemprop="dateCreated datePublished" datetime="2017-03-14T20:02:59+08:00">2017-03-14</time>
             
 
             
@@ -401,7 +401,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Laravel/" itemprop="url" rel="index"><span itemprop="name">Laravel</span></a></span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/设计模式/" itemprop="url" rel="index"><span itemprop="name">设计模式</span></a></span>
 
                 
                 
@@ -435,39 +435,13 @@
       
 
       
-        <h2 id="场景"><a href="#场景" class="headerlink" title="场景"></a>场景</h2><p>不同于Yii2,ThinkPHP和其它原生PHPCMS，Laravel框架利用migration将数据库表结构的操作交由代码控制，确实省心省力。相比于python的flask,笔者更喜欢Laravel的设计。</p>
-<ol>
-<li>数据库表结构的操作，虽由代码控制，但并没有和逻辑代码混淆在一起；</li>
-<li>类似于git和svn,版本迭代功能，虽不怎么完美，但倒也不失为还不错的多人合作解决方案（目前公司多人合作方案是共用一个远程数据库，这样注重了结果，但没有记录修改数据库的过程）</li>
-<li>目前笔者所知的数据库设计方式有三种：CodeFirst,ModelFirst,databaseFirst</li>
-</ol>
-<ul>
-<li><p>databaseFirst<br>  到目前为止，笔者用的最多的还是databaseFirst。利用navicat或者commandLine根据需求直接建表。这种方式比较中性。</p>
-</li>
-<li><p>ModelFirst<br>  利用建模工具创建数据库，笔者还没有做过。不过相信dba利用这些工具建表时，所考虑的代码层面肯定很少很少。</p>
-</li>
-<li><p>CodeFirst<br>  如果想兼顾到代码，相信CodeFirst是最好的方式。作为一个程序员(笔者不喜欢给自己贴标签,只能说当前在公司还是靠程序员这个职位养活自己),或者说暂时还是程序员，不是运维也不是dba,用CodeFist方式操作数据库，更能兼顾到业务逻辑代码和数据库的一体性。</p>
-</li>
-</ul>
-<h2 id="过程"><a href="#过程" class="headerlink" title="过程"></a>过程</h2><p>刚安装Laravel54后，遇到两个小bug.</p>
-<blockquote>
-<p>提示User表已存在 </p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"> /Applications/MAMP/htdocs/laravel54  ./artisan migrate</span><br><span class="line"></span><br><span class="line">In Connection.php line 647:</span><br><span class="line"></span><br><span class="line">  SQLSTATE[42S01]: Base table or view already exists: 1050 Table &apos;users&apos; already exists (SQL: create table `users` (`id` int unsigned not null auto_increment primary key, `name` varchar(191) not</span><br><span class="line">   null, `email` varchar(191) not null, `password` varchar(191) not null, `remember_token` varchar(100) null, `created_at` timestamp null, `updated_at` timestamp null) default character set utf8</span><br><span class="line">  mb4 collate utf8mb4_unicode_ci)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">In Connection.php line 449:</span><br><span class="line"></span><br><span class="line">  SQLSTATE[42S01]: Base table or view already exists: 1050 Table &apos;users&apos; already exists</span><br></pre></td></tr></table></figure>
-<p>笔者查看user表相关逻辑，有了那么一句：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line">   * Reverse the migrations.</span><br><span class="line">   *</span><br><span class="line">   * @return void</span><br><span class="line">   */</span><br><span class="line">  public function down()</span><br><span class="line">  &#123;</span><br><span class="line">      Schema::dropIfExists(&apos;users&apos;);</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure></p>
-<p>有毒，本想直接操作Navicate的，后来想想算了，直接命令行吧,下面一段直接stackoverflow抄的，有效：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">php artisan tinker</span><br><span class="line"></span><br><span class="line">Then</span><br><span class="line"></span><br><span class="line">Schema::drop(&apos;books&apos;)</span><br><span class="line"></span><br><span class="line">(and exit with q)</span><br><span class="line"></span><br><span class="line">Now, you can successfully php artisan migrate:rollback and php artisan migrate.</span><br></pre></td></tr></table></figure></p>
-<p>发现删完再migration的时候不会出毛病了……好吧！！！</p>
-<blockquote>
-<p>字节长度造成的bug</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"> /Applications/MAMP/htdocs/laravel54  ./artisan migrate</span><br><span class="line"></span><br><span class="line">In Connection.php line 647:</span><br><span class="line"></span><br><span class="line">  SQLSTATE[42000]: Syntax error or access violation: 1071 Specified key was too long; max key length is 767 bytes (SQL: alter table `users` add unique `users_email_unique`(`email`))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">In Connection.php line 449:</span><br><span class="line"></span><br><span class="line">  SQLSTATE[42000]: Syntax error or access violation: 1071 Specified key was too long; max key length is 767 bytes</span><br></pre></td></tr></table></figure>
-<p>查了下user表的email,string类型。Laravel 5.4 把默认数据库字符集更改成 utf8mb4，如果运行的是 MySQL v5.7.7 及更高版本，那么就不会出现本文提到的错误。</p>
-<p>因为utf8mb4中是4个byte对应一个字符。767/4 = 191</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">namespace App\Providers;</span><br><span class="line"></span><br><span class="line">use Illuminate\Support\Facades\Schema;</span><br><span class="line">use Illuminate\Support\ServiceProvider;</span><br><span class="line"></span><br><span class="line">class AppServiceProvider extends ServiceProvider</span><br><span class="line">&#123;</span><br><span class="line">    /**</span><br><span class="line">     * Bootstrap any application services.</span><br><span class="line">     *</span><br><span class="line">     * @return void</span><br><span class="line">     */</span><br><span class="line">    public function boot()</span><br><span class="line">    &#123;</span><br><span class="line">        Schema::defaultStringLength(191);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <h2 id="概要："><a href="#概要：" class="headerlink" title="概要："></a>概要：</h2><p>桥接模式将抽象化与实现化脱耦。或者说，实现对象与行为的多对多关系。</p>
+<p>如下例子，小米mix与小米note，无论是哪种行为，皆可输出。</p>
+<h2 id="代码如下："><a href="#代码如下：" class="headerlink" title="代码如下："></a>代码如下：</h2><p>从网上找的例子，这个例子感觉最好<br>code:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br></pre></td><td class="code"><pre><span class="line">abstract class MiPhone</span><br><span class="line">&#123;</span><br><span class="line">    // 存放音频软件对象</span><br><span class="line">    protected $_audio;</span><br><span class="line"></span><br><span class="line">    public function __construct(Audio $audio)</span><br><span class="line">    &#123;</span><br><span class="line">        $this-&gt;_audio = $audio;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    abstract function output();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">class Mix extends MiPhone</span><br><span class="line">&#123;</span><br><span class="line">    public function output()</span><br><span class="line">    &#123;</span><br><span class="line">        $this-&gt;_audio-&gt;output();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">class Note extends MiPhone</span><br><span class="line">&#123;</span><br><span class="line">    public function output()</span><br><span class="line">    &#123;</span><br><span class="line">        $this-&gt;_audio-&gt;output();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">// 实现化角色 功能实现者</span><br><span class="line">abstract class Audio</span><br><span class="line">&#123;</span><br><span class="line">    abstract function output();</span><br><span class="line">&#125;</span><br><span class="line">// 具体音频实现者-骨传导音频输出</span><br><span class="line">class Osteophony extends Audio</span><br><span class="line">&#123;</span><br><span class="line">    public function output()</span><br><span class="line">    &#123;</span><br><span class="line">        echo &quot;骨传导输出的声音-----哈哈&quot; . PHP_EOL;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">// 普通音频输出-声筒输出</span><br><span class="line">class Cylinder extends Audio</span><br><span class="line">&#123;</span><br><span class="line">    public function output()</span><br><span class="line">    &#123;</span><br><span class="line">        echo &quot;声筒输出的声音-----呵呵&quot; . PHP_EOL;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 让小米mix和小米note输出声音</span><br><span class="line">$mix = new Mix(new Osteophony);</span><br><span class="line">$mix-&gt;output();</span><br><span class="line"></span><br><span class="line">$note = new Note(new Cylinder);</span><br><span class="line">$note-&gt;output();</span><br><span class="line"></span><br><span class="line">$test3 = new Mix(new Cylinder());</span><br><span class="line">$test3-&gt;output();</span><br><span class="line"></span><br><span class="line">$test4 = new Note(new Osteophony());</span><br><span class="line">$test4-&gt;output();</span><br></pre></td></tr></table></figure></p>
+<p>output:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">骨传导输出的声音-----哈哈</span><br><span class="line">声筒输出的声音-----呵呵</span><br><span class="line">声筒输出的声音-----呵呵</span><br><span class="line">骨传导输出的声音-----哈哈</span><br></pre></td></tr></table></figure></p>
 <h2 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h2><ol>
-<li>migration是个好东西，常用migration命令可以在命令行中查，这里不罗列了；</li>
-<li>codeFirst这种思想不错；</li>
-<li>mysql5.6和更高版本的不同确是要引起足够重视。</li>
+<li>多对多的关系，相互搭配，桥接；</li>
+<li>如果一样东西看不懂，可能是顺序错了，可能方法不对，要找出原因，然后果敢的改正。</li>
 </ol>
 
       
@@ -492,15 +466,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Laravel/" rel="tag"># Laravel</a>
-          
-            <a href="/tags/migration/" rel="tag"># migration</a>
-          
-            <a href="/tags/command/" rel="tag"># command</a>
-          
-            <a href="/tags/MySQL/" rel="tag"># MySQL</a>
-          
-            <a href="/tags/PHP/" rel="tag"># PHP</a>
+            <a href="/tags/16个PHP设计模式/" rel="tag"># 16个PHP设计模式</a>
           
         </div>
       
@@ -513,8 +479,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/01/30/如何触发xdebug断点/" rel="next" title="如何触发xdebug断点">
-                <i class="fa fa-chevron-left"></i> 如何触发xdebug断点
+              <a href="/2017/02/17/6-适配器模式/" rel="next" title="6-适配器模式">
+                <i class="fa fa-chevron-left"></i> 6-适配器模式
               </a>
             
           </div>
@@ -522,6 +488,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/11/08/mysql-commands/" rel="prev" title="mysql commands">
+                mysql commands <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -753,7 +723,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#场景"><span class="nav-number">1.</span> <span class="nav-text">场景</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#过程"><span class="nav-number">2.</span> <span class="nav-text">过程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#结论"><span class="nav-number">3.</span> <span class="nav-text">结论</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#概要："><span class="nav-number">1.</span> <span class="nav-text">概要：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代码如下："><span class="nav-number">2.</span> <span class="nav-text">代码如下：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#结论"><span class="nav-number">3.</span> <span class="nav-text">结论</span></a></li></ol></div>
             
 
           </div>
