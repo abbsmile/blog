@@ -11,4 +11,4 @@ tags:
 
 笔者电脑是MacBook Air,直接用的是微软的Office，每次运行word、excel时，卡的不行。前段时间，同事介绍wps,说mac版的wps也能用了，抱着半信半疑的态度下载了，体验极其好。
 
-于是，果断卸载了微软的Office。wps,良心产品，还免费。i
+于是，果断卸载了微软的Office。wps,良心产品，还免费。
