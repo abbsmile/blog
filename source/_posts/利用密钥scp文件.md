@@ -4,7 +4,7 @@ date: 2019-02-26 20:26:00i
 categories: 
 - CentOS
 tags:
-- Linuxi
+- Linux
 - command
 - iTerm2
 ---
