@@ -96,18 +96,18 @@
 
 
 
-  <meta name="description" content="man df看一下:123df -- display free disk space-H  &amp;quot;Human-readable&amp;quot; output.  Use unit suffixes: Byte, Kilobyte, Megabyte, Gigabyte, Terabyte and Petabyte in order to reduce the number of digits t">
+  <meta name="description" content="man df看一下: df – display free disk space -H  “Human-readable” output.  Use unit suffixes: Byte, Kilobyte, Megabyte, Gigabyte, Terabyte and Petabyte in order to reduce the number of digits to three or l">
 <meta name="keywords" content="Linux">
 <meta property="og:type" content="article">
 <meta property="og:title" content="df -h">
 <meta property="og:url" content="http://www.abble.com/2017/03/04/df-h/index.html">
 <meta property="og:site_name" content="笔误通鉴">
-<meta property="og:description" content="man df看一下:123df -- display free disk space-H  &amp;quot;Human-readable&amp;quot; output.  Use unit suffixes: Byte, Kilobyte, Megabyte, Gigabyte, Terabyte and Petabyte in order to reduce the number of digits t">
+<meta property="og:description" content="man df看一下: df – display free disk space -H  “Human-readable” output.  Use unit suffixes: Byte, Kilobyte, Megabyte, Gigabyte, Terabyte and Petabyte in order to reduce the number of digits to three or l">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-03-04T13:41:16.114Z">
+<meta property="og:updated_time" content="2019-03-04T13:44:47.875Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="df -h">
-<meta name="twitter:description" content="man df看一下:123df -- display free disk space-H  &amp;quot;Human-readable&amp;quot; output.  Use unit suffixes: Byte, Kilobyte, Megabyte, Gigabyte, Terabyte and Petabyte in order to reduce the number of digits t">
+<meta name="twitter:description" content="man df看一下: df – display free disk space -H  “Human-readable” output.  Use unit suffixes: Byte, Kilobyte, Megabyte, Gigabyte, Terabyte and Petabyte in order to reduce the number of digits to three or l">
 
 
 
@@ -435,9 +435,14 @@
       
 
       
-        <p><code>man df</code>看一下:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">df -- display free disk space</span><br><span class="line"></span><br><span class="line">-H  &quot;Human-readable&quot; output.  Use unit suffixes: Byte, Kilobyte, Megabyte, Gigabyte, Terabyte and Petabyte in order to reduce the number of digits to three or less using base 10 for sizes.</span><br></pre></td></tr></table></figure></p>
+        <p><code>man df</code>看一下:</p>
+<p>df – display free disk space</p>
+<p>-H  “Human-readable” output.  Use unit suffixes: Byte, Kilobyte, Megabyte, Gigabyte, Terabyte and Petabyte in order to reduce the number of digits to three or less using base 10 for sizes.</p>
 <p>个人感觉很好理解了。</p>
-<p>来一个感受一下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"> ~  df -h</span><br><span class="line">Filesystem      Size   Used  Avail Capacity iused               ifree %iused  Mounted on</span><br><span class="line">/dev/disk1s1   113Gi  102Gi  6.7Gi    94% 2351652 9223372036852424155    0%   /</span><br><span class="line">devfs          201Ki  201Ki    0Bi   100%     696                   0  100%   /dev</span><br><span class="line">/dev/disk1s4   113Gi  3.0Gi  6.7Gi    31%       3 9223372036854775804    0%   /private/var/vm</span><br><span class="line">map -hosts       0Bi    0Bi    0Bi   100%       0                   0  100%   /net</span><br><span class="line">map auto_home    0Bi    0Bi    0Bi   100%       0                   0  100%   /home</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li>来一个感受一下：</li>
+</ul>
+<p>df -h<br>Filesystem      Size   Used  Avail Capacity iused               ifree %iused  Mounted on<br>/dev/disk1s1   113Gi  102Gi  6.7Gi    94% 2351652 9223372036852424155    0%   /<br>devfs          201Ki  201Ki    0Bi   100%     696                   0  100%   /dev<br>/dev/disk1s4   113Gi  3.0Gi  6.7Gi    31%       3 9223372036854775804    0%   /private/var/vm<br>map -hosts       0Bi    0Bi    0Bi   100%       0                   0  100%   /net<br>map auto_home    0Bi    0Bi    0Bi   100%       0                   0  100%   /home</p>
 <p>这是个常用命令，老大用得频率极高。啊，，，貌似运维上用的多，开发上也还好。以前总记不住，然后这边英文理解<code>display free disk space</code>,<code>Human-readable</code>可以帮助记忆。</p>
 <p>总之，还是要学会看手册，看menu.</p>
 
