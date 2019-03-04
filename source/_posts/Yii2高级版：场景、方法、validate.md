@@ -66,7 +66,23 @@ public void behaviors ()
 
 所以，完全可以继承，以实现对`http request methods`的甄别。
 
+> `Class yii\rest\Controller`下面的这句话，感觉有必要复制一下：
+
+```
+Controller implements the following steps in a RESTful API request handling cycle:
+
+Resolving response format (see yii\filters\ContentNegotiator);
+Validating request method (see verbs()).
+Authenticating user (see yii\filters\auth\AuthInterface);
+Rate limiting (see yii\filters\RateLimiter);
+Formatting response data (see serializeData()).
+For more details and usage information on Controller, see the guide article on rest controllers.
+```
+其中有一个`Validating request method`,这也是能找到`Class yii\filters\VerbFilte`的原因，总有内在逻辑关系的。
+
 ## 设置验证场景
+
+这里没有其它的，就想把里面的代码一行一行分析一遍。
 
 
 
