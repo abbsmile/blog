@@ -96,25 +96,25 @@
 
 
 
-  <meta name="description" content="场景在处理分页的时候，用到了这两个函数，也造成了一个不小的bug。特此记录下。 ceil查了下，有天花板的意思，向上取整。 floor自然，floor这个地板，也就是向下取整了。 说明程序中开始用的是floor，然后当个数刚刚好时，总数/页数 恰巧为整数时，会出bug。 所以，当用到这两个函数时，要注意整数的情况。有时会出现一两个异类，造成临界情况出差错。">
-<meta name="keywords" content="PHP,PHP函数">
+  <meta name="description" content="工作中遇到一个需求，任意给一个结点id,求出其所有的叶子结点。 123456789101112131415161718192021222324252627282930313233/** * 求出单个结点下面所有叶子结点，并加入到变量中 * @param $id 结点id * @param $data 从数据库查找出来的school_area的数据 */public function findLas">
+<meta name="keywords" content="PHP">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ceil与floor">
-<meta property="og:url" content="http://www.abble.com/2017/01/31/ceil与floor/index.html">
+<meta property="og:title" content="求树的所有叶子结点">
+<meta property="og:url" content="http://www.abble.com/2018/01/11/求树的所有叶子结点/index.html">
 <meta property="og:site_name" content="笔误通鉴">
-<meta property="og:description" content="场景在处理分页的时候，用到了这两个函数，也造成了一个不小的bug。特此记录下。 ceil查了下，有天花板的意思，向上取整。 floor自然，floor这个地板，也就是向下取整了。 说明程序中开始用的是floor，然后当个数刚刚好时，总数/页数 恰巧为整数时，会出bug。 所以，当用到这两个函数时，要注意整数的情况。有时会出现一两个异类，造成临界情况出差错。">
+<meta property="og:description" content="工作中遇到一个需求，任意给一个结点id,求出其所有的叶子结点。 123456789101112131415161718192021222324252627282930313233/** * 求出单个结点下面所有叶子结点，并加入到变量中 * @param $id 结点id * @param $data 从数据库查找出来的school_area的数据 */public function findLas">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-01-31T07:44:01.275Z">
+<meta property="og:updated_time" content="2019-03-17T23:26:22.121Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ceil与floor">
-<meta name="twitter:description" content="场景在处理分页的时候，用到了这两个函数，也造成了一个不小的bug。特此记录下。 ceil查了下，有天花板的意思，向上取整。 floor自然，floor这个地板，也就是向下取整了。 说明程序中开始用的是floor，然后当个数刚刚好时，总数/页数 恰巧为整数时，会出bug。 所以，当用到这两个函数时，要注意整数的情况。有时会出现一两个异类，造成临界情况出差错。">
+<meta name="twitter:title" content="求树的所有叶子结点">
+<meta name="twitter:description" content="工作中遇到一个需求，任意给一个结点id,求出其所有的叶子结点。 123456789101112131415161718192021222324252627282930313233/** * 求出单个结点下面所有叶子结点，并加入到变量中 * @param $id 结点id * @param $data 从数据库查找出来的school_area的数据 */public function findLas">
 
 
 
 
 
 
-  <link rel="canonical" href="http://www.abble.com/2017/01/31/ceil与floor/">
+  <link rel="canonical" href="http://www.abble.com/2018/01/11/求树的所有叶子结点/">
 
 
 
@@ -124,7 +124,7 @@
   };
 </script>
 
-  <title>ceil与floor | 笔误通鉴</title>
+  <title>求树的所有叶子结点 | 笔误通鉴</title>
   
 
 
@@ -340,7 +340,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.abble.com/2017/01/31/ceil与floor/">
+    <link itemprop="mainEntityOfPage" href="http://www.abble.com/2018/01/11/求树的所有叶子结点/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Abble">
@@ -357,7 +357,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">ceil与floor
+          <h1 class="post-title" itemprop="name headline">求树的所有叶子结点
 
               
             
@@ -383,7 +383,7 @@
                 
               
 
-              <time title="创建时间：2017-01-31 14:46:04" itemprop="dateCreated datePublished" datetime="2017-01-31T14:46:04+08:00">2017-01-31</time>
+              <time title="创建时间：2018-01-11 22:37:22" itemprop="dateCreated datePublished" datetime="2018-01-11T22:37:22+08:00">2018-01-11</time>
             
 
             
@@ -435,11 +435,9 @@
       
 
       
-        <h2 id="场景"><a href="#场景" class="headerlink" title="场景"></a>场景</h2><p>在处理分页的时候，用到了这两个函数，也造成了一个不小的bug。特此记录下。</p>
-<h2 id="ceil"><a href="#ceil" class="headerlink" title="ceil"></a>ceil</h2><p>查了下，有天花板的意思，向上取整。</p>
-<h2 id="floor"><a href="#floor" class="headerlink" title="floor"></a>floor</h2><p>自然，floor这个地板，也就是向下取整了。</p>
-<h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><p>程序中开始用的是floor，然后当个数刚刚好时，总数/页数 恰巧为整数时，会出bug。</p>
-<p>所以，当用到这两个函数时，要注意整数的情况。有时会出现一两个异类，造成临界情况出差错。</p>
+        <p>工作中遇到一个需求，任意给一个结点id,求出其所有的叶子结点。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line"> * 求出单个结点下面所有叶子结点，并加入到变量中</span><br><span class="line"> * @param $id 结点id</span><br><span class="line"> * @param $data 从数据库查找出来的school_area的数据</span><br><span class="line"> */</span><br><span class="line">public function findLastNodes($id, $data)</span><br><span class="line">&#123;</span><br><span class="line">	if ($this-&gt;childCounts($id, $data) == 0) &#123;</span><br><span class="line">		array_push($this-&gt;nodes, $id);</span><br><span class="line">	&#125; else &#123;</span><br><span class="line">		foreach ($data as $key =&gt; $value) &#123;</span><br><span class="line">			if ($value[&apos;parent_id&apos;] == $id) &#123;</span><br><span class="line">				$this-&gt;findLastNodes($value[&apos;id&apos;], $data);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * @param $id 结点id</span><br><span class="line"> * @param $data school_area里取出来的数据</span><br><span class="line"> * @return int 该结点下子结点的个数</span><br><span class="line"> */</span><br><span class="line">public function childCounts($id, $data)</span><br><span class="line">&#123;</span><br><span class="line">	$i = 0;</span><br><span class="line">	foreach ($data as $key =&gt; $value) &#123;</span><br><span class="line">		if ($value[&apos;parent_id&apos;] == $id) &#123;</span><br><span class="line">			++$i;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	return $i;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>上面的方法在一个TP类中，所以调用方法就直接用$this-&gt;funcion name的形式，对数组的保存也是这样。用到了递归。不过效率应该不高。</p>
 
       
     </div>
@@ -465,8 +463,6 @@
           
             <a href="/tags/PHP/" rel="tag"># PHP</a>
           
-            <a href="/tags/PHP函数/" rel="tag"># PHP函数</a>
-          
         </div>
       
 
@@ -478,8 +474,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/01/12/3-抽象工厂模式/" rel="next" title="3-抽象工厂模式">
-                <i class="fa fa-chevron-left"></i> 3-抽象工厂模式
+              <a href="/2018/01/07/High-Sierra-XAMPP-terminal下打开mysql/" rel="next" title="High Sierra+XAMPP+ terminal下打开mysql">
+                <i class="fa fa-chevron-left"></i> High Sierra+XAMPP+ terminal下打开mysql
               </a>
             
           </div>
@@ -488,8 +484,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/02/12/4-建造者模式/" rel="prev" title="4-建造者模式">
-                4-建造者模式 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/02/27/PHP-BCMath/" rel="prev" title="PHP-BCMath">
+                PHP-BCMath <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -535,17 +531,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <div class="site-overview-wrap sidebar-panel">
+      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -739,23 +726,6 @@
         </div>
       </div>
 
-      
-      <!--noindex-->
-        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-            
-            
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#场景"><span class="nav-number">1.</span> <span class="nav-text">场景</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ceil"><span class="nav-number">2.</span> <span class="nav-text">ceil</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#floor"><span class="nav-number">3.</span> <span class="nav-text">floor</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#说明"><span class="nav-number">4.</span> <span class="nav-text">说明</span></a></li></ol></div>
-            
-
-          </div>
-        </div>
-      <!--/noindex-->
       
 
       
