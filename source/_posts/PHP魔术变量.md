@@ -1,6 +1,7 @@
 ---
 title: PHP魔术变量
 date: 2018-02-28 23:50:47
+categories:
 - PHP
 tags:
 - PHP
