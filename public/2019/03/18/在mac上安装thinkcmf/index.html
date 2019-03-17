@@ -96,28 +96,33 @@
 
 
 
-  <meta name="description" content="CMS项目中，sql查询有时条件是多样的，例如这样：  当然，以上程序运行不了。下面这样一个小技巧还不错：">
-<meta name="keywords" content="ThinkPHP,ThinkCMF,php">
+  <meta name="description" content="以前是在CentOS上安装的thinkcmf,记忆中一直很顺利。昨天在mac上安装，遇到点小波折。然后这里记录一下。 1.首先会遇到下面的错误  稍加分析，找到$cacaeFile所代表的路径，便知道了是权限的问题。 同理，如果改变了这里的权限。接下来会出现这样的错误：  因此，在安装之前，我们可以：chmod 777 data ./public/upload改变两个文件夹的权限。以便apach">
+<meta name="keywords" content="ThinkPHP">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ThinkCMF：查询条件中的or">
-<meta property="og:url" content="http://www.abble.com/2019/01/12/ThinkCMF：查询条件中的or/index.html">
+<meta property="og:title" content="在mac上安装thinkcmf">
+<meta property="og:url" content="http://www.abble.com/2019/03/18/在mac上安装thinkcmf/index.html">
 <meta property="og:site_name" content="笔误通鉴">
-<meta property="og:description" content="CMS项目中，sql查询有时条件是多样的，例如这样：  当然，以上程序运行不了。下面这样一个小技巧还不错：">
+<meta property="og:description" content="以前是在CentOS上安装的thinkcmf,记忆中一直很顺利。昨天在mac上安装，遇到点小波折。然后这里记录一下。 1.首先会遇到下面的错误  稍加分析，找到$cacaeFile所代表的路径，便知道了是权限的问题。 同理，如果改变了这里的权限。接下来会出现这样的错误：  因此，在安装之前，我们可以：chmod 777 data ./public/upload改变两个文件夹的权限。以便apach">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2875232-68db949a98d88d38.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/620">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2875232-a92b57fab83b5bb3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/550">
-<meta property="og:updated_time" content="2019-01-31T15:36:23.582Z">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2875232-3ddf4bf1ca4b44e7.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2875232-5e3f3115ac5c2a86.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/310">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2875232-6f59047bb906689e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/310">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2875232-8e662789ba70efee.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/310">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2875232-d90943206a2d417e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/310">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2875232-47a105f027f6a144.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/310">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2875232-5a510a41c7138291.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/130">
+<meta property="og:updated_time" content="2019-03-17T23:54:01.924Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ThinkCMF：查询条件中的or">
-<meta name="twitter:description" content="CMS项目中，sql查询有时条件是多样的，例如这样：  当然，以上程序运行不了。下面这样一个小技巧还不错：">
-<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/2875232-68db949a98d88d38.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/620">
+<meta name="twitter:title" content="在mac上安装thinkcmf">
+<meta name="twitter:description" content="以前是在CentOS上安装的thinkcmf,记忆中一直很顺利。昨天在mac上安装，遇到点小波折。然后这里记录一下。 1.首先会遇到下面的错误  稍加分析，找到$cacaeFile所代表的路径，便知道了是权限的问题。 同理，如果改变了这里的权限。接下来会出现这样的错误：  因此，在安装之前，我们可以：chmod 777 data ./public/upload改变两个文件夹的权限。以便apach">
+<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/2875232-3ddf4bf1ca4b44e7.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 
 
 
 
 
 
-  <link rel="canonical" href="http://www.abble.com/2019/01/12/ThinkCMF：查询条件中的or/">
+  <link rel="canonical" href="http://www.abble.com/2019/03/18/在mac上安装thinkcmf/">
 
 
 
@@ -127,7 +132,7 @@
   };
 </script>
 
-  <title>ThinkCMF：查询条件中的or | 笔误通鉴</title>
+  <title>在mac上安装thinkcmf | 笔误通鉴</title>
   
 
 
@@ -343,7 +348,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.abble.com/2019/01/12/ThinkCMF：查询条件中的or/">
+    <link itemprop="mainEntityOfPage" href="http://www.abble.com/2019/03/18/在mac上安装thinkcmf/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Abble">
@@ -360,7 +365,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">ThinkCMF：查询条件中的or
+          <h1 class="post-title" itemprop="name headline">在mac上安装thinkcmf
 
               
             
@@ -386,7 +391,7 @@
                 
               
 
-              <time title="创建时间：2019-01-12 12:26:40" itemprop="dateCreated datePublished" datetime="2019-01-12T12:26:40+08:00">2019-01-12</time>
+              <time title="创建时间：2019-03-18 07:52:25" itemprop="dateCreated datePublished" datetime="2019-03-18T07:52:25+08:00">2019-03-18</time>
             
 
             
@@ -438,9 +443,25 @@
       
 
       
-        <p>CMS项目中，sql查询有时条件是多样的，例如这样：</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2875232-68db949a98d88d38.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/620" alt="d89204a4446bed6b5017f703f939289.png"></p>
-<p>当然，以上程序运行不了。下面这样一个小技巧还不错：<br><img src="http://upload-images.jianshu.io/upload_images/2875232-a92b57fab83b5bb3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/550" alt="49a06fc0d93c8bb5e5126e40d54a21d.png"></p>
+        <p><img src="http://upload-images.jianshu.io/upload_images/2875232-3ddf4bf1ca4b44e7.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=".jpg"></p>
+<p>以前是在CentOS上安装的thinkcmf,记忆中一直很顺利。昨天在mac上安装，遇到点小波折。然后这里记录一下。</p>
+<p>1.首先会遇到下面的错误</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2875232-5e3f3115ac5c2a86.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/310" alt="image.png"></p>
+<p>稍加分析，找到<code>$cacaeFile</code>所代表的路径，便知道了是权限的问题。</p>
+<p>同理，如果改变了这里的权限。接下来会出现这样的错误：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2875232-6f59047bb906689e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/310" alt="image.png"></p>
+<p>因此，在安装之前，我们可以：<code>chmod 777 data ./public/upload</code>改变两个文件夹的权限。以便apache可以对其操作。</p>
+<p>2.<code>下一步</code>安装的时候，有可能会遇到这样的错误：<br><img src="http://upload-images.jianshu.io/upload_images/2875232-8e662789ba70efee.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/310" alt="image.png"></p>
+<p>这个时候，我们可以到<code>httpd.conf</code>修改<code>AllowOverride All</code>,如下所示：<br><img src="http://upload-images.jianshu.io/upload_images/2875232-d90943206a2d417e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/310" alt="image.png"></p>
+<p>3.我也遇到过这样的问题，不过后来莫名其妙没有了。觉得没有意义。没有深究了。然后在这里，听别人说：必须是root，其它用户不行。这是个bug。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2875232-47a105f027f6a144.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/310" alt="image.png"></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2875232-5a510a41c7138291.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/130" alt="image.png"></p>
+<blockquote>
+<p>安装的时候参考了：<a href="https://tech.yj777.cn/thinkcmf-%E7%9A%84%E9%83%A8%E7%BD%B2/" target="_blank" rel="noopener">ThinkCMF 的部署</a></p>
+</blockquote>
+<p>这篇文章提到了两点，个人感觉很重要：</p>
+<p>1.安装完成后把<code>install</code>文件夹删除。这个容易忘记。<br>2.代码不能用root + password方式获取数据库数据。所以要另创建一个用户，然后修改数据库配置文件。</p>
+<p>—bug:这个我还没实验好，有点小难度。</p>
 
       
     </div>
@@ -466,10 +487,6 @@
           
             <a href="/tags/ThinkPHP/" rel="tag"># ThinkPHP</a>
           
-            <a href="/tags/ThinkCMF/" rel="tag"># ThinkCMF</a>
-          
-            <a href="/tags/php/" rel="tag"># php</a>
-          
         </div>
       
 
@@ -481,8 +498,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/01/12/软链接/" rel="next" title="软链接">
-                <i class="fa fa-chevron-left"></i> 软链接
+              <a href="/2019/03/08/CentOS7使用firewalld打开关闭防火墙、端口/" rel="next" title="CentOS7使用firewalld打开关闭防火墙、端口">
+                <i class="fa fa-chevron-left"></i> CentOS7使用firewalld打开关闭防火墙、端口
               </a>
             
           </div>
@@ -490,10 +507,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/01/12/ThinkCMF：向upload目录下写文件失败/" rel="prev" title="ThinkCMF：向upload目录下写文件失败">
-                ThinkCMF：向upload目录下写文件失败 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
