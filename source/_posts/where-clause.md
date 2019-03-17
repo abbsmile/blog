@@ -1,10 +1,12 @@
 ---
 title: where clause
 date: 2018-02-03 23:35:03
+categories:
 - SQL
 tags:
 - SQL
 ---
+
 
 这个是tp开发中经常会报的错：
 
