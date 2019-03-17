@@ -96,24 +96,31 @@
 
 
 
-  <meta name="description" content="Stay Hungry Stay Foolish    世事洞明皆学问人情练达即文章">
-<meta name="keywords" content="PHP Python 运维">
-<meta property="og:type" content="website">
-<meta property="og:title" content="笔误通鉴">
-<meta property="og:url" content="http://www.abble.com/archives/2019/03/index.html">
+  <meta name="description" content="怎样配置的就不在这里说了，网上教程很多，跟着走就可以了。可以百度：mac xdebug phpstorm 调试配置 一般要注意两点：1.Debug port:最好别设置成9000，它默认是9000，但有可能会出错。只要和php.init文件里的配置相同就行了。我设置的是90012.localhost有时与127.0.0.1不一样，这个要分清。最好的方法就是一个不行，试试另一个。当然寻根溯源是最好的">
+<meta name="keywords" content="PHPStorm">
+<meta property="og:type" content="article">
+<meta property="og:title" content="PHPStorm在浏览器中的断点调试">
+<meta property="og:url" content="http://www.abble.com/2018/01/07/PHPStorm在浏览器中的断点调试/index.html">
 <meta property="og:site_name" content="笔误通鉴">
-<meta property="og:description" content="Stay Hungry Stay Foolish    世事洞明皆学问人情练达即文章">
+<meta property="og:description" content="怎样配置的就不在这里说了，网上教程很多，跟着走就可以了。可以百度：mac xdebug phpstorm 调试配置 一般要注意两点：1.Debug port:最好别设置成9000，它默认是9000，但有可能会出错。只要和php.init文件里的配置相同就行了。我设置的是90012.localhost有时与127.0.0.1不一样，这个要分清。最好的方法就是一个不行，试试另一个。当然寻根溯源是最好的">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2875232-5db2dd9e4adae6c8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2875232-cfa59997d1d9fb4d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2875232-1e3c161bf73b7c04.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2875232-d26e724655f62fc6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/620">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2875232-96af86d8689485be.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2019-03-17T23:20:17.220Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="笔误通鉴">
-<meta name="twitter:description" content="Stay Hungry Stay Foolish    世事洞明皆学问人情练达即文章">
+<meta name="twitter:title" content="PHPStorm在浏览器中的断点调试">
+<meta name="twitter:description" content="怎样配置的就不在这里说了，网上教程很多，跟着走就可以了。可以百度：mac xdebug phpstorm 调试配置 一般要注意两点：1.Debug port:最好别设置成9000，它默认是9000，但有可能会出错。只要和php.init文件里的配置相同就行了。我设置的是90012.localhost有时与127.0.0.1不一样，这个要分清。最好的方法就是一个不行，试试另一个。当然寻根溯源是最好的">
+<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/2875232-5db2dd9e4adae6c8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 
 
 
 
 
 
-  <link rel="canonical" href="http://www.abble.com/archives/2019/03/">
+  <link rel="canonical" href="http://www.abble.com/2018/01/07/PHPStorm在浏览器中的断点调试/">
 
 
 
@@ -123,7 +130,7 @@
   };
 </script>
 
-  <title>归档 | 笔误通鉴</title>
+  <title>PHPStorm在浏览器中的断点调试 | 笔误通鉴</title>
   
 
 
@@ -171,7 +178,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
@@ -260,7 +267,7 @@
         
         
           
-          <li class="menu-item menu-item-archives menu-item-active">
+          <li class="menu-item menu-item-archives">
 
     
     
@@ -299,28 +306,6 @@
   
     
 
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
-
   
 
   
@@ -345,112 +330,219 @@
           <div id="content" class="content">
             
 
+  <div id="posts" class="posts-expand">
+    
+
+  
+
   
   
   
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
 
-      
-      <span class="archive-page-counter">
-        
-        
-         
-          
-        不错! 目前共计 77 篇日志。 继续努力。
-      </span>
-      
-
-      
-
-        
-        
-        
-
-        
-          
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2019">2019</h1>
-          </div>
-        
-        
-
-        
+  
 
   <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://www.abble.com/2018/01/07/PHPStorm在浏览器中的断点调试/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Abble">
+      <meta itemprop="description" content="Stay Hungry Stay Foolish <br> <br>  世事洞明皆学问<br>人情练达即文章 <br>">
+      <meta itemprop="image" content="/images/WechatIMG586.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="笔误通鉴">
+    </span>
+
+    
+      <header class="post-header">
+
         
-          <a class="post-title-link" href="/2019/03/08/CentOS7使用firewalld打开关闭防火墙、端口/" itemprop="url">
-            
-              <span itemprop="name">CentOS7使用firewalld打开关闭防火墙、端口</span>
-            
-          </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">PHPStorm在浏览器中的断点调试
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-03-08T10:33:13+08:00" content="2019-03-08">
-          03-08
-        </time>
-      </div>
+              
+            
+          </h1>
+        
 
-    </header>
-  </article>
+        <div class="post-meta">
+          <span class="post-time">
 
+            
+            
+            
 
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-01-07 22:34:58" itemprop="dateCreated datePublished" datetime="2018-01-07T22:34:58+08:00">2018-01-07</time>
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/PHPStorm/" itemprop="url" rel="index"><span itemprop="name">PHPStorm</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/03/02/shell脚本实现远程登录、操作/" itemprop="url">
-            
-              <span itemprop="name">shell脚本实现远程登录、操作</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-03-02T18:47:26+08:00" content="2019-03-02">
-          03-02
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
 
+      
+        <p>怎样配置的就不在这里说了，网上教程很多，跟着走就可以了。<br>可以百度：mac xdebug phpstorm 调试配置</p>
+<p>一般要注意两点：<br>1.Debug port:最好别设置成9000，它默认是9000，但有可能会出错。只要和php.init文件里的配置相同就行了。我设置的是9001<br>2.localhost有时与127.0.0.1不一样，这个要分清。最好的方法就是一个不行，试试另一个。当然寻根溯源是最好的。</p>
+<p>下面是流程：</p>
+<ul>
+<li>环境<br>High Sierra（版本 10.13）<br>XAMPP 7.0.2-1<br>ThinkPHP 5</li>
+</ul>
+<blockquote>
+<p>设置虚拟域名</p>
+</blockquote>
+<p>我在项目中设置了一个虚拟域名，怎么设置的说不清楚，各种情况都有，要根据问题百度教程相应的教程。大致方向是这三个文件：</p>
+<p><code>/Applications/XAMPP/xamppfiles/etc/httpd.conf</code></p>
+<p>打开后，搜索Virtual hosts,定位到这里：<br><img src="http://upload-images.jianshu.io/upload_images/2875232-5db2dd9e4adae6c8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<p>去掉注释，这样便引用了这个文件，下一个要改的就是这个文件：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;VirtualHost *:80&gt;</span><br><span class="line">    DocumentRoot &quot;/Applications/XAMPP/xamppfiles/htdocs/bjzerg/public&quot;</span><br><span class="line">    ServerName a.cn</span><br><span class="line">&lt;/VirtualHost&gt;</span><br></pre></td></tr></table></figure></p>
+<p>外加上 /etc/hosts 里面配置一下：<code>127.0.0.1 a.cn</code> OK.</p>
+<p>localhost最好也依样画葫芦配置一下，不然出现的结果有点尴尬。</p>
+<blockquote>
+<p>PHPStorm中配置</p>
+</blockquote>
+<p>1.PHPStorm右上角<br><img src="http://upload-images.jianshu.io/upload_images/2875232-cfa59997d1d9fb4d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<p>2.添加PHP Web Application<br><img src="http://upload-images.jianshu.io/upload_images/2875232-1e3c161bf73b7c04.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<p>怎么配置的不要太关心。最好的依据就是中间蓝色的url,这个是关键。</p>
+<p>3.PHPStorm右上角有个电话的小按钮：Start Listening for PHP Debug Connections。点击跳转到网页：<br><img src="http://upload-images.jianshu.io/upload_images/2875232-d26e724655f62fc6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/620" alt="image.png"></p>
+<p>我们要的其实就是箭头所指的东西。</p>
+<blockquote>
+<p>Postman</p>
+</blockquote>
+<p>下载一个专用的测试url的插件或软件。Postman不错。在url后面加上上图所示的XDEBUG_SESSION_START.在Postman中显示如下图所示：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2875232-96af86d8689485be.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<p>在PHPStorm中打断点，即可进行调试。</p>
+
+      
     </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/PHPStorm/" rel="tag"># PHPStorm</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/12/10/Mac-PhpStorm-Xdebug/" rel="next" title="Mac + PhpStorm + Xdebug">
+                <i class="fa fa-chevron-left"></i> Mac + PhpStorm + Xdebug
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/01/07/看问题的方式不一样/" rel="prev" title="看问题的方式不一样">
+                看问题的方式不一样 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+  </div>
 
 
           </div>
           
+
+  
+
+
 
         </div>
         
@@ -787,6 +879,10 @@
   
 
   
+  <script src="/js/src/scrollspy.js?v=6.7.0"></script>
+<script src="/js/src/post-details.js?v=6.7.0"></script>
+
+
 
   
 
@@ -796,6 +892,8 @@
 
 
   
+  
+
 
   
 
