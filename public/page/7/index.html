@@ -1860,7 +1860,7 @@ JS对象标记，可以理解成和JS对象没有半毛
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.abble.com/2017/03/14/7-桥接模式/">
+    <link itemprop="mainEntityOfPage" href="http://www.abble.com/2017/03/19/thinkcmf-cmf-password-及其它/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Abble">
@@ -1880,7 +1880,7 @@ JS对象标记，可以理解成和JS对象没有半毛
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/2017/03/14/7-桥接模式/" class="post-title-link" itemprop="url">7-桥接模式</a>
+                <a href="/2017/03/19/thinkcmf-cmf-password-及其它/" class="post-title-link" itemprop="url">thinkcmf:cmf_password()及其它</a>
               
             
           </h1>
@@ -1905,7 +1905,7 @@ JS对象标记，可以理解成和JS对象没有半毛
                 
               
 
-              <time title="创建时间：2017-03-14 20:02:59" itemprop="dateCreated datePublished" datetime="2017-03-14T20:02:59+08:00">2017-03-14</time>
+              <time title="创建时间：2017-03-19 23:52:24" itemprop="dateCreated datePublished" datetime="2017-03-19T23:52:24+08:00">2017-03-19</time>
             
 
             
@@ -1923,7 +1923,7 @@ JS对象标记，可以理解成和JS对象没有半毛
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/设计模式/" itemprop="url" rel="index"><span itemprop="name">设计模式</span></a></span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/ThinkCMF/" itemprop="url" rel="index"><span itemprop="name">ThinkCMF</span></a></span>
 
                 
                 
@@ -1960,15 +1960,16 @@ JS对象标记，可以理解成和JS对象没有半毛
         
           
             <p>
-              概要：桥接模式将抽象化与实现化脱耦。或者说，实现对象与行为的多对多关系。
-如下例子，小米mix与小米note，无论是哪种行为，皆可输出。
-代码如下：从网上找的例子，这个例子感觉最好code:abstract class MiPhone&#123;    // 存放音频软件对象    protecte
+              
+笔者让阿里云上数据库覆盖了本地数据库，然后发现，云端可登录的帐号密码在本地登陆不了。
+查看cmf源码，定位cmf_password()函数，发现它使用了数据库配置文件中的一个参数。而数据库配置文件，由于做了特殊设置git时本地与云端不同步。
+换句话：也就是云端加密与本地加密的盐不同。/** * C
               ...
             </p>
           <!--noindex-->
           
             <div class="post-button text-center">
-              <a class="btn" href="/2017/03/14/7-桥接模式/#more" rel="contents">
+              <a class="btn" href="/2017/03/19/thinkcmf-cmf-password-及其它/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -2062,7 +2063,7 @@ JS对象标记，可以理解成和JS对象没有半毛
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">92</span>
+                    <span class="site-state-item-count">93</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -2115,7 +2116,9 @@ JS对象标记，可以理解成和JS对象没有半毛
                     
                       
                     
-                    <span class="site-state-item-count">20</span>
+                      
+                    
+                    <span class="site-state-item-count">21</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
