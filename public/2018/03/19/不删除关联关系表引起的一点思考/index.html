@@ -96,24 +96,27 @@
 
 
 
-  <meta name="description" content="Stay Hungry Stay Foolish    世事洞明皆学问人情练达即文章">
-<meta name="keywords" content="PHP Python 运维">
-<meta property="og:type" content="website">
-<meta property="og:title" content="笔误通鉴">
-<meta property="og:url" content="http://www.abble.com/tags/HTML/index.html">
+  <meta name="description" content="三张表，其中一张c是另外两张a,b的关系表。如果仅仅考虑删除的情况，那么只要删除a就行了。不用去碰c表（coding的时候最好别这样做）。 a表相当于指向c表的指针，指针没有了，所指向的内容也就没有了价值。 下面是几个小例子： Windows上无论删除哪里的内容，只是删除了指针。内容还在那里，不增不减。所以，才有恢复数据一说。 在同一个磁盘里剪切是很快的，只是复制了指针。原数据还在那里不动的。不">
+<meta name="keywords" content="MySQL">
+<meta property="og:type" content="article">
+<meta property="og:title" content="不删除关联关系表引起的一点思考">
+<meta property="og:url" content="http://www.abble.com/2018/03/19/不删除关联关系表引起的一点思考/index.html">
 <meta property="og:site_name" content="笔误通鉴">
-<meta property="og:description" content="Stay Hungry Stay Foolish    世事洞明皆学问人情练达即文章">
+<meta property="og:description" content="三张表，其中一张c是另外两张a,b的关系表。如果仅仅考虑删除的情况，那么只要删除a就行了。不用去碰c表（coding的时候最好别这样做）。 a表相当于指向c表的指针，指针没有了，所指向的内容也就没有了价值。 下面是几个小例子： Windows上无论删除哪里的内容，只是删除了指针。内容还在那里，不增不减。所以，才有恢复数据一说。 在同一个磁盘里剪切是很快的，只是复制了指针。原数据还在那里不动的。不">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/2875232-0f0cb9fd01d8877c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2019-03-18T00:14:00.412Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="笔误通鉴">
-<meta name="twitter:description" content="Stay Hungry Stay Foolish    世事洞明皆学问人情练达即文章">
+<meta name="twitter:title" content="不删除关联关系表引起的一点思考">
+<meta name="twitter:description" content="三张表，其中一张c是另外两张a,b的关系表。如果仅仅考虑删除的情况，那么只要删除a就行了。不用去碰c表（coding的时候最好别这样做）。 a表相当于指向c表的指针，指针没有了，所指向的内容也就没有了价值。 下面是几个小例子： Windows上无论删除哪里的内容，只是删除了指针。内容还在那里，不增不减。所以，才有恢复数据一说。 在同一个磁盘里剪切是很快的，只是复制了指针。原数据还在那里不动的。不">
+<meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/2875232-0f0cb9fd01d8877c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 
 
 
 
 
 
-  <link rel="canonical" href="http://www.abble.com/tags/HTML/">
+  <link rel="canonical" href="http://www.abble.com/2018/03/19/不删除关联关系表引起的一点思考/">
 
 
 
@@ -123,7 +126,7 @@
   };
 </script>
 
-  <title>标签: HTML | 笔误通鉴</title>
+  <title>不删除关联关系表引起的一点思考 | 笔误通鉴</title>
   
 
 
@@ -171,7 +174,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
@@ -226,7 +229,7 @@
         
         
           
-          <li class="menu-item menu-item-tags menu-item-active">
+          <li class="menu-item menu-item-tags">
 
     
     
@@ -299,28 +302,6 @@
   
     
 
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
-
   
 
   
@@ -345,108 +326,198 @@
           <div id="content" class="content">
             
 
+  <div id="posts" class="posts-expand">
+    
+
+  
+
   
   
   
-  <div class="post-block tag">
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>HTML<small>标签</small>
-        </h1>
-      </div>
-
-      
-        
+  
 
   <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://www.abble.com/2018/03/19/不删除关联关系表引起的一点思考/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Abble">
+      <meta itemprop="description" content="Stay Hungry Stay Foolish <br> <br>  世事洞明皆学问<br>人情练达即文章 <br>">
+      <meta itemprop="image" content="/images/WechatIMG586.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="笔误通鉴">
+    </span>
+
+    
+      <header class="post-header">
+
         
-          <a class="post-title-link" href="/2019/01/12/volist-volist-对数组的操作/" itemprop="url">
-            
-              <span itemprop="name"><volist></volist>对数组的操作</span>
-            
-          </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">不删除关联关系表引起的一点思考
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-01-12T11:28:52+08:00" content="2019-01-12">
-          01-12
-        </time>
-      </div>
+              
+            
+          </h1>
+        
 
-    </header>
-  </article>
+        <div class="post-meta">
+          <span class="post-time">
 
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-03-19 22:13:12" itemprop="dateCreated datePublished" datetime="2018-03-19T22:13:12+08:00">2018-03-19</time>
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/MySQL/" itemprop="url" rel="index"><span itemprop="name">MySQL</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-        
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/01/12/html中写点php/" itemprop="url">
-            
-              <span itemprop="name">html中写点php</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-01-12T11:24:39+08:00" content="2019-01-12">
-          01-12
-        </time>
-      </div>
-
-    </header>
-  </article>
-
+      
 
       
-        
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2018/03/13/Getting-Checkbox-Values-in-jQuery/" itemprop="url">
-            
-              <span itemprop="name">Getting Checkbox Values in jQuery</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2018-03-13T23:59:29+08:00" content="2018-03-13">
-          03-13
-        </time>
-      </div>
-
-    </header>
-  </article>
-
+        <p><img src="https://upload-images.jianshu.io/upload_images/2875232-0f0cb9fd01d8877c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<p>三张表，其中一张c是另外两张a,b的关系表。如果仅仅考虑删除的情况，那么只要删除a就行了。不用去碰c表（coding的时候最好别这样做）。</p>
+<p>a表相当于指向c表的指针，指针没有了，所指向的内容也就没有了价值。</p>
+<h4 id="下面是几个小例子："><a href="#下面是几个小例子：" class="headerlink" title="下面是几个小例子："></a>下面是几个小例子：</h4><ol>
+<li>Windows上无论删除哪里的内容，只是删除了指针。内容还在那里，不增不减。所以，才有恢复数据一说。</li>
+<li>在同一个磁盘里剪切是很快的，只是复制了指针。原数据还在那里不动的。不同磁盘间的复制很慢，那是真的在复制东西。所以Linux上 <code>mv</code>命令很快。</li>
+</ol>
+<p>写不下去了，操作系统知识了解的太少。</p>
 
       
     </div>
 
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/MySQL/" rel="tag"># MySQL</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/03/18/Install-composer-on-macOS-High-Sierra/" rel="next" title="Install composer on macOS High Sierra">
+                <i class="fa fa-chevron-left"></i> Install composer on macOS High Sierra
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/08/19/Yii2高级版：场景、方法、validate/" rel="prev" title="Yii2高级版：场景、方法、validate">
+                Yii2高级版：场景、方法、validate <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
+
+  </div>
 
 
           </div>
           
+
+  
+
+
 
         </div>
         
@@ -467,8 +538,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -671,6 +751,23 @@
       </div>
 
       
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#下面是几个小例子："><span class="nav-number">1.</span> <span class="nav-text">下面是几个小例子：</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
 
       
 
@@ -791,6 +888,10 @@
   
 
   
+  <script src="/js/src/scrollspy.js?v=6.7.0"></script>
+<script src="/js/src/post-details.js?v=6.7.0"></script>
+
+
 
   
 
@@ -800,6 +901,8 @@
 
 
   
+  
+
 
   
 

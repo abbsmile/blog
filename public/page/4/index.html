@@ -1871,7 +1871,7 @@ Class
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.abble.com/2018/03/18/Install-composer-on-macOS-High-Sierra/">
+    <link itemprop="mainEntityOfPage" href="http://www.abble.com/2018/03/19/不删除关联关系表引起的一点思考/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Abble">
@@ -1891,7 +1891,7 @@ Class
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/2018/03/18/Install-composer-on-macOS-High-Sierra/" class="post-title-link" itemprop="url">Install composer on macOS High Sierra</a>
+                <a href="/2018/03/19/不删除关联关系表引起的一点思考/" class="post-title-link" itemprop="url">不删除关联关系表引起的一点思考</a>
               
             
           </h1>
@@ -1916,7 +1916,7 @@ Class
                 
               
 
-              <time title="创建时间：2018-03-18 23:04:25" itemprop="dateCreated datePublished" datetime="2018-03-18T23:04:25+08:00">2018-03-18</time>
+              <time title="创建时间：2018-03-19 22:13:12" itemprop="dateCreated datePublished" datetime="2018-03-19T22:13:12+08:00">2018-03-19</time>
             
 
             
@@ -1934,7 +1934,7 @@ Class
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Composer/" itemprop="url" rel="index"><span itemprop="name">Composer</span></a></span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/MySQL/" itemprop="url" rel="index"><span itemprop="name">MySQL</span></a></span>
 
                 
                 
@@ -1972,17 +1972,16 @@ Class
           
             <p>
               
-本地上传图片的过程中，Safari好像比Chrome稍微慢一点。下面说正事
-
-install composer on macOS
-
-tp5官网上的命令是：curl -sS https://getcomposer.org/installer | phpmv composer.phar /usr/lo
+三张表，其中一张c是另外两张a,b的关系表。如果仅仅考虑删除的情况，那么只要删除a就行了。不用去碰c表（coding的时候最好别这样做）。
+a表相当于指向c表的指针，指针没有了，所指向的内容也就没有了价值。
+下面是几个小例子：
+Windows上无论删除哪里的内容，只是删除了指针。内容还在那里，不增
               ...
             </p>
           <!--noindex-->
           
             <div class="post-button text-center">
-              <a class="btn" href="/2018/03/18/Install-composer-on-macOS-High-Sierra/#more" rel="contents">
+              <a class="btn" href="/2018/03/19/不删除关联关系表引起的一点思考/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -2076,7 +2075,7 @@ tp5官网上的命令是：curl -sS https://getcomposer.org/installer | phpmv co
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">95</span>
+                    <span class="site-state-item-count">96</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
