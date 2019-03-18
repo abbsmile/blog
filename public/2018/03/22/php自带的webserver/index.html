@@ -96,25 +96,27 @@
 
 
 
-  <meta name="description" content="sql数据表数据可以在这里查到 记录主要是为了case when 题目  查询各科成绩最高分、最低分和平均分; 以如下形式显示：课程ID，课程name，最高分，最低分，平均分，及格率，中等率，优良率，优秀率,及格为&amp;gt;=60，中等为：70-80，优良为：80-90，优秀为：&amp;gt;=90 要求输出课程号和选修人数，查询结果按人数降序排列，若人数相同，按课程号升序排列  sql  1234567">
-<meta name="keywords" content="SQL">
+  <meta name="description" content="笔者不喜欢这样的学习方式：认识一个命令，然后把它的大部分用法学一下。理由很明确：其一枯燥，其二不知所为何用，其三笔者学习能力尤其记忆能力比较差。 笔者同时深知，学习方法只是因时因人因阶段而异，没有所谓的好与坏。上面的学习方式，在某个阶段，对于笔者而言还是有用的。只是，今天这篇文章思路不是这样，它以流程目的为主导。 插个题外话：大学有个同学，跟我讲过同样的学习方法。很荣幸认识这样的人，给我以启迪；">
+<meta name="keywords" content="ThinkPHP">
 <meta property="og:type" content="article">
-<meta property="og:title" content="sql中的case">
-<meta property="og:url" content="http://www.abble.com/2016/11/22/sql中的case-when/index.html">
+<meta property="og:title" content="php自带的webserver">
+<meta property="og:url" content="http://www.abble.com/2018/03/22/php自带的webserver/index.html">
 <meta property="og:site_name" content="笔误通鉴">
-<meta property="og:description" content="sql数据表数据可以在这里查到 记录主要是为了case when 题目  查询各科成绩最高分、最低分和平均分; 以如下形式显示：课程ID，课程name，最高分，最低分，平均分，及格率，中等率，优良率，优秀率,及格为&amp;gt;=60，中等为：70-80，优良为：80-90，优秀为：&amp;gt;=90 要求输出课程号和选修人数，查询结果按人数降序排列，若人数相同，按课程号升序排列  sql  1234567">
+<meta property="og:description" content="笔者不喜欢这样的学习方式：认识一个命令，然后把它的大部分用法学一下。理由很明确：其一枯燥，其二不知所为何用，其三笔者学习能力尤其记忆能力比较差。 笔者同时深知，学习方法只是因时因人因阶段而异，没有所谓的好与坏。上面的学习方式，在某个阶段，对于笔者而言还是有用的。只是，今天这篇文章思路不是这样，它以流程目的为主导。 插个题外话：大学有个同学，跟我讲过同样的学习方法。很荣幸认识这样的人，给我以启迪；">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-02-21T13:35:54.074Z">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/2875232-6f05015d382b9b60.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/620">
+<meta property="og:updated_time" content="2019-03-18T00:17:26.715Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="sql中的case">
-<meta name="twitter:description" content="sql数据表数据可以在这里查到 记录主要是为了case when 题目  查询各科成绩最高分、最低分和平均分; 以如下形式显示：课程ID，课程name，最高分，最低分，平均分，及格率，中等率，优良率，优秀率,及格为&amp;gt;=60，中等为：70-80，优良为：80-90，优秀为：&amp;gt;=90 要求输出课程号和选修人数，查询结果按人数降序排列，若人数相同，按课程号升序排列  sql  1234567">
+<meta name="twitter:title" content="php自带的webserver">
+<meta name="twitter:description" content="笔者不喜欢这样的学习方式：认识一个命令，然后把它的大部分用法学一下。理由很明确：其一枯燥，其二不知所为何用，其三笔者学习能力尤其记忆能力比较差。 笔者同时深知，学习方法只是因时因人因阶段而异，没有所谓的好与坏。上面的学习方式，在某个阶段，对于笔者而言还是有用的。只是，今天这篇文章思路不是这样，它以流程目的为主导。 插个题外话：大学有个同学，跟我讲过同样的学习方法。很荣幸认识这样的人，给我以启迪；">
+<meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/2875232-6f05015d382b9b60.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/620">
 
 
 
 
 
 
-  <link rel="canonical" href="http://www.abble.com/2016/11/22/sql中的case-when/">
+  <link rel="canonical" href="http://www.abble.com/2018/03/22/php自带的webserver/">
 
 
 
@@ -124,7 +126,7 @@
   };
 </script>
 
-  <title>sql中的case | 笔误通鉴</title>
+  <title>php自带的webserver | 笔误通鉴</title>
   
 
 
@@ -340,7 +342,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.abble.com/2016/11/22/sql中的case-when/">
+    <link itemprop="mainEntityOfPage" href="http://www.abble.com/2018/03/22/php自带的webserver/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Abble">
@@ -357,7 +359,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">sql中的case
+          <h1 class="post-title" itemprop="name headline">php自带的webserver
 
               
             
@@ -383,7 +385,7 @@
                 
               
 
-              <time title="创建时间：2016-11-22 20:24:20" itemprop="dateCreated datePublished" datetime="2016-11-22T20:24:20+08:00">2016-11-22</time>
+              <time title="创建时间：2018-03-22 20:16:24" itemprop="dateCreated datePublished" datetime="2018-03-22T20:16:24+08:00">2018-03-22</time>
             
 
             
@@ -401,7 +403,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/SQL/" itemprop="url" rel="index"><span itemprop="name">SQL</span></a></span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/ThinkPHP/" itemprop="url" rel="index"><span itemprop="name">ThinkPHP</span></a></span>
 
                 
                 
@@ -435,22 +437,28 @@
       
 
       
-        <h2 id="sql数据"><a href="#sql数据" class="headerlink" title="sql数据"></a>sql数据</h2><p><a href="http://www.abble.top/2016/11/17/%E7%9B%B8%E5%85%B3%E5%AD%90%E6%9F%A5%E8%AF%A2%E5%92%8C%E4%B8%8D%E7%9B%B8%E5%85%B3%E5%AD%90%E6%9F%A5%E8%AF%A2/" target="_blank" rel="noopener">表数据可以在这里查到</a></p>
-<h2 id="记录主要是为了case-when"><a href="#记录主要是为了case-when" class="headerlink" title="记录主要是为了case when"></a>记录主要是为了case when</h2><blockquote>
-<p>题目</p>
-</blockquote>
-<p>查询各科成绩最高分、最低分和平均分;</p>
-<p>以如下形式显示：课程ID，课程name，最高分，最低分，平均分，及格率，中等率，优良率，优秀率,<br>及格为&gt;=60，中等为：70-80，优良为：80-90，优秀为：&gt;=90</p>
-<p>要求输出课程号和选修人数，查询结果按人数降序排列，若人数相同，按课程号升序排列</p>
+        <p><img src="https://upload-images.jianshu.io/upload_images/2875232-6f05015d382b9b60.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/620" alt=""></p>
+<p>笔者不喜欢这样的学习方式：认识一个命令，然后把它的大部分用法学一下。理由很明确：其一枯燥，其二不知所为何用，其三笔者学习能力尤其记忆能力比较差。</p>
+<p>笔者同时深知，学习方法只是因时因人因阶段而异，没有所谓的好与坏。上面的学习方式，在某个阶段，对于笔者而言还是有用的。只是，今天这篇文章思路不是这样，它以流程目的为主导。</p>
+<p>插个题外话：大学有个同学，跟我讲过同样的学习方法。很荣幸认识这样的人，给我以启迪；很庆幸现在自己还记得。发现别人的优点，然后去学习。三人行，必有我师。</p>
 <blockquote>
-<p>sql</p>
+<p>webserver</p>
 </blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">SELECT</span><br><span class="line">  SC.CId,</span><br><span class="line">  Course.Cname,</span><br><span class="line">  max(sc.score)              AS 最高分,</span><br><span class="line">  min(sc.score)              AS 最低分,</span><br><span class="line">  AVG(sc.score)              AS 平均分,</span><br><span class="line">  count(*)                   AS 选修人数,</span><br><span class="line">  sum(CASE WHEN SC.score &gt;= 60 THEN 1 ELSE 0 END) / count(*) AS 及格率,</span><br><span class="line">  sum(CASE WHEN SC.score &gt;= 70 AND SC.score &lt;80 THEN 1 ELSE 0 END) / count(*) AS 中等率,</span><br><span class="line">  sum(CASE WHEN SC.score &gt;= 80 AND SC.score &lt;90 THEN 1 ELSE 0 END) / count(*) AS 优良率,</span><br><span class="line">  sum(CASE WHEN SC.score &gt;= 90 THEN 1 ELSE 0 END) / count(*) AS 优秀率</span><br><span class="line">FROM SC ,Course</span><br><span class="line">  WHERE SC.CId = Course.CId</span><br><span class="line">GROUP BY SC.CId</span><br><span class="line">ORDER BY count(*) DESC, SC.CId ASC;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>count(*)在group by里面同样可以统计小组人数;</li>
-<li>A/B 的形式可以这样使用；</li>
-<li><code>CASE WHEN SC.score &gt;= 90 THEN 1 ELSE 0 END</code>是一个新的认识；因为代码中使用原生sql极少，使用这样的sql语句极少，虽然见过这样的sql,但没有亲自学习过。</li>
-</ul>
+<p><strong>router.php用于php自带webserver支持，可用于快速测试</strong></p>
+<p>LAMP是php web开发的标配，但php自带的webserver在测试环境中可以取代Apache（不建议这样做，毕竟Apache安装配置很简单,而且好用）。</p>
+<p>运行一条看似简单的命令即可：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">➜  public pwd</span><br><span class="line">/Applications/XAMPP/xamppfiles/htdocs/tp5/public</span><br><span class="line">➜  public php -S localhost:8888 router.php</span><br><span class="line">PHP 7.0.13 Development Server started at Thu Mar 22 00:47:46 2018</span><br><span class="line">Listening on http://localhost:8888</span><br><span class="line">Document root is /Applications/XAMPP/xamppfiles/htdocs/tp5/public</span><br><span class="line">Press Ctrl-C to quit.</span><br></pre></td></tr></table></figure></p>
+<p>1、端口号可以随意指定，一般情况下取大一点，不可以与本机已有的端口号重复。具体范围可以百度。但大于2000的四位数肯定可以。不建议8080，一般8080的端口号已被占用。</p>
+<p>2、可以观察上面的提示，<code>webserver</code> 的根目录在 <code>public</code> 目录下面，而笔者<code>Apache</code>中配置的根目录只到<code>htdocs</code>下面。所以访问tp5时，利用Apache服务器时路径还要加上：<code>/tp5/public</code>，而在<code>webserver</code>直接输入<code>localhost:8888</code> 便可直接访问。</p>
+<blockquote>
+<p>如何退出？</p>
+</blockquote>
+<p>在讨论退出之前，我们先证明 <code>8888</code> 端口已启用。 </p>
+<p>两个方法：<br>1.浏览器直接访问：<code>localhost:8888</code> , 可以进入系统，则表示已启用;<br>2.利用 <code>ps</code> 命令</p>
+<p>下面问题来了，什么是 <code>ps</code> 命令？<br><code>Reports a snapshot of the status of currently running processes.</code><br><code>ps</code> 命令能够给出当前系统中进程的快照。它能捕获系统在某一事件的进程状态。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">➜  tp5 ps</span><br><span class="line">  PID TTY           TIME CMD</span><br><span class="line">18264 ttys000    0:00.98 /bin/zsh --login -i</span><br><span class="line">22549 ttys000    0:00.10 php -S localhost:8888 router.php</span><br><span class="line">19517 ttys001    0:00.79 /bin/zsh --login -i</span><br></pre></td></tr></table></figure>
+<p>PID: 进程号 process ID<br>TTY: 命令所运行的位置 teletypewriters（了解这个要稍微百度一下历史）<br>TIME: 运行这个命令 cpu 所占用的处理时间 time<br>CMD: 进程所运行的命令 command</p>
+<p>利用<code>ps</code>命令看见 <code>8888</code> 端口已被启用。</p>
+<p>退出进程，两个方法：<br>1、ctrt + c<br>2、kill PID (这里是kill 22549)</p>
 
       
     </div>
@@ -474,7 +482,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/SQL/" rel="tag"># SQL</a>
+            <a href="/tags/ThinkPHP/" rel="tag"># ThinkPHP</a>
           
         </div>
       
@@ -487,8 +495,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/11/20/group-by只是一个附加条件/" rel="next" title="group by只是一个附加条件">
-                <i class="fa fa-chevron-left"></i> group by只是一个附加条件
+              <a href="/2018/03/20/tp5自动生成目录结构/" rel="next" title="tp5自动生成目录结构">
+                <i class="fa fa-chevron-left"></i> tp5自动生成目录结构
               </a>
             
           </div>
@@ -497,8 +505,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/01/11/1-简单工厂模式/" rel="prev" title="1.简单工厂模式">
-                1.简单工厂模式 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/08/19/Yii2高级版：场景、方法、validate/" rel="prev" title="Yii2高级版：场景、方法、validate">
+                Yii2高级版：场景、方法、validate <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -544,17 +552,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <div class="site-overview-wrap sidebar-panel">
+      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -756,23 +755,6 @@
         </div>
       </div>
 
-      
-      <!--noindex-->
-        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-            
-            
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#sql数据"><span class="nav-number">1.</span> <span class="nav-text">sql数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#记录主要是为了case-when"><span class="nav-number">2.</span> <span class="nav-text">记录主要是为了case when</span></a></li></ol></div>
-            
-
-          </div>
-        </div>
-      <!--/noindex-->
       
 
       
