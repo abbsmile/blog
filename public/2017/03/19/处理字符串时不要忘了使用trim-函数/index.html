@@ -96,25 +96,27 @@
 
 
 
-  <meta name="description" content="书的作者：大冰 可能是我记忆力不好，也可能是我没把精力放在书的详细内容上。今晚想起上周看过这本书，觉得要写点什么。毕竟这是本好书，至少我是这样想的。那我就略微梳理一下。 这是分割线  第一段是我上周写的，或许是上上周。那天看完了比较激动，后来在豆瓣查查，大多是差评，于是就不敢写的。理由很简单：我的审美有问题，好书差书都分不清，还是太年轻，或者说无知。 后来，后来就没怎么看书了。直到今天，想写点技术">
-<meta name="keywords" content="书评">
+  <meta name="description" content="trim() 函数移除字符串两侧的空白字符或其他预定义字符。 ltrim() - 移除字符串左侧的空白字符或其他预定义字符rtrim() - 移除字符串右侧的空白字符或其他预定义字符 技术不重要，而是要有意识使用这个函数。笔者今天遇到个bug,查了很长时间没能找出来。最后发现当把字符串截成两半的时候，后面一个字符串多了一个空格。 所以，在使用函数将数组转化成字符串时，要习惯性的使用trim()函">
+<meta name="keywords" content="PHP">
 <meta property="og:type" content="article">
-<meta property="og:title" content="书评：乖，摸摸头">
-<meta property="og:url" content="http://www.abble.com/2018/01/07/书评：乖，摸摸头/index.html">
+<meta property="og:title" content="处理字符串时不要忘了使用trim()函数">
+<meta property="og:url" content="http://www.abble.com/2017/03/19/处理字符串时不要忘了使用trim-函数/index.html">
 <meta property="og:site_name" content="笔误通鉴">
-<meta property="og:description" content="书的作者：大冰 可能是我记忆力不好，也可能是我没把精力放在书的详细内容上。今晚想起上周看过这本书，觉得要写点什么。毕竟这是本好书，至少我是这样想的。那我就略微梳理一下。 这是分割线  第一段是我上周写的，或许是上上周。那天看完了比较激动，后来在豆瓣查查，大多是差评，于是就不敢写的。理由很简单：我的审美有问题，好书差书都分不清，还是太年轻，或者说无知。 后来，后来就没怎么看书了。直到今天，想写点技术">
+<meta property="og:description" content="trim() 函数移除字符串两侧的空白字符或其他预定义字符。 ltrim() - 移除字符串左侧的空白字符或其他预定义字符rtrim() - 移除字符串右侧的空白字符或其他预定义字符 技术不重要，而是要有意识使用这个函数。笔者今天遇到个bug,查了很长时间没能找出来。最后发现当把字符串截成两半的时候，后面一个字符串多了一个空格。 所以，在使用函数将数组转化成字符串时，要习惯性的使用trim()函">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-02-14T15:24:38.861Z">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/2875232-9b6f1f5ac7cd3f60.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/620">
+<meta property="og:updated_time" content="2019-03-18T00:09:41.552Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="书评：乖，摸摸头">
-<meta name="twitter:description" content="书的作者：大冰 可能是我记忆力不好，也可能是我没把精力放在书的详细内容上。今晚想起上周看过这本书，觉得要写点什么。毕竟这是本好书，至少我是这样想的。那我就略微梳理一下。 这是分割线  第一段是我上周写的，或许是上上周。那天看完了比较激动，后来在豆瓣查查，大多是差评，于是就不敢写的。理由很简单：我的审美有问题，好书差书都分不清，还是太年轻，或者说无知。 后来，后来就没怎么看书了。直到今天，想写点技术">
+<meta name="twitter:title" content="处理字符串时不要忘了使用trim()函数">
+<meta name="twitter:description" content="trim() 函数移除字符串两侧的空白字符或其他预定义字符。 ltrim() - 移除字符串左侧的空白字符或其他预定义字符rtrim() - 移除字符串右侧的空白字符或其他预定义字符 技术不重要，而是要有意识使用这个函数。笔者今天遇到个bug,查了很长时间没能找出来。最后发现当把字符串截成两半的时候，后面一个字符串多了一个空格。 所以，在使用函数将数组转化成字符串时，要习惯性的使用trim()函">
+<meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/2875232-9b6f1f5ac7cd3f60.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/620">
 
 
 
 
 
 
-  <link rel="canonical" href="http://www.abble.com/2018/01/07/书评：乖，摸摸头/">
+  <link rel="canonical" href="http://www.abble.com/2017/03/19/处理字符串时不要忘了使用trim-函数/">
 
 
 
@@ -124,7 +126,7 @@
   };
 </script>
 
-  <title>书评：乖，摸摸头 | 笔误通鉴</title>
+  <title>处理字符串时不要忘了使用trim()函数 | 笔误通鉴</title>
   
 
 
@@ -340,7 +342,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.abble.com/2018/01/07/书评：乖，摸摸头/">
+    <link itemprop="mainEntityOfPage" href="http://www.abble.com/2017/03/19/处理字符串时不要忘了使用trim-函数/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Abble">
@@ -357,7 +359,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">书评：乖，摸摸头
+          <h1 class="post-title" itemprop="name headline">处理字符串时不要忘了使用trim()函数
 
               
             
@@ -383,7 +385,7 @@
                 
               
 
-              <time title="创建时间：2018-01-07 23:23:09" itemprop="dateCreated datePublished" datetime="2018-01-07T23:23:09+08:00">2018-01-07</time>
+              <time title="创建时间：2017-03-19 23:08:12" itemprop="dateCreated datePublished" datetime="2017-03-19T23:08:12+08:00">2017-03-19</time>
             
 
             
@@ -401,7 +403,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/诗和远方/" itemprop="url" rel="index"><span itemprop="name">诗和远方</span></a></span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/PHP/" itemprop="url" rel="index"><span itemprop="name">PHP</span></a></span>
 
                 
                 
@@ -435,17 +437,11 @@
       
 
       
-        <p>书的作者：大冰</p>
-<p>可能是我记忆力不好，也可能是我没把精力放在书的详细内容上。今晚想起上周看过这本书，觉得要写点什么。毕竟这是本好书，至少我是这样想的。那我就略微梳理一下。</p>
-<p>这是分割线</p>
-<hr>
-<p>第一段是我上周写的，或许是上上周。那天看完了比较激动，后来在豆瓣查查，大多是差评，于是就不敢写的。理由很简单：我的审美有问题，好书差书都分不清，还是太年轻，或者说无知。</p>
-<p>后来，后来就没怎么看书了。直到今天，想写点技术文章，打开简书，看到这个标题横在这里，应该要写点什么，也对得起这个标题，总不能删了。毕竟应该是有一段时间过去了，书里的内容也忘的差不多了，现在写也比较合适。</p>
-<hr>
-<p>记忆中那本书，有几个鲜明的故事。让我尝试着回想，好吧，还是说不清楚，只是几个鲜明的画面。有几个嬉戏打闹的场景，看起来有温馨也有遗憾。有几个感人的故事，看起来很有情怀，不过只能想想，其实也不仅仅是想想，只能说在合适的时候做合适的事；在合适的场合做合适的事。这叫得体。</p>
-<p>相比于慷慨激昂，温文尔雅还是不错的。有条理，然后有生活。品味，得体，自然而然。好的人生，不是有多大的成就，而是在家庭、工作、朋友中都还不错，处理事情来更平和。当然，要有所爱，要坚持所长，平凡的人生，过平凡的日子，坚持所坚持的，对于无力解决的，放任又如何。</p>
-<p>生活就是一个if else,真解决不了，抛出一个异常，下面的流程继续。至于这种抒情类鸡汤，偶尔读读，为生活加点品味。或者说，将之视为AOP思想中的一个切面，但是处理逻辑的主线，与其无关。</p>
-<p>主线呢，一定是直白的，一针风血的，有逻辑的，有结果的。这是我坚持的。</p>
+        <p><img src="https://upload-images.jianshu.io/upload_images/2875232-9b6f1f5ac7cd3f60.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/620" alt="image.png"></p>
+<p>trim() 函数移除字符串两侧的空白字符或其他预定义字符。</p>
+<p><a href="http://www.w3school.com.cn/php/func_string_ltrim.asp" title="PHP ltrim() 函数" target="_blank" rel="noopener">ltrim()</a> - 移除字符串左侧的空白字符或其他预定义字符<br><a href="http://www.w3school.com.cn/php/func_string_rtrim.asp" title="PHP rtrim() 函数" target="_blank" rel="noopener">rtrim()</a> - 移除字符串右侧的空白字符或其他预定义字符</p>
+<p>技术不重要，而是要有意识使用这个函数。笔者今天遇到个bug,查了很长时间没能找出来。最后发现当把字符串截成两半的时候，后面一个字符串多了一个空格。</p>
+<p>所以，在使用函数将数组转化成字符串时，要习惯性的使用trim()函数处理得到的每一个字符串。</p>
 
       
     </div>
@@ -469,7 +465,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/书评/" rel="tag"># 书评</a>
+            <a href="/tags/PHP/" rel="tag"># PHP</a>
           
         </div>
       
@@ -482,8 +478,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/01/07/看问题的方式不一样/" rel="next" title="看问题的方式不一样">
-                <i class="fa fa-chevron-left"></i> 看问题的方式不一样
+              <a href="/2017/03/14/7-桥接模式/" rel="next" title="7-桥接模式">
+                <i class="fa fa-chevron-left"></i> 7-桥接模式
               </a>
             
           </div>
@@ -492,8 +488,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/01/07/High-Sierra-XAMPP-terminal下打开mysql/" rel="prev" title="High Sierra+XAMPP+ terminal下打开mysql">
-                High Sierra+XAMPP+ terminal下打开mysql <i class="fa fa-chevron-right"></i>
+              <a href="/2017/03/19/thinkcmf-cmf-password-及其它/" rel="prev" title="thinkcmf:cmf_password()及其它">
+                thinkcmf:cmf_password()及其它 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
