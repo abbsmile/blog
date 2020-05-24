@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>笔误通鉴</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Stay Hungry Stay Foolish    世事洞明皆学问人情练达即文章">
+<meta name="keywords" content="PHP Python 运维">
+<meta property="og:type" content="website">
+<meta property="og:title" content="笔误通鉴">
+<meta property="og:url" content="http://www.abble.com/page/6/index.html">
+<meta property="og:site_name" content="笔误通鉴">
+<meta property="og:description" content="Stay Hungry Stay Foolish    世事洞明皆学问人情练达即文章">
+<meta property="og:locale" content="zh-CN">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="笔误通鉴">
+<meta name="twitter:description" content="Stay Hungry Stay Foolish    世事洞明皆学问人情练达即文章">
+  
+    <link rel="alternate" href="/atom.xml" title="笔误通鉴" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">笔误通鉴</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://www.abble.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-Install-composer-on-macOS-High-Sierra" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/03/18/Install-composer-on-macOS-High-Sierra/" class="article-date">
+  <time datetime="2018-03-18T15:04:25.000Z" itemprop="datePublished">2018-03-18</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Composer/">Composer</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/03/18/Install-composer-on-macOS-High-Sierra/">Install composer on macOS High Sierra</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="https://upload-images.jianshu.io/upload_images/2875232-361e8a75973595ab.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/620" alt="KnpU-Composer.png"></p>
+<p>本地上传图片的过程中，Safari好像比Chrome稍微慢一点。下面说正事</p>
+<blockquote>
+<p>install composer on macOS</p>
+</blockquote>
+<p>tp5官网上的命令是：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">curl -sS https://getcomposer.org/installer | php</span><br><span class="line">mv composer.phar /usr/local/bin/composer</span><br></pre></td></tr></table></figure></p>
+<p>在实验过程中：<code>|</code>后不加空格的话，会理想一点。</p>
+<p>两步过后：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">composer --version</span><br></pre></td></tr></table></figure></p>
+<p>如果能看见类似下面的内容，表明安装成功<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Composer version 1.6.3 2018-01-31 16:28:17</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>install tp5 via composer</p>
+</blockquote>
+<p>tp5官网上的命令是：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">composer create-project topthink/think=5.0.* tp5  --prefer-dist</span><br></pre></td></tr></table></figure></p>
+<p>照做了，于是，bug重现。我最大的错误在于没有仔细研读后面的错误提示，也没有打断点的思维习惯，一直以为是composer安装失误。所有事后我认为理所当然的事，在事前，也理所当然的没有被我意识到。</p>
+<p>最后利用第三方在国内做的全景镜像，下载安装成功：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">composer config -g repo.packagist composer https://packagist.phpcomposer.com</span><br><span class="line">composer create-project topthink/think tp5</span><br></pre></td></tr></table></figure></p>
+<p>其中topthink/think是核心文件，然后tp5是我们起的一个名字。</p>
+<p>解决前一个bug靠的是经验，感觉；后一个是隔了一会儿看视频找到了些许灵感，当然简书也提供了帮助。至于搜索引擎，官网，我的首选，这次反而浪费了时间和精力。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.abble.com/2018/03/18/Install-composer-on-macOS-High-Sierra/" data-id="ckakye69l000v0qs6dkajvpyi" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Composer/">Composer</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Safari扩展：SafariKeyWordSearch" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/03/18/Safari扩展：SafariKeyWordSearch/" class="article-date">
+  <time datetime="2018-03-18T12:02:49.000Z" itemprop="datePublished">2018-03-18</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Safari/">Safari</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/03/18/Safari扩展：SafariKeyWordSearch/">Safari扩展：SafariKeyWordSearch</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="https://upload-images.jianshu.io/upload_images/2875232-8e2de170dc2d093a.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="SafariKeyWordSearch.jpeg"></p>
+<p>虽然用mac很长时间了，但一直没用过Safari。固执如我。</p>
+<p>这么多年下来，chrome不声不响，始终在那里。在爱情上或许是个好习惯，在技术上，可以说是不思进取。偶然的机会，看到别人把Safari用的得心应手。于是，感慨和Safari相逢恨晚；于是，见异思迁。……至少，以后把一半流量放在Safari上了。</p>
+<blockquote>
+<p>下面介绍一下Safari扩展：SafariKeyWordSearch</p>
+</blockquote>
+<p>功能：搜索内容时，指定搜索引擎。比如我们在浏览器输入<br><code>du 六安</code> ：我们希望用百度搜索「六安」关键字；<br><code>bing curl linux</code>: 我们希望用Bing搜索「curl linux」关键字；</p>
+<p>类似这样的功能，对于玩计算机的来说应该不陌生。百度是最好的中文搜索引擎，而Bing国际版对于喜欢英文搜索不想FQ的小孩来说很有帮助。再加上知乎，豆瓣，Stack Overflow,CSDN，博客园等网站，其实已经把很多知识区分开了。如果人脑作为第一道筛选，无疑提高了搜索效率。</p>
+<p>下载安装：Bing国际版输入SafariKeyWordSearch，第一个便是下载地址。<br><img src="https://upload-images.jianshu.io/upload_images/2875232-94edfcf3f7e6825e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/2875232-3b6ee9bde2bad6a0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<p>配置：安装完成之后，浏览器界面右键,keyword search setting进入配置页面<br><img src="https://upload-images.jianshu.io/upload_images/2875232-3b76c3ce0f5e3dd0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/620" alt="image.png"></p>
+<p>最重要也是我唯一想说明的是这个url expansion:先到一个网站随便搜索一个词语，然后把浏览器上面的地址复制过来，最后把词语和词语后面的所有东西全删了，在原来词语前面的等号后面加上：<code>@@@</code></p>
+<p>当然，有闲情雅致看它的说明最好。上面方法我是凭感觉的，没有仔细研究里面的细节。我的目的是达到我想要的功能便可。</p>
+<p>认识：搜索引擎没有好与坏，合理利用才好。最重要的是，先有这个意识。过程永远为目的服务。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.abble.com/2018/03/18/Safari扩展：SafariKeyWordSearch/" data-id="ckakye6ap002o0qs6qbt6erje" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Safari/">Safari</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Getting-Checkbox-Values-in-jQuery" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/03/13/Getting-Checkbox-Values-in-jQuery/" class="article-date">
+  <time datetime="2018-03-13T15:59:29.000Z" itemprop="datePublished">2018-03-13</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/HTML/">HTML</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/03/13/Getting-Checkbox-Values-in-jQuery/">Getting Checkbox Values in jQuery</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ul>
+<li><p>本篇文章最重要的不是下面的链接，不是方法的细节，而是这个标题<br><code>Getting Checkbox Values in jQuery</code>。 锻炼英文思维，知道如何用英文搜索。</p>
+</li>
+<li><p>这个链接上面的解释不错，讲的很仔细<br><a href="https://phppot.com/php/getting-checkbox-values-in-jquery/" target="_blank" rel="noopener">Getting Checkbox Values in jQuery</a></p>
+</li>
+<li><p>如果懒得看链接，可以看下面：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;input type=&quot;checkbox&quot; class=&quot;js-check&quot; data-yid=&quot;js-check-y&quot; </span><br><span class="line">data-xid=&quot;js-check-x&quot; </span><br><span class="line">name=&quot;ids[]&quot; </span><br><span class="line">value=&quot;&#123;$vo.id&#125;&quot; </span><br><span class="line">data-name=&quot;&#123;$vo.name&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;button id=&quot;btnSubmit&quot; type=&quot;button&quot; class=&quot;btn btn-info btn-sm&quot;&gt;添加&lt;/button&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">$(document).ready(function () &#123;</span><br><span class="line">    $(&quot;#btnSubmit&quot;).click(function () &#123;</span><br><span class="line">        // 2.1 选中属性组id</span><br><span class="line">        var selectedAttrGroup = new Array();</span><br><span class="line">        $(&apos;input[name=&quot;ids[]&quot;]:checked&apos;).each(function () &#123;</span><br><span class="line">            selectedAttrGroup.push(this.value);</span><br><span class="line">        &#125;);      </span><br><span class="line">    &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>细节不啰嗦了，主要在于体会。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.abble.com/2018/03/13/Getting-Checkbox-Values-in-jQuery/" data-id="ckakye69h000n0qs6dwbbv5hz" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML/">HTML</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-MySQL：1044和1045" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/03/12/MySQL：1044和1045/" class="article-date">
+  <time datetime="2018-03-12T13:18:36.000Z" itemprop="datePublished">2018-03-12</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/MySQL/">MySQL</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/03/12/MySQL：1044和1045/">MySQL：1044和1045</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="https://upload-images.jianshu.io/upload_images/2875232-ff11cb1df76965e9.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="th.jpeg"></p>
+<blockquote>
+<p>1044和1045是什么？</p>
+</blockquote>
+<p>使用mysql数据库的时候，最容易碰上1044和1045错误。什么意思？有点经验的人往往会说：没权限，密码错误。于是，菜鸟傻傻记住了。</p>
+<p>过一段时间，再问。两个概念，菜鸟傻傻分不清。于是Bing:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">*   Error: `1044` SQLSTATE: `42000` ([`ER_DBACCESS_DENIED_ERROR`](https://dev.mysql.com/doc/refman/5.5/en/error-messages-server.html#error_er_dbaccess_denied_error))</span><br><span class="line"></span><br><span class="line">    Message: Access denied for user &apos;%s&apos;@&apos;%s&apos; to database &apos;%s&apos;</span><br><span class="line"></span><br><span class="line">*   Error: `1045` SQLSTATE: `28000` ([`ER_ACCESS_DENIED_ERROR`](https://dev.mysql.com/doc/refman/5.5/en/error-messages-server.html#error_er_access_denied_error))</span><br><span class="line"></span><br><span class="line">    Message: Access denied for user &apos;%s&apos;@&apos;%s&apos; (using password: %s)</span><br></pre></td></tr></table></figure>
+<p>转开一个话题：其实用DashApp更快。具体用Dash和Bing搜索主要看查找的内容和个人使用习惯了，下面是dash的一个截图。身边人用Dash的比较少，所以这里多说一句。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/2875232-f6814a23eb3b46b9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/620" alt="image.png"></p>
+<blockquote>
+<p>如何去理解上面两句英文<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Access denied for user &apos;%s&apos;@&apos;%s&apos; to database &apos;%s&apos;</span><br><span class="line">Access denied for user &apos;%s&apos;@&apos;%s&apos; (using password: %s)</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<ul>
+<li><code>%s</code>起到一个占位符的作用；注意，这里的<code>%s</code>，我们潜意识默认它是有值的。</li>
+<li><code>@&#39;%s&#39;</code>相当于<code>@localhost</code>这种。现在看来很好理解，而我当时的误区是把<code>@</code>后面的<code>%s</code>理解成密码（现在想想都好笑，但是事后诸葛亮，我们要理解这种不以为意的习惯）。所以，当时怎么看怎么别扭。无法区分两个。</li>
+</ul>
+<p>而关于其它的错误，也没有必要去记，按照这个方式逻辑去学习应该是可以的。主要是对英文的理解很重要。同时在认识这个问题时，感谢别人的提醒。</p>
+<blockquote>
+<p>笔者后来常遇到的</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Error: `1048` SQLSTATE: `23000` ([`ER_BAD_NULL_ERROR`](error-handling.html#error_er_bad_null_error))</span><br><span class="line">Message: Column &apos;%s&apos; cannot be null</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.abble.com/2018/03/12/MySQL：1044和1045/" data-id="ckakye6a7001t0qs6r17hy98t" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MySQL/">MySQL</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-centOS上快速打开指定的mysql数据库" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/03/09/centOS上快速打开指定的mysql数据库/" class="article-date">
+  <time datetime="2018-03-09T13:51:30.000Z" itemprop="datePublished">2018-03-09</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/MySQL/">MySQL</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/03/09/centOS上快速打开指定的mysql数据库/">centOS上快速打开指定的mysql数据库</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>在centOS上开发项目时，我们可能会经常打开某个数据库。如何设置，才能确保快速有效地进入数据库？如下所示：</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/2875232-f75c35d0b588e7a0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<p>当我们经常使用<code>ssear</code>数据库时，只要配置好，输入<code>mysql</code>便可快速进入相应数据库。</p>
+<p>方法：</p>
+<p>1.进入<code>.my.cnf</code>文件。这是个隐藏文件，<code>ls -a</code>才能看到全部<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd ~</span><br><span class="line">vim .my.cnf</span><br></pre></td></tr></table></figure></p>
+<p>2.在mysql的配置文件：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[mysql]</span><br><span class="line">database = databaseName</span><br><span class="line">user = userName</span><br><span class="line">password = password</span><br></pre></td></tr></table></figure></p>
+<p>配置好，重启生效即可。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.abble.com/2018/03/09/centOS上快速打开指定的mysql数据库/" data-id="ckakye6bg003g0qs6n5ycrtr6" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MySQL/">MySQL</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-选择排序" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/03/09/选择排序/" class="article-date">
+  <time datetime="2018-03-09T11:50:19.000Z" itemprop="datePublished">2018-03-09</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/算法与数据结构/">算法与数据结构</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/03/09/选择排序/">冒泡排序</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="golang"><a href="#golang" class="headerlink" title="golang"></a>golang</h2><p>理解的时候，注意<code>min</code>是复制，把它与原来的集合分成两部分。</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> <span class="string">"fmt"</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">	<span class="keyword">var</span> values = []<span class="keyword">int</span>&#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">4</span>, <span class="number">87</span>, <span class="number">100</span>, <span class="number">25</span>, <span class="number">36</span>&#125;</span><br><span class="line">	selectSort(values)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 简单选择排序</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">selectSort</span><span class="params">(values []<span class="keyword">int</span>)</span></span> &#123;</span><br><span class="line">	length := <span class="built_in">len</span>(values)</span><br><span class="line">	<span class="keyword">for</span> i := <span class="number">0</span>; i &lt; length; i++ &#123;</span><br><span class="line">		min := i</span><br><span class="line">		<span class="keyword">for</span> j := i + <span class="number">1</span>; j &lt; length; j++ &#123;</span><br><span class="line">			<span class="keyword">if</span> values[min] &gt; values[j] &#123;</span><br><span class="line">				min = j</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="comment">// values数组 是一个集合</span></span><br><span class="line">		<span class="comment">// min 是游离在这个集合之外的因素,可以理解成：复制</span></span><br><span class="line">		<span class="comment">// 获取到的 min 则是这个数组中数值最小的元素的 下标</span></span><br><span class="line"></span><br><span class="line">		<span class="keyword">if</span> min != i &#123;</span><br><span class="line">			values[i], values[min] = values[min], values[i]</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	fmt.Println(values)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.abble.com/2018/03/09/选择排序/" data-id="ckakye6h900ah0qs61vgqa515" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/数据结构/">数据结构</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-冒泡排序" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/03/09/冒泡排序/" class="article-date">
+  <time datetime="2018-03-09T11:26:19.000Z" itemprop="datePublished">2018-03-09</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/算法与数据结构/">算法与数据结构</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/03/09/冒泡排序/">冒泡排序</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="本质"><a href="#本质" class="headerlink" title="本质"></a>本质</h4><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;<span class="number">4</span>, <span class="number">93</span>, <span class="number">84</span>, <span class="number">85</span>, <span class="number">80</span>, <span class="number">37</span>, <span class="number">81</span>, <span class="number">93</span>, <span class="number">27</span>,<span class="number">12</span>&#125;</span><br><span class="line"> <span class="number">0</span>   <span class="number">1</span>  <span class="number">2</span>   <span class="number">3</span>   <span class="number">4</span>    <span class="number">5</span>   <span class="number">6</span>   <span class="number">7</span>   <span class="number">8</span>  <span class="number">9</span></span><br><span class="line">i = value[<span class="number">0</span>-&gt;<span class="number">9</span>]</span><br><span class="line">j = value[i+<span class="number">1</span> -&gt; <span class="number">9</span>]</span><br><span class="line"><span class="built_in">len</span> = <span class="number">10</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> <span class="string">"fmt"</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">   <span class="keyword">var</span> values = []<span class="keyword">int</span>&#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">4</span>, <span class="number">87</span>, <span class="number">100</span>, <span class="number">25</span>, <span class="number">36</span>&#125;</span><br><span class="line">   bubbleAsort(values)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">bubbleAsort</span><span class="params">(values []<span class="keyword">int</span>)</span></span> &#123;</span><br><span class="line">   <span class="keyword">var</span> <span class="built_in">len</span> = <span class="built_in">len</span>(values)</span><br><span class="line">   <span class="keyword">for</span> i := <span class="number">0</span>; i &lt; <span class="built_in">len</span> - <span class="number">1</span>; i++ &#123;</span><br><span class="line">      <span class="keyword">for</span> j := i+<span class="number">1</span>; j &lt; <span class="built_in">len</span>; j ++ &#123;</span><br><span class="line">         <span class="keyword">if</span> values[i] &gt; values[j] &#123;</span><br><span class="line">            values[i], values[j] = values[j], values[i]</span><br><span class="line">         &#125;</span><br><span class="line">      &#125;</span><br><span class="line">   &#125;</span><br><span class="line">   fmt.Println(values)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h4><p>中间有块应该错了,介值不去管它。思维点还是在于 <code>矮子里面拔将军</code></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.abble.com/2018/03/09/冒泡排序/" data-id="ckakye6g100970qs6fsgthjq0" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/数据结构/">数据结构</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-在mac上安装thinkcmf" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/03/07/在mac上安装thinkcmf/" class="article-date">
+  <time datetime="2018-03-07T13:34:25.000Z" itemprop="datePublished">2018-03-07</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/ThinkPHP/">ThinkPHP</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/03/07/在mac上安装thinkcmf/">在mac上安装thinkcmf</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="http://upload-images.jianshu.io/upload_images/2875232-3ddf4bf1ca4b44e7.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=".jpg"></p>
+<p>以前是在CentOS上安装的thinkcmf,记忆中一直很顺利。昨天在mac上安装，遇到点小波折。然后这里记录一下。</p>
+<p>1.首先会遇到下面的错误</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2875232-5e3f3115ac5c2a86.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/310" alt="image.png"></p>
+<p>稍加分析，找到<code>$cacaeFile</code>所代表的路径，便知道了是权限的问题。</p>
+<p>同理，如果改变了这里的权限。接下来会出现这样的错误：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2875232-6f59047bb906689e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/310" alt="image.png"></p>
+<p>因此，在安装之前，我们可以：<code>chmod 777 data ./public/upload</code>改变两个文件夹的权限。以便apache可以对其操作。</p>
+<p>2.<code>下一步</code>安装的时候，有可能会遇到这样的错误：<br><img src="http://upload-images.jianshu.io/upload_images/2875232-8e662789ba70efee.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/310" alt="image.png"></p>
+<p>这个时候，我们可以到<code>httpd.conf</code>修改<code>AllowOverride All</code>,如下所示：<br><img src="http://upload-images.jianshu.io/upload_images/2875232-d90943206a2d417e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/310" alt="image.png"></p>
+<p>3.我也遇到过这样的问题，不过后来莫名其妙没有了。觉得没有意义。没有深究了。然后在这里，听别人说：必须是root，其它用户不行。这是个bug。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2875232-47a105f027f6a144.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/310" alt="image.png"></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2875232-5a510a41c7138291.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/130" alt="image.png"></p>
+<blockquote>
+<p>安装的时候参考了：<a href="https://tech.yj777.cn/thinkcmf-%E7%9A%84%E9%83%A8%E7%BD%B2/" target="_blank" rel="noopener">ThinkCMF 的部署</a></p>
+</blockquote>
+<p>这篇文章提到了两点，个人感觉很重要：</p>
+<p>1.安装完成后把<code>install</code>文件夹删除。这个容易忘记。<br>2.代码不能用root + password方式获取数据库数据。所以要另创建一个用户，然后修改数据库配置文件。</p>
+<p>—bug:这个我还没实验好，有点小难度。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.abble.com/2018/03/07/在mac上安装thinkcmf/" data-id="ckakye6fl008p0qs60k9j4ftd" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ThinkPHP/">ThinkPHP</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-PHP魔术变量" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/02/28/PHP魔术变量/" class="article-date">
+  <time datetime="2018-02-28T15:50:47.000Z" itemprop="datePublished">2018-02-28</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/PHP/">PHP</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/02/28/PHP魔术变量/">PHP魔术变量</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">__LINE__  // 显示文件中的当前行号</span><br></pre></td></tr></table></figure>
+<p><img src="http://upload-images.jianshu.io/upload_images/2875232-63251b17e9f790b5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">__FILE__ // 代码在被包含文件中，显示的是包含文件名的绝对路径</span><br></pre></td></tr></table></figure>
+<p><img src="http://upload-images.jianshu.io/upload_images/2875232-9e0101b16cd4c6b2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">__DIR__ // 代码在被包含文件中，显示的是此文件的绝对目录</span><br></pre></td></tr></table></figure>
+<p><img src="http://upload-images.jianshu.io/upload_images/2875232-7ae3e1039be19197.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">这两个比较有意思</span><br><span class="line">__FUNCTION__</span><br><span class="line">__METHOD__</span><br></pre></td></tr></table></figure>
+<p><img src="http://upload-images.jianshu.io/upload_images/2875232-e8823ede6f2d6760.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">如果再加两个</span><br><span class="line">__CLASS__</span><br><span class="line">__NAMESPACE__</span><br><span class="line"></span><br><span class="line">method和class在我意料之外。</span><br></pre></td></tr></table></figure>
+<p><img src="http://upload-images.jianshu.io/upload_images/2875232-c0e3faa25722ff5f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<p>这些东西没什么大用，但就像一个个螺丝钉一样，一颗一颗把它拧紧。在测试，或者用到图片文件地址时，不失为实用工具。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.abble.com/2018/02/28/PHP魔术变量/" data-id="ckakye6am002j0qs6ez80wy90" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/PHP/">PHP</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-php中两种添加数组元素的小技巧" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/02/27/php中两种添加数组元素的小技巧/" class="article-date">
+  <time datetime="2018-02-27T14:39:56.000Z" itemprop="datePublished">2018-02-27</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/PHP/">PHP</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/02/27/php中两种添加数组元素的小技巧/">php中两种添加数组元素的小技巧</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">I&apos;ve done a small comparison between array_push() and the $array[] method and the $array[] seems to be a lot faster.</span><br><span class="line"></span><br><span class="line">&lt;?php</span><br><span class="line">$array = array();</span><br><span class="line">for ($x = 1; $x &lt;= 100000; $x++)</span><br><span class="line">&#123;</span><br><span class="line">    $array[] = $x;</span><br><span class="line">&#125;</span><br><span class="line">?&gt;</span><br><span class="line">takes 0.0622200965881 seconds</span><br><span class="line"></span><br><span class="line">and</span><br><span class="line"></span><br><span class="line">&lt;?php</span><br><span class="line">$array = array();</span><br><span class="line">for ($x = 1; $x &lt;= 100000; $x++)</span><br><span class="line">&#123;</span><br><span class="line">    array_push($array, $x);</span><br><span class="line">&#125;</span><br><span class="line">?&gt;</span><br><span class="line">takes 1.63195490837 seconds</span><br><span class="line"></span><br><span class="line">so if your not making use of the return value of array_push() its better to use the $array[] way.</span><br><span class="line"></span><br><span class="line">Hope this helps someone.</span><br></pre></td></tr></table></figure>
+<p>没验证过上面的正确性，只是偶然看见$array[] 方法，感觉比较新鲜，查了一下。</p>
+<ol>
+<li>知道了原来添加数组原素还有这样一种方法;</li>
+<li><a href="http://php.net/manual/en/function.array-push.php" target="_blank" rel="noopener">array_push</a> php.net网站上的评论还是很不错的，这方面给我打开了一扇新的窗户。上面文章是对链接中的部分评论。</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.abble.com/2018/02/27/php中两种添加数组元素的小技巧/" data-id="ckakye6cz005e0qs6xl93a0m9" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/PHP/">PHP</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+
+
+  <nav id="page-nav">
+    
+    <a class="extend prev" rel="prev" href="/page/5/">&laquo; 上一页</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/">7</a><a class="page-number" href="/page/8/">8</a><span class="space">&hellip;</span><a class="page-number" href="/page/11/">11</a><a class="extend next" rel="next" href="/page/7/">下一页 &raquo;</a>
+  </nav>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Apache/">Apache</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/CentOS/">CentOS</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Composer/">Composer</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Git/">Git</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/HTML/">HTML</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Laravel/">Laravel</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Linux/">Linux</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mac/">Mac</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/MySQL/">MySQL</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/PHP/">PHP</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/PHPStorm/">PHPStorm</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/SQL/">SQL</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Safari/">Safari</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Shell/">Shell</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/ThinkCMF/">ThinkCMF</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/ThinkPHP/">ThinkPHP</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Yii2/">Yii2</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/nginx/">nginx</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术心得/">技术心得</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/数据格式/">数据格式</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/算法与数据结构/">算法与数据结构</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/设计模式/">设计模式</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/诗和远方/">诗和远方</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/运维/">运维</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/16个PHP设计模式/">16个PHP设计模式</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Apache/">Apache</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CMS/">CMS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CentOS/">CentOS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Composer/">Composer</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/">Git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML/">HTML</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JSON/">JSON</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Laravel/">Laravel</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/">Linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MacOS/">MacOS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MySQL/">MySQL</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PHP/">PHP</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PHP-MySQL/">PHP MySQL</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PHPStorm/">PHPStorm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PHP函数/">PHP函数</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SQL/">SQL</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Safari/">Safari</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Shell/">Shell</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ThinkCMF/">ThinkCMF</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ThinkPHP/">ThinkPHP</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/UTF-8/">UTF-8</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VCS/">VCS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Xdebug/">Xdebug</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Yii2/">Yii2</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/command/">command</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/docker-showdoc/">docker showdoc</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iTerm2/">iTerm2</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/migration/">migration</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nginx/">nginx</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/php/">php</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/swoole/">swoole</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/书评/">书评</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/代理/">代理</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/函数/">函数</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/分页/">分页</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/反射/">反射</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/取地址符/">取地址符</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/存储过程/">存储过程</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/安全/">安全</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/异常/">异常</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/技术心得/">技术心得</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/指针/">指针</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/接口/">接口</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数据结构/">数据结构</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数组/">数组</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/杂记/">杂记</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/权限/">权限</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/电影/">电影</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/端口/">端口</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/防火墙/">防火墙</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/16个PHP设计模式/" style="font-size: 16.67px;">16个PHP设计模式</a> <a href="/tags/Apache/" style="font-size: 11.11px;">Apache</a> <a href="/tags/CMS/" style="font-size: 10px;">CMS</a> <a href="/tags/CentOS/" style="font-size: 15.56px;">CentOS</a> <a href="/tags/Composer/" style="font-size: 11.11px;">Composer</a> <a href="/tags/Git/" style="font-size: 10px;">Git</a> <a href="/tags/HTML/" style="font-size: 12.22px;">HTML</a> <a href="/tags/JSON/" style="font-size: 10px;">JSON</a> <a href="/tags/Laravel/" style="font-size: 10px;">Laravel</a> <a href="/tags/Linux/" style="font-size: 17.78px;">Linux</a> <a href="/tags/MacOS/" style="font-size: 18.89px;">MacOS</a> <a href="/tags/MySQL/" style="font-size: 18.89px;">MySQL</a> <a href="/tags/PHP/" style="font-size: 20px;">PHP</a> <a href="/tags/PHP-MySQL/" style="font-size: 10px;">PHP MySQL</a> <a href="/tags/PHPStorm/" style="font-size: 14.44px;">PHPStorm</a> <a href="/tags/PHP函数/" style="font-size: 12.22px;">PHP函数</a> <a href="/tags/SQL/" style="font-size: 18.89px;">SQL</a> <a href="/tags/Safari/" style="font-size: 10px;">Safari</a> <a href="/tags/Shell/" style="font-size: 14.44px;">Shell</a> <a href="/tags/ThinkCMF/" style="font-size: 15.56px;">ThinkCMF</a> <a href="/tags/ThinkPHP/" style="font-size: 17.78px;">ThinkPHP</a> <a href="/tags/UTF-8/" style="font-size: 10px;">UTF-8</a> <a href="/tags/VCS/" style="font-size: 10px;">VCS</a> <a href="/tags/Xdebug/" style="font-size: 11.11px;">Xdebug</a> <a href="/tags/Yii2/" style="font-size: 11.11px;">Yii2</a> <a href="/tags/command/" style="font-size: 13.33px;">command</a> <a href="/tags/docker-showdoc/" style="font-size: 10px;">docker showdoc</a> <a href="/tags/iTerm2/" style="font-size: 12.22px;">iTerm2</a> <a href="/tags/migration/" style="font-size: 10px;">migration</a> <a href="/tags/nginx/" style="font-size: 10px;">nginx</a> <a href="/tags/php/" style="font-size: 10px;">php</a> <a href="/tags/swoole/" style="font-size: 11.11px;">swoole</a> <a href="/tags/书评/" style="font-size: 15.56px;">书评</a> <a href="/tags/代理/" style="font-size: 11.11px;">代理</a> <a href="/tags/函数/" style="font-size: 10px;">函数</a> <a href="/tags/分页/" style="font-size: 10px;">分页</a> <a href="/tags/反射/" style="font-size: 12.22px;">反射</a> <a href="/tags/取地址符/" style="font-size: 10px;">取地址符</a> <a href="/tags/存储过程/" style="font-size: 10px;">存储过程</a> <a href="/tags/安全/" style="font-size: 10px;">安全</a> <a href="/tags/异常/" style="font-size: 10px;">异常</a> <a href="/tags/技术心得/" style="font-size: 10px;">技术心得</a> <a href="/tags/指针/" style="font-size: 10px;">指针</a> <a href="/tags/接口/" style="font-size: 10px;">接口</a> <a href="/tags/数据结构/" style="font-size: 11.11px;">数据结构</a> <a href="/tags/数组/" style="font-size: 10px;">数组</a> <a href="/tags/杂记/" style="font-size: 14.44px;">杂记</a> <a href="/tags/权限/" style="font-size: 10px;">权限</a> <a href="/tags/电影/" style="font-size: 10px;">电影</a> <a href="/tags/端口/" style="font-size: 10px;">端口</a> <a href="/tags/防火墙/" style="font-size: 10px;">防火墙</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">四月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">三月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">七月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">三月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">二月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">一月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">十二月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">十月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">八月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">三月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">二月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">一月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">十二月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">十一月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">八月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">七月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">三月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">二月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">一月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">十一月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">九月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">八月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">七月 2016</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/04/08/kdevtmpfdi/">kdevtmpfdi</a>
+          </li>
+        
+          <li>
+            <a href="/2020/03/23/docker下的showdoc迁移/">docker下的showdoc迁移</a>
+          </li>
+        
+          <li>
+            <a href="/2020/03/08/mac-to-many-process/">mac to many process</a>
+          </li>
+        
+          <li>
+            <a href="/2020/03/08/利用密钥scp文件/">利用密钥scp文件</a>
+          </li>
+        
+          <li>
+            <a href="/2019/07/18/源码安装nginx/">源码安装nginx</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 Abble<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
